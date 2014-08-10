@@ -1,0 +1,58 @@
+{
+  "speakers": [
+    {
+      "about": "Incididunt mollit cupidatat magna excepteur do tempor ex non eiusmod magna exercitation proident nisi non. Sunt ad consequat eu non esse excepteur. Veniam quis Lorem ea labore ullamco veniam nisi do sunt. Nisi irure sit qui irure mollit ad aliquip non culpa sint reprehenderit ullamco.\r\n",
+      "company": "Ecratic",
+      "email": "larsonrichard@ecratic.com",
+      "firstName": "Larson",
+      "id": 0,
+      "lastName": " Richard",
+      "picture": "http://placehold.it/32x32",
+      "tags": [
+        "Minim ad id mollit consectetur fugiat occaecat in cillum aute.",
+        "Nostrud non nostrud pariatur veniam duis magna.",
+        "Reprehenderit officia do sint officia dolore dolore pariatur Lorem reprehenderit.",
+        "Occaecat veniam aliquip ullamco eu aute exercitation quis elit labore sunt elit.",
+        "Voluptate est culpa et irure.",
+        "Culpa ut ipsum duis tempor enim.",
+        "Dolore nulla culpa deserunt consequat."
+      ]
+    },
+    {
+      "about": "Labore tempor irure adipisicing consectetur velit. Ipsum Lorem non mollit aliquip. Fugiat est irure quis laboris minim anim esse fugiat et culpa exercitation. Dolor cillum excepteur officia Lorem ullamco magna et cupidatat dolor incididunt occaecat adipisicing consectetur in. Ullamco ullamco commodo nulla eiusmod. Lorem Lorem non sunt laboris ut et elit mollit deserunt nostrud est et id adipisicing.\r\n",
+      "company": "Acusage",
+      "email": "esterclements@acusage.com",
+      "firstName": "Ester",
+      "id": 1,
+      "lastName": " Clements",
+      "picture": "http://placehold.it/32x32",
+      "tags": [
+        "Veniam qui do velit velit mollit in laboris minim incididunt exercitation aliquip.",
+        "Amet ipsum eiusmod do fugiat culpa nostrud nostrud do irure consectetur.",
+        "Officia enim dolor incididunt amet culpa proident reprehenderit aute ipsum anim mollit enim dolor occaecat.",
+        "Eiusmod pariatur elit nisi amet ut.",
+        "Nisi dolore eiusmod tempor aliquip eu dolor duis eiusmod ex ex qui do elit.",
+        "Mollit qui labore commodo aliquip aliqua in deserunt.",
+        "Pariatur esse eiusmod reprehenderit ad aute nostrud non aliquip cupidatat aliqua irure."
+      ]
+    },
+    {
+      "about": "Proident ex Lorem et Lorem ad. Do voluptate officia minim in nisi ut sit nisi ex eu nostrud do ut. Aute ad dolor tempor dolor aute nisi deserunt deserunt ut deserunt cillum quis. Ipsum nulla sit reprehenderit consequat incididunt incididunt dolore et magna aliquip ut ex. Cupidatat exercitation ipsum dolore nisi incididunt anim est. Culpa veniam ut excepteur aliqua exercitation.\r\n",
+      "company": "Talkola",
+      "email": "christensenfisher@talkola.com",
+      "firstName": "Christensen",
+      "id": 2,
+      "lastName": " Fisher",
+      "picture": "http://placehold.it/32x32",
+      "tags": [
+        "Ad officia ullamco enim occaecat culpa mollit.",
+        "Occaecat id commodo non sit exercitation non culpa amet sunt reprehenderit.",
+        "Pariatur do commodo consectetur ea aliquip incididunt.",
+        "Sunt sit dolor voluptate eiusmod officia.",
+        "Nisi cupidatat excepteur aliquip dolor non quis aliquip sit aliquip aute.",
+        "Ipsum excepteur officia dolor ad eu dolore et est et.",
+        "Dolore aute enim aliqua consequat minim duis pariatur quis qui fugiat dolor labore velit."
+      ]
+    }
+  ]
+}

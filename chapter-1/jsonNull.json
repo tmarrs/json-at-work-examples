@@ -1,0 +1,10 @@
+{
+  "address": {
+    "line1": "555 Any Street",
+    "line2": null,
+    "city": "Denver",
+    "stateOrProvince": "CO",
+    "zipOrPostalCode": "80202",
+    "country": "USA"
+  }
+}

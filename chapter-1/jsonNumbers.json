@@ -1,0 +1,11 @@
+{
+  "age": 29,
+  "cost": 299.99,
+  "temperature": -10.5,
+  "speedOfLight": 1.23e11,
+  "speedOfLight2": 1.23e+11,
+  "avogadro": 6.023E23,
+  "avogadro2": 6.023E+23,
+  "oneHundredth": 10e-3,
+  "oneTenth": 10E-2
+}

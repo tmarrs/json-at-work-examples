@@ -1,0 +1,18 @@
+{
+  "speaker": {
+    "firstName": "Tom",
+    "lastName": "Marrs",
+    "topics": [
+      "JSON",
+      "REST",
+      "SOA"
+    ],
+    "address": {
+      "line1": "555 Any Street",
+      "city": "Denver",
+      "stateOrProvince": "CO",
+      "zipOrPostalCode": "80202",
+      "country": "USA"
+    }
+  }
+}

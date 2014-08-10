@@ -1,0 +1,22 @@
+{
+  "presentations": [
+    {
+      "title": "JSON at Work: Overview and Ecosystem",
+      "length": "90 minutes",
+      "abstract": [
+        "JSON is more than just a simple replacement for XML when",
+        "you make an AJAX call."
+      ],
+      "track": "Web APIs"
+    },
+    {
+      "title": "RESTful Security at Work",
+      "length": "90 minutes",
+      "abstract": [
+        "You’ve been working with RESTful Web Services for a few years",
+        "now, and you’d like to know if your services are secure."
+      ],
+      "track": "Web APIs"
+    }
+  ]
+}

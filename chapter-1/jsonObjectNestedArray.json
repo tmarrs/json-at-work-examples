@@ -1,0 +1,7 @@
+{
+  "speaker": {
+    "firstName": "Tom",
+    "lastName": "Marrs",
+    "topics": ["JSON", "REST", "SOA"]
+  }
+}
