@@ -5,7 +5,7 @@
     "email": "larsonrichard@ecratic.com",
     "firstName": "Larson",
     "id": 0,
-    "lastName": " Richard",
+    "lastName": "Richard",
     "picture": "http://placehold.it/32x32",
     "tags": [
       "JavaScript",
@@ -19,7 +19,7 @@
     "email": "esterclements@acusage.com",
     "firstName": "Ester",
     "id": 1,
-    "lastName": " Clements",
+    "lastName": "Clements",
     "picture": "http://placehold.it/32x32",
     "tags": [
       "REST",
@@ -33,7 +33,7 @@
     "email": "christensenfisher@talkola.com",
     "firstName": "Christensen",
     "id": 2,
-    "lastName": " Fisher",
+    "lastName": "Fisher",
     "picture": "http://placehold.it/32x32",
     "tags": [
       "Java",
