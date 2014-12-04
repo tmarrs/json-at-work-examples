@@ -24,12 +24,6 @@ $(document).ready(function(){
     });
   }
 
-/*
-  $.getJSON('scripts/speakers.json',
-*/
-/*
-  $.getJSON('https://jsonatwork.firebaseio.com/speakers.json',
-*/
   $.getJSON('scripts/speakers.json',
     function(data){
       addSpeakersjQuery(data);
