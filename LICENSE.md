@@ -1,3 +1,1 @@
-MIT Open Source License
-
-See http://opensource.org/licenses/MIT
+[MIT Open Source License](http://opensource.org/licenses/MIT)
