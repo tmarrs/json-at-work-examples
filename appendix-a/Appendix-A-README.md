@@ -1,7 +1,7 @@
 Installation Guide
 ==================
 
-Installation Guide for __JSON at Work__.
+Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work/blob/master/README.md).
 
 ## Contents
 - [Installing JSON Tools in the Browser](#installing-json-tools-in-the-browser)
