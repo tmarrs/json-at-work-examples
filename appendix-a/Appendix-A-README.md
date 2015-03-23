@@ -4,7 +4,6 @@ Installation Guide
 Installation Guide for __JSON at Work__.
 
 ## Contents
-- [Contents](#contents)
 - [Installing JSON Tools in the Browser](#installing-json-tools-in-the-browser)
     - [Installing JSONView in Firefox](#installing-jsonview-in-firefox)
     - [Installing JSONView in Chrome](#installing-jsonview-in-chrome)
