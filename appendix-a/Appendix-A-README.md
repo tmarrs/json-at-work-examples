@@ -15,8 +15,10 @@ Installation Guide for [**JSON at Work**](https://github.com/tmarrs/json-at-work
 - [Installing MySQL](#installing-mysql)
 
 ## Installing JSON Tools in the Browser
-### Installing JSONView in Firefox
-### Installing JSONView in Chrome
+### Installing JSONView in Chrome and Firefox
+
+Please follow the installation instructions on the [JSONView](http://jsonview.com/)
+
 ## Installing JSONPad
 ## Installing Node with NVM
 ## Installing Ruby on Rails
