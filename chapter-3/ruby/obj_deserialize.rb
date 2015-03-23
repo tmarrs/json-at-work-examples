@@ -1,4 +1,6 @@
 require 'multi_json'
+require 'hashie'
+require 'awesome_print'
 
 puts "Current JSON Engine = #{MultiJson.current_adapter()}"
 puts
@@ -20,8 +22,14 @@ speaker = Speaker.new('Larson', 'Richard', 'larsonrichard@ecratic.com',
             'Incididunt mollit cupidatat magna excepteur do tempor ex non ...',
             'Ecratic', %w('json', 'rest', 'api', 'oauth'), true)
 
-json_spkr = MultiJson.dump(speaker, pretty: true)
+json_spkr2 = MultiJson.dump(speaker, pretty: true)
 
-spkr2 = MultiJson.load(json_spkr)
-puts "speaker 2 after load() = #{spkr2}"
+hash_spkr2 = Hashie::Mash.new(MultiJson.load(json_spkr2))
+
+spkr2 =  Speaker.new(hash_spkr2.first_name, hash_spkr2.last_name, hash_spkr2.email,
+                     hash_spkr2.about, hash_spkr2.company, hash_spkr2.tags,
+                     hash_spkr2.registered)
+
+puts "speaker 2 after load()"
+ap spkr2
 puts
