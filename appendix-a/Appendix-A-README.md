@@ -17,7 +17,7 @@ Installation Guide for [**JSON at Work**](https://github.com/tmarrs/json-at-work
 ## Installing JSON Tools in the Browser
 ### Installing JSONView in Chrome and Firefox
 
-Please follow the installation instructions on the [JSONView](http://jsonview.com/)
+Please follow the installation instructions on the [JSONView](http://jsonview.com/) site.
 
 ## Installing JSONPad
 ## Installing Node with NVM
