@@ -34,7 +34,7 @@ json-at-work => node -v
 v0.10.32
 ```
 
-When you check out the (Node.js REPL [Request-Eval-Print-Loop)](nodejs.org/api/repl.html), you should see this:
+When you check out the Node.js [REPL (Request-Eval-Print-Loop)](https://nodejs.org/api/repl.html), you should see this:
 
 ```
 json-at-work => node
