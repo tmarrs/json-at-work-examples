@@ -25,7 +25,7 @@ Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
 You can download JSONPad from the [JSONPad Downloads page]().
 
 ## Installing Node.js
-This book uses Node.js version 10.3.
+This book uses Node.js version ```v0.10.32```.
 
 If Node.js is working properly on your machine, then you should see the following from the command line when you check the version number:
 
