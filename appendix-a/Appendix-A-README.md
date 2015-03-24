@@ -105,18 +105,19 @@ Now that NVM is installed, use it to install Node:
 * Set the default Node version to be used in any new shell: ```nvm alias default v0.10.32```
   * Without this, neither the 'node' or 'npm' commands will work properly when you exit the current shell.
   * Now, exit your current shell.
-  * Open up a new shell, and do the following health checks:
-    * ```nvm ls```. You should see:
+
+From a new shell, do the following health checks:
+  * ```nvm ls```. You should see:
 ```
           ->  v0.10.32
                system
           default -> v0.10.32
 ```
-    * ```node -v```, which yields:
+  * ```node -v```, which yields:
 ```
           v0.10.32
 ```
-    * ```npm -v```, and it looks like:
+  * ```npm -v```, and it looks like:
 ```
           1.4.28
 ```
