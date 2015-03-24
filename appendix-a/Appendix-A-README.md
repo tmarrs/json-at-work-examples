@@ -79,7 +79,7 @@ Do the following:
 
 ### Install Node.js on Mac OS X and Linux
 Now that Node.js is completely uninstalled, let's do a fresh instllation. Although you could use the installation package from the [Node.js site](https://nodejs.org/), it's difficult to change versions. Instead, let's use [NVM (Node Version Manager)](https://github.com/creationix/nvm). NVM makes it easy to install/uninstall Node.js, and upgrade to newer versions. First, install NVM by using one of the following methods:
-* [Instal Script](https://github.com/creationix/nvm#install-script)
+* [Install Script](https://github.com/creationix/nvm#install-script)
 * [Manual Install](https://github.com/creationix/nvm#manual-install)
 
 Next, let's make sure that NVM runs properly. Source it from a shell as follows: ```source ~/.nvm/nvm.sh```
@@ -120,9 +120,6 @@ Now that NVM is installed, use it to install Node:
 ```
           1.4.28
 ```
-
-We're almost there. You'll also want to ensure that Node.js runs properly each time you login. To do this, you'll need source the Node.
-
 
 To see a full list of NVM's capabilities, type: ```nvm --help```.
 
