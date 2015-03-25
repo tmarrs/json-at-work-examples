@@ -18,9 +18,9 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Uninstalling Node.js on Mac OS X](#uninstalling-nodejs-on-mac-os-x)
         - [Uninstalling Node.js on Windows](#uninstalling-nodejs-on-windows)
         - [Uninstalling Node.js on Linux](#uninstalling-nodejs-on-linux)
-- [Installing Ruby on Rails](#installing-ruby-on-rails)
-    - [Installing Ruby](#installing-ruby)
-    - [Installing Rails](#installing-rails)
+- [Installing Ruby on Rails (RoR)](#installing-ruby-on-rails-ror)
+    - [Installing with RVM + the ```rails``` Gem](#installing-with-rvm--the-rails-gem)
+    - [Rails on Windows](#rails-on-windows)
 - [Installing MySQL](#installing-mysql)
 - [References](#references)
 
@@ -202,11 +202,53 @@ Do the following:
   * ```sudo rm -rf share/man/*/node.*```
 
 
-## Installing Ruby on Rails
+## Installing Ruby on Rails (RoR)
+There are several ways to install Ruby on Rails:
+* [Rails Installer](http://railsinstaller.org)
+* [ruby-install](https://github.com/postmodern/ruby-install)
+* RVM (Ruby Version Manager) + the ```rails``` gem
+* +rbenv+ + the ```rails``` gem
 
-### Installing Ruby
+### Installing with RVM + the ```rails``` Gem
+I prefer RVM because it's easy to upgrade to switch between Ruby versions.
+Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
 
-### Installing Rails
+Use RVM to install Ruby as follows:
+* See the available versions of Ruby
+```
+rvm list known
+```
+* Install Ruby ```v2.2.0``` as follows:
+```
+rvm install 2.2.0
+```
+* Check the Ruby version, and you should see something like this.
+```
+ruby -v
+ruby 2.2.0
+```
+
+After installing Ruby, you can install Rails as follows:
+```
+gem install rails
+```
+
+Check Rails version, and it should look like:
+```
+json-at-work => rails -v
+Rails 4.2.1
+```
+
+And you're done.
+
+You can easily upgrade to new versions of Ruby and Rails by:
+* Installing a new version of Ruby (2.3 for example): ```rvm install 2.3```
+* Using the new version: ```rvm use 2.3```
+* Then install the ```rails``` as shown above.
+
+### Rails on Windows
+Rails is difficult to setup on Windows. Try the Rails Installer for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
+
 
 ## Installing MySQL
 The Ruby on Rails examples require MySQL because Rails insists on a database. Of course, it's possible to run a Ruby on Rails project without a database, but that takes a lot of configuration and you're definitely swimming upstream. Just give Rails what it wants, and install MySQL.
