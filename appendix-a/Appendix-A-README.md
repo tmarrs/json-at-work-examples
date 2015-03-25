@@ -36,7 +36,7 @@ You can download JSONPad from the [JSONPad Downloads page](https://code.google.c
 JSONPad in its current form runs on Adobe AIR, but it should be included in the install.
 
 Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to
-[my GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool on Node Webkit (rather than Adobe AIR) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
+[my own ```json-pad``` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool on Node Webkit (rather than Adobe AIR) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
 
 
 ## Installing Node.js
