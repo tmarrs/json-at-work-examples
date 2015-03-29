@@ -22,6 +22,10 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Installing with RVM + the ```rails``` Gem](#installing-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
 - [Installing MySQL](#installing-mysql)
+- [Installing Java](#installing-java)
+    - [Installing Maven](#installing-maven)
+    - [Installing Spring](#installing-spring)
+    - [Installing Apache Tomcat](#installing-apache-tomcat)
 - [References](#references)
 
 ## Installing JSON Tools in the Browser
@@ -273,6 +277,18 @@ brew uninstall mysql
 After installing MySQL, you'll need to start the server. You'll probably want to ensure that MySQL starts automatically upon system startup. For further details on MySQL installation, startup, and configuration, please visit:
 * [MySQL's Post Installation Setup and Testing](https://dev.mysql.com/doc/refman/5.6/en/postinstallation.html)
 * [Joe Fallon's blog](http://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/)
+
+
+## Installing Java
+
+
+### Installing Maven
+
+
+### Installing Maven
+
+
+### Installing Apache Tomcat
 
 
 ## References
