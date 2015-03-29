@@ -285,7 +285,7 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 ### Installing Maven
 
 
-### Installing Maven
+### Installing Spring
 
 
 ### Installing Apache Tomcat
