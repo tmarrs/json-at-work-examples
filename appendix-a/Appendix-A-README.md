@@ -11,15 +11,18 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Install Node.js on Mac OS X and Linux with NVM](#install-nodejs-on-mac-os-x-and-linux-with-nvm)
         - [Install and Confgiure NVM](#install-and-confgiure-nvm)
         - [Install Node](#install-node)
-        - [Avoiding ```sudo``` with npm](#avoiding-sudo-with-npm)
+        - [Avoiding `sudo` with npm](#avoiding-sudo-with-npm)
+        - [Avoiding `sudo` with npm - Option 2](#avoiding-sudo-with-npm---option-2)
         - [Taming the REPL](#taming-the-repl)
     - [Install Node.js on Windows](#install-nodejs-on-windows)
     - [Uninstalling Node.js](#uninstalling-nodejs)
         - [Uninstalling Node.js on Mac OS X](#uninstalling-nodejs-on-mac-os-x)
         - [Uninstalling Node.js on Windows](#uninstalling-nodejs-on-windows)
         - [Uninstalling Node.js on Linux](#uninstalling-nodejs-on-linux)
+- [Installing Yeoman](#installing-yeoman)
+- [Installing the `webapp` Yeoman Generator](#installing-the-webapp-yeoman-generator)
 - [Installing Ruby on Rails (RoR)](#installing-ruby-on-rails-ror)
-    - [Installing with RVM + the ```rails``` Gem](#installing-with-rvm--the-rails-gem)
+    - [Installing with RVM + the `rails` Gem](#installing-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
 - [Installing MySQL](#installing-mysql)
 - [Installing Java](#installing-java)
@@ -123,6 +126,9 @@ sudo chown -R $USER ~/.nvm
 This works if you installed node with NVM (all node installations go under that directory).
 This tip was inspired by Isaac Z. Schlueter from [How to Node](http://howtonode.org/introduction-to-npm).
 
+#### Avoiding `sudo` with npm - Option 2
+Here's another way to avoid `sudo` - please see the [NPM Global without Sudo Guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) provided by [Sindre Sorhus](https://github.com/sindresorhus).
+
 #### Taming the REPL
 Out of the box, the default behavoir of the REPL leaves a bit to be desired because you 'undefined' after most lines of JavaScript, hitting the Enter key, breathing, etc. This is due to the fact that JavaScript functions always return something. If nothing is returned, then 'undefined' is returned by default. This behavior can be very annoying and unproductive. Here's a sample session:
 
@@ -208,6 +214,12 @@ sudo rm -rf lib/node_modules/npm
 sudo rm -rf lib/node
 sudo rm -rf share/man/*/node.*
 ```
+
+## Installing Yeoman
+Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
+
+## Installing the `webapp` Yeoman Generator
+Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp).
 
 ## Installing Ruby on Rails (RoR)
 There are several ways to install Ruby on Rails:
