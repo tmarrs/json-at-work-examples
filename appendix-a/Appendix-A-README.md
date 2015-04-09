@@ -219,7 +219,7 @@ sudo rm -rf share/man/*/node.*
 Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
 
 ## Installing the `webapp` Yeoman Generator
-Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp).
+Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp). Please follow the default installation so that the test environment includes both [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
 
 ## Installing Ruby on Rails (RoR)
 There are several ways to install Ruby on Rails:
