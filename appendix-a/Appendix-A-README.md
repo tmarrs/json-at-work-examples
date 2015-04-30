@@ -233,8 +233,8 @@ Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/genera
 There are several ways to install Ruby on Rails:
 * [Rails Installer](http://railsinstaller.org)
 * [ruby-install](https://github.com/postmodern/ruby-install)
-* RVM (Ruby Version Manager) + the `rails` gem
-* +rbenv+ + the `rails` gem
+* [RVM (Ruby Version Manager)](https://rvm.io/) + the `rails` gem
+* [+rbenv+](https://github.com/sstephenson/rbenv) + the `rails` gem
 
 ### Installing with RVM + the `rails` Gem
 I prefer RVM because it's easy to upgrade to switch between Ruby versions.
@@ -274,7 +274,7 @@ You can easily upgrade to new versions of Ruby and Rails by:
 * Then install the `rails` as shown above.
 
 ### Rails on Windows
-Rails is difficult to setup on Windows. Try the Rails Installer for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
+Rails is difficult to setup on Windows. Try the [Rails Installer( [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
 
 ## Installing MySQL
