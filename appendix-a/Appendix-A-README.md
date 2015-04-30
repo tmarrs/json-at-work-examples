@@ -274,15 +274,15 @@ You can easily upgrade to new versions of Ruby and Rails by:
 * Then install the `rails` as shown above.
 
 ### Rails on Windows
-Rails is difficult to setup on Windows. Try the [Rails Installer( [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
+Rails is difficult to setup on Windows. Try the [Rails Installer[Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
 
 ## Installing MySQL
-The Ruby on Rails examples require MySQL because Rails insists on a database. Of course, it's possible to run a Ruby on Rails project without a database, but that takes a lot of configuration and you're definitely swimming upstream. Just give Rails what it wants, and install MySQL.
+The Ruby on Rails examples require [MySQL](https://www.mysql.com/) because Rails insists on a database. Of course, it's possible to run a Ruby on Rails project without a database, but that takes a lot of configuration and you're definitely swimming upstream. Just give Rails what it wants, and install [MySQL](https://www.mysql.com/).
 
-This book uses MySQL 5.6, and you can download and install it by following the [MySQL Installation Instructions](https://dev.mysql.com/doc/refman/5.6/en/installing.html).
+This book uses MySQL 5.6, and you can download and install it on your operating system by following the [MySQL Installation Instructions](https://dev.mysql.com/doc/refman/5.6/en/installing.html).
 
-Or if you're on a Mac, you can use Hombrew as follows:
+Or if you're on a Mac, you have a simpler installation procedure. You can use [Homebrew](http://brew.sh/) as follows:
 
 ```
 brew install mysql
