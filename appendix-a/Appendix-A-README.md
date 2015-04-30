@@ -26,12 +26,17 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Rails on Windows](#rails-on-windows)
 - [Installing MySQL](#installing-mysql)
 - [Installing The Java Environment](#installing-the-java-environment)
-    - [Installing Core Java](#installing-core-java)
+    - [Installing Java SE](#installing-java-se)
+        - [Java Setup on Windows](#java-setup-on-windows)
+        - [Java Setup on Mac OS X, Linux, Solaris](#java-setup-on-mac-os-x-linux-solaris)
     - [Installing Maven](#installing-maven)
     - [Installing Spring](#installing-spring)
     - [Installing Apache Tomcat](#installing-apache-tomcat)
 - [Installing `jq`](#installing-jq)
     - [Installing `cURL`](#installing-curl)
+        - [Installing `cURL` on Windows](#installing-curl-on-windows)
+        - [Installing `cURL` on Linux](#installing-curl-on-linux)
+        - [Installing `cURL` on Mac OS X](#installing-curl-on-mac-os-x)
 - [References](#references)
 
 ## Installing JSON Tools in the Browser
@@ -297,20 +302,40 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 ## Installing The Java Environment
 Our Java environment depends on:
 
-* [Core Java](#installing-core-java)
+* [Java SE](#installing-java-se)
 * [Maven](#installing-maven)
 * [Spring](#installing-spring)
 * [Apache Tomcat](#installing-apache-tomcat)
 
-### Installing Core Java
-FIXME: Add doc from Oracle.
+### Installing Java SE
+We're using Java SE (Standard Edition) 7 for this book, so please visit the [Oracle Java SE 7 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+
+You'll also see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment.
+
+#### Java Setup on Windows
+Setup `%JAVA_HOME%`. FIXME.
+
+#### Java Setup on Mac OS X, Linux, Solaris
+Setup `$JAVA_HOME`. FIXME.
 
 ### Installing Maven
+FIXME.
+http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+http://maven.apache.org/download.cgi#Installation
 
 ### Installing Spring
+FIXME.
+https://spring.io/guides/gs/maven/
+http://www.mkyong.com/spring/quick-start-maven-spring-example/
+http://spring.io/blog/2011/01/17/green-beans-getting-started-with-maven-and-spring/
 
 ### Installing Apache Tomcat
+FIXME.
+Windows - https://tomcat.apache.org/tomcat-8.0-doc/setup.html (see Windows instructions)
+Mac OS X - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
+               http://wolfpaulus.com/jounal/mac/tomcat8/
 
+Linux - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
 
 ## Installing `jq`
 [`jq`](http://stedolan.github.io/jq/) provides JSON-based command-line processing.
