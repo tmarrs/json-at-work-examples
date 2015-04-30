@@ -25,7 +25,8 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Installing with RVM + the `rails` Gem](#installing-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
 - [Installing MySQL](#installing-mysql)
-- [Installing Java](#installing-java)
+- [Installing The Java Environment](#installing-the-java-environment)
+    - [Installing Core Java](#installing-core-java)
     - [Installing Maven](#installing-maven)
     - [Installing Spring](#installing-spring)
     - [Installing Apache Tomcat](#installing-apache-tomcat)
@@ -293,20 +294,20 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 * [Joe Fallon's blog](http://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/)
 
 
-## Installing Core Java
+## Installing The Java Environment
 Our Java environment depends on:
 
-* The Core Java Language
+* [Core Java](#installing-core-java)
 * [Maven](#installing-maven)
 * [Spring](#installing-spring)
+* [Apache Tomcat](#installing-apache-tomcat)
 
+### Installing Core Java
 FIXME: Add doc from Oracle.
 
 ### Installing Maven
 
-
 ### Installing Spring
-
 
 ### Installing Apache Tomcat
 
