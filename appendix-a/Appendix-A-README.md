@@ -379,7 +379,7 @@ curl --version
 ```
 
 If it's already there, then there's nothing else to do. Otherwise, you'll need to install it.
-I use [Homebrew](http://brew.sh/) as my package installer on Mac OS X. Use the following command to install `cURL`: on a Mac:
+I use [Homebrew](http://brew.sh/) as my package installer on Mac OS X, so use the following command to install `cURL` on a Mac:
 ```
 brew install curl
 ```
