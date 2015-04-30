@@ -29,6 +29,8 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Installing Maven](#installing-maven)
     - [Installing Spring](#installing-spring)
     - [Installing Apache Tomcat](#installing-apache-tomcat)
+- [Installing `jq`](#installing-jq)
+    - [Installing `curl`](#installing-curl)
 - [References](#references)
 
 ## Installing JSON Tools in the Browser
@@ -291,8 +293,14 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 * [Joe Fallon's blog](http://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/)
 
 
-## Installing Java
+## Installing Core Java
+Our Java environment depends on:
 
+* The Core Java Language
+* [Maven](#installing-maven)
+* [Spring](#installing-spring)
+
+FIXME: Add doc from Oracle.
 
 ### Installing Maven
 
@@ -301,6 +309,12 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 
 
 ### Installing Apache Tomcat
+
+
+## Installing `jq`
+`jq` depends on [`curl`](#installing-curl)
+
+### Installing `curl`
 
 
 ## References
