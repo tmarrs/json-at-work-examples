@@ -274,7 +274,7 @@ You can easily upgrade to new versions of Ruby and Rails by:
 * Then install the `rails` as shown above.
 
 ### Rails on Windows
-Rails is difficult to setup on Windows. Try the [Rails Installer[Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
+Rails is difficult to setup on Windows. Try the [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
 
 ## Installing MySQL
