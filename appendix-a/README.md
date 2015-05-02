@@ -361,14 +361,14 @@ The Java Windows Installer usually puts the JDK in one of the following director
 * `C:\Program Files (x86)\Java`
 
 Then, do the following:
-* Right-click the My Computer icon on your desktop and select Properties.
-* Click the Advanced tab.
-* Click the Environment Variables button.
-* Under System Variables, click New.
-* Enter the variable name as JAVA_HOME.
+* Right-click the `My Computer` icon on your desktop and select `Properties`.
+* Click the `Advanced` tab.
+* Click the `Environment Variables` button.
+* Under `System Variables`, click `New.``
+* Enter the variable name as `JAVA_HOME`.
 * Enter the variable value as the installation path for the Java Development Kit (see where the installer put the JDK directory).
-* Click OK.
-* Click Apply Changes.
+* Click `OK`.
+* Click `Apply Changes`.
 
 Credit for the Java setup on Windows goes to [Robert Sindall](http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/).
 
@@ -468,7 +468,7 @@ Credit for the Tomcat/Linux install instructions goes to [Nenyang Technical Univ
 #### Installing Apache Tomcat on Windows
 * Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a zip file.
 * Unzip the file.
-* Add CATALINA_HOME as a System Variable (see the [Java Setup on Windows](#java-setup-on-windows) for an example for an example of how to set a Windows System Variable).
+* Add `CATALINA_HOME` as a System Variable (see the [Java Setup on Windows](#java-setup-on-windows) for an example for an example of how to set a Windows System Variable).
 
 Start Tomcat as follows:
 * `cd %CATALINA_HOME%\bin`
