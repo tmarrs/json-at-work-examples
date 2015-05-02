@@ -282,7 +282,7 @@ You can easily upgrade to new versions of Ruby and Rails by:
 * Then install the `rails` as shown above.
 
 ### Rails on Windows
-Rails is difficult to setup on Windows. Try the [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
+Ruby on Rails is difficult to setup on Windows. Try the [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
 
 ## Installing MySQL
@@ -317,7 +317,14 @@ Our Java environment depends on:
 ### Installing Java SE
 We're using Java SE (Standard Edition) 7 for this book, so please visit the [Oracle Java SE 7 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 
-You'll also see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your aperating system.
+You'll also see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your operating system.
+
+Follow the instructions below for you system. Then run `java -version`, and you should see something similar to this:
+```
+java version "1.7.0_40"
+Java(TM) SE Runtime Environment (build 1.7.0_40-b43)
+Java HotSpot(TM) 64-Bit Server VM (build 24.0-b56, mixed mode)
+```
 
 #### Java Setup on Mac OS X
 In `.bashrc`, do the following:
@@ -363,9 +370,19 @@ Then, do the following:
 Credit for the Java setup on Windows goes to [Robert Sindall](http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/).
 
 ### Installing Maven
-FIXME.
-http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
-http://maven.apache.org/download.cgi#Installation
+* Visit the [Maven Download page](http://maven.apache.org/download.cgi) to download a Maven zip or tar file.
+* Follow the [Maven Installation Instructions](http://maven.apache.org/download.cgi#Installation) for your system.
+* Run `mvn --version`, and you should see something like this:
+```
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 09:22:22-0600)
+Maven home: /Users/tmarrs/apache-maven-3.1.1
+Java version: 1.7.0_40, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "10.10.3", arch: "x86_64", family: "mac"
+```
+
+For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
 ### Installing Spring
 FIXME.
