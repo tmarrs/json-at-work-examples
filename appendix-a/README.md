@@ -347,7 +347,7 @@ export JAVA_HOME=/usr/java/jdk1.x.y/bin/java # x and y are the minor and patch v
 
 ...
 
-export PATH=...:${JAVA_HOME}/bin:... # JAVA_HOME to your PATH
+export PATH=...:${JAVA_HOME}/bin:... # Add JAVA_HOME to your PATH
 ```
 
 Credit for Java setup on Linux goes to [nixCraft](http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/). 
@@ -391,17 +391,49 @@ http://www.mkyong.com/spring/quick-start-maven-spring-example/
 http://spring.io/blog/2011/01/17/green-beans-getting-started-with-maven-and-spring/
 
 ### Installing Apache Tomcat
-FIXME.
+We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.html) to run our Spring-based Java application.
 
 #### Installing Apache Tomcat on Mac OS X
-Mac OS X - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
-               http://wolfpaulus.com/jounal/mac/tomcat8/
-               
+Homebrew is the simplest way to install Tomcat on Mac OS X. Just do `brew install tomcat` from the command line. This gives you the latest version by default.
+
+Start Tomcat by typing `catalina start`, and then visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. Type `catalina stop` to shut down Tomcat.
+
+The Mac Homebrew install instructions were inspired by the [`{{discovery_collection}} blog`](http://blog.bolshchikov.net/post/50277857673/installing-tomcat-on-macos-with-homebrew). You can follow the additional steps listed there to further confgure your application directory structure.
+
+For further reference, please see:
+* http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
+* http://wolfpaulus.com/jounal/mac/tomcat8/
+             
 #### Installing Apache Tomcat on Linux
-Linux - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
+* Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a tar file.
+* Untar the tar file.
+* Add CATALINA_HOME to `.bashrc`:
+```
+export CATALINA_HOME=/usr/local/tomcat/apache-tomcat-8.0.{xx}/bin
+
+export PATH=...:${CATALINA_HOME}/bin:... # Add CATALINA_HOME to your PATH
+```
+
+Start Tomcat as follows:
+* `cd $CATALINA_HOME\bin`
+* Type `startup.sh` to start Tomcat.
+* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. 
+* Type `shutdown.sh` to shut down Tomcat.
+
+Credit for the Tomcat/Linux install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
 
 #### Installing Apache Tomcat on Windows
-Windows - https://tomcat.apache.org/tomcat-8.0-doc/setup.html (see Windows instructions)
+* Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a zip file.
+* Unzip the file.
+* Add CATALINA_HOME as a System Variable (see the [Java Setup on Windows](#java-setup-on-windows) for an example for an example of how to set a Windows System Variable).
+
+Start Tomcat as follows:
+* `cd %CATALINA_HOME%\bin`
+* Type `startup.bat` to start Tomcat.
+* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. 
+* Type `shutdown.bat` to shut down Tomcat.
+
+Credit for the Tomcat/Windows install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
 
 
 ## Installing `jq`
