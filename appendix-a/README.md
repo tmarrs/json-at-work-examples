@@ -350,6 +350,8 @@ export JAVA_HOME=/usr/java/jdk1.x.y/bin/java # x and y are the minor and patch v
 export PATH=...:${JAVA_HOME}/bin:... # Add JAVA_HOME to your PATH
 ```
 
+Then, refresh your environment: `source ~/.bashrc`
+
 Credit for Java setup on Linux goes to [nixCraft](http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/). 
 
 #### Java Setup on Windows
@@ -407,12 +409,13 @@ For further reference, please see:
 #### Installing Apache Tomcat on Linux
 * Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a tar file.
 * Untar the tar file.
-* Add CATALINA_HOME to `.bashrc`:
+* Add `CATALINA_HOME` to `.bashrc`:
 ```
 export CATALINA_HOME=/usr/local/tomcat/apache-tomcat-8.0.{xx}/bin
 
 export PATH=...:${CATALINA_HOME}/bin:... # Add CATALINA_HOME to your PATH
 ```
+* `source ~/.bashrc`
 
 Start Tomcat as follows:
 * `cd $CATALINA_HOME\bin`
