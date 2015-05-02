@@ -39,12 +39,14 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Installing `cURL` on Mac OS X](#installing-curl-on-mac-os-x)
 - [References](#references)
 
+
 ## Installing JSON Tools in the Browser
 ### Installing JSONView in Chrome and Firefox
 Please follow the installation instructions on the [JSONView site](http://jsonview.com/) for your browser.
 
 ### JSONLint
 Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
+
 
 ## Installing JSONPad
 You can download JSONPad from the [JSONPad Downloads page](https://code.google.com/p/json-pad/downloads/list).
@@ -71,7 +73,6 @@ json-at-work => node
 > .exit
 json-at-work =>
 ```
-
 
 ### Install Node.js on Mac OS X and Linux with NVM
 Now that Node.js is completely uninstalled, let's do a fresh instllation. Although you could use the installation package from the [Node.js site](https://nodejs.org/), it's difficult to change versions. Instead, let's use [NVM (Node Version Manager)](https://github.com/creationix/nvm). NVM makes it easy to install/uninstall Node.js, and upgrade to newer versions.
@@ -182,7 +183,6 @@ If NVM doesn't work for your Windows environment, then try one of the following 
 * Please follow [Team Treehouse's instructions for installing Node on Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
 * Use [Nitrous.io](https://www.nitrous.io/) to run your Node.js environment in the Cloud rather than on Windows. Please note that Nitrous.io has both free and commercial usage plans.
 
-
 ### Uninstalling Node.js
 If you have a previous installation of Node.js that isn't quite working properly anymore, you may need to completely uninstall it from your machine. This includes both the `node` and `npm` executables.
 
@@ -228,6 +228,7 @@ Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
 
 ## Installing the `webapp` Yeoman Generator
 Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp). Please follow the default installation so that the test environment includes both [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
+
 
 ## Installing Ruby on Rails (RoR)
 There are several ways to install Ruby on Rails:
@@ -301,7 +302,6 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 
 ## Installing The Java Environment
 Our Java environment depends on:
-
 * [Java SE](#installing-java-se)
 * [Maven](#installing-maven)
 * [Spring](#installing-spring)
@@ -336,6 +336,7 @@ Mac OS X - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.
                http://wolfpaulus.com/jounal/mac/tomcat8/
 
 Linux - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
+
 
 ## Installing `jq`
 [`jq`](http://stedolan.github.io/jq/) provides JSON-based command-line processing.
