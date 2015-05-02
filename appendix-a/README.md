@@ -3,13 +3,14 @@ Installation Guide
 Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work/blob/master/README.md).
 
 ## Contents
+- [Contents](#contents)
 - [Installing JSON Tools in the Browser](#installing-json-tools-in-the-browser)
     - [Installing JSONView in Chrome and Firefox](#installing-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
 - [Installing JSONPad](#installing-jsonpad)
 - [Installing Node.js](#installing-nodejs)
     - [Install Node.js on Mac OS X and Linux with NVM](#install-nodejs-on-mac-os-x-and-linux-with-nvm)
-        - [Install and Confgiure NVM](#install-and-confgiure-nvm)
+        - [Install and Configure NVM](#install-and-configure-nvm)
         - [Install Node](#install-node)
         - [Avoiding `sudo` with npm](#avoiding-sudo-with-npm)
         - [Avoiding `sudo` with npm - Option 2](#avoiding-sudo-with-npm---option-2)
@@ -17,8 +18,8 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Install Node.js on Windows](#install-nodejs-on-windows)
     - [Uninstalling Node.js](#uninstalling-nodejs)
         - [Uninstalling Node.js on Mac OS X](#uninstalling-nodejs-on-mac-os-x)
-        - [Uninstalling Node.js on Windows](#uninstalling-nodejs-on-windows)
         - [Uninstalling Node.js on Linux](#uninstalling-nodejs-on-linux)
+        - [Uninstalling Node.js on Windows](#uninstalling-nodejs-on-windows)
 - [Installing Yeoman](#installing-yeoman)
 - [Installing the `webapp` Yeoman Generator](#installing-the-webapp-yeoman-generator)
 - [Installing Ruby on Rails (RoR)](#installing-ruby-on-rails-ror)
@@ -27,16 +28,20 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
 - [Installing MySQL](#installing-mysql)
 - [Installing The Java Environment](#installing-the-java-environment)
     - [Installing Java SE](#installing-java-se)
+        - [Java Setup on Mac OS X](#java-setup-on-mac-os-x)
+        - [Java Setup on Linux](#java-setup-on-linux)
         - [Java Setup on Windows](#java-setup-on-windows)
-        - [Java Setup on Mac OS X, Linux, Solaris](#java-setup-on-mac-os-x-linux-solaris)
     - [Installing Maven](#installing-maven)
     - [Installing Spring](#installing-spring)
     - [Installing Apache Tomcat](#installing-apache-tomcat)
+        - [Installing Apache Tomcat on Mac OS X](#installing-apache-tomcat-on-mac-os-x)
+        - [Installing Apache Tomcat on Linux](#installing-apache-tomcat-on-linux)
+        - [Installing Apache Tomcat on Windows](#installing-apache-tomcat-on-windows)
 - [Installing `jq`](#installing-jq)
     - [Installing `cURL`](#installing-curl)
-        - [Installing `cURL` on Windows](#installing-curl-on-windows)
-        - [Installing `cURL` on Linux](#installing-curl-on-linux)
         - [Installing `cURL` on Mac OS X](#installing-curl-on-mac-os-x)
+        - [Installing `cURL` on Linux](#installing-curl-on-linux)
+        - [Installing `cURL` on Windows](#installing-curl-on-windows)
 - [References](#references)
 
 
@@ -77,7 +82,7 @@ json-at-work =>
 ### Install Node.js on Mac OS X and Linux with NVM
 Now that Node.js is completely uninstalled, let's do a fresh instllation. Although you could use the installation package from the [Node.js site](https://nodejs.org/), it's difficult to change versions. Instead, let's use [NVM (Node Version Manager)](https://github.com/creationix/nvm). NVM makes it easy to install/uninstall Node.js, and upgrade to newer versions.
 
-#### Install and Confgiure NVM
+#### Install and Configure NVM
 First, install NVM by using one of the following methods:
 * [Install Script](https://github.com/creationix/nvm#install-script)
 * [Manual Install](https://github.com/creationix/nvm#manual-install)
@@ -202,13 +207,6 @@ rm -rf /usr/local/lib/dtrace/node.d
 rm -rf $USER/.npm
 ```
 
-#### Uninstalling Node.js on Windows
-Credit for the Windows uninstall instructions goes to [Team Treehouse](http://blog.teamtreehouse.com/install-node-js-npm-windows). Here are the steps:
-* Open the Windows Control Panel.
-* Choose “Programs and Features”.
-* Click “Uninstall a program”.
-* Select Node.js, and click the Uninstall link.
-
 #### Uninstalling Node.js on Linux
 Credit for the Linux uninstall instructions goes to [Stack Overflow](http://stackoverflow.com/questions/5650169/uninstall-node-js-using-linux-command-line) and [GitHub](https://github.com/joyent/node/issues/4058).
 Do the following:
@@ -222,6 +220,14 @@ sudo rm -rf lib/node_modules/npm
 sudo rm -rf lib/node
 sudo rm -rf share/man/*/node.*
 ```
+
+#### Uninstalling Node.js on Windows
+Credit for the Windows uninstall instructions goes to [Team Treehouse](http://blog.teamtreehouse.com/install-node-js-npm-windows). Here are the steps:
+* Open the Windows Control Panel.
+* Choose “Programs and Features”.
+* Click “Uninstall a program”.
+* Select Node.js, and click the Uninstall link.
+
 
 ## Installing Yeoman
 Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
@@ -238,7 +244,8 @@ There are several ways to install Ruby on Rails:
 * [+rbenv+](https://github.com/sstephenson/rbenv) + the `rails` gem
 
 ### Installing with RVM + the `rails` Gem
-I prefer RVM because it's easy to upgrade to switch between Ruby versions.
+I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux. If this doesn't work on Windows, try [Rails on Windows](#rails-on -windows).
+
 Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
 
 Use RVM to install Ruby as follows:
@@ -310,13 +317,50 @@ Our Java environment depends on:
 ### Installing Java SE
 We're using Java SE (Standard Edition) 7 for this book, so please visit the [Oracle Java SE 7 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 
-You'll also see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment.
+You'll also see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your aperating system.
+
+#### Java Setup on Mac OS X
+In `.bashrc`, do the following:
+```
+...
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.x.y.jdk/Contents/Home # x and y are the minor and patch versions
+
+...
+
+export PATH=...:${JAVA_HOME}/bin:... # JAVA_HOME to your PATH
+```
+
+#### Java Setup on Linux
+In `.bashrc`, do the following:
+```
+...
+
+export JAVA_HOME=/usr/java/jdk1.x.y/bin/java # x and y are the minor and patch versions
+
+...
+
+export PATH=...:${JAVA_HOME}/bin:... # JAVA_HOME to your PATH
+```
+
+Credit for Java setup on Linux goes to [nixCraft](http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/). 
 
 #### Java Setup on Windows
-Setup `%JAVA_HOME%`. FIXME.
+The Java Windows Installer usually puts the JDK in one of the following directories:
+* `C:\Program Files\Java`
+* `C:\Program Files (x86)\Java`
 
-#### Java Setup on Mac OS X, Linux, Solaris
-Setup `$JAVA_HOME`. FIXME.
+Then, do the following:
+* Right-click the My Computer icon on your desktop and select Properties.
+* Click the Advanced tab.
+* Click the Environment Variables button.
+* Under System Variables, click New.
+* Enter the variable name as JAVA_HOME.
+* Enter the variable value as the installation path for the Java Development Kit (see where the installer put the JDK directory).
+* Click OK.
+* Click Apply Changes.
+
+Credit for the Java setup on Windows goes to [Robert Sindall](http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/).
 
 ### Installing Maven
 FIXME.
@@ -331,11 +375,16 @@ http://spring.io/blog/2011/01/17/green-beans-getting-started-with-maven-and-spri
 
 ### Installing Apache Tomcat
 FIXME.
-Windows - https://tomcat.apache.org/tomcat-8.0-doc/setup.html (see Windows instructions)
+
+#### Installing Apache Tomcat on Mac OS X
 Mac OS X - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
                http://wolfpaulus.com/jounal/mac/tomcat8/
-
+               
+#### Installing Apache Tomcat on Linux
 Linux - see http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
+
+#### Installing Apache Tomcat on Windows
+Windows - https://tomcat.apache.org/tomcat-8.0-doc/setup.html (see Windows instructions)
 
 
 ## Installing `jq`
@@ -347,15 +396,18 @@ To install it, just follow the [Download instructions on the `cURL`] site(http:/
 ### Installing `cURL`
 [`cURL`](http://curl.haxx.se/) provides the ability to communicate over multiple protocols, including HTTP. We use this to make HTTP calls to RESTful APIs from the command line. 
 
-#### Installing `cURL` on Windows
-To install `cURL` on Windows, do the following:
-* Visit the [`cURL` Download Wizard](http://curl.haxx.se/dlwiz/)
-* Select the type of package: __curl executable__
-* Select the Operating System: either Windows / Win32 or Win64
-* Select the Flavor - either `Cygwin` (if you use [Cygwin](https://www.cygwin.com/)) or `Generic` (if you don't use [Cygwin](https://www.cygwin.com/))
-* Select the Win32 Version (only if you selected Windows / Win32 above): __Unspecified__
+#### Installing `cURL` on Mac OS X
+Just like with Linux, `cURL` may already be installed on your Mac. Check it as follows: 
 
-Credit for the `cURL` Windows install instructions goes to [Stack Overflow](http://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-a-windows).
+```
+curl --version
+```
+
+If it's already there, then there's nothing else to do. Otherwise, you'll need to install it.
+I use [Homebrew](http://brew.sh/) as my package installer on Mac OS X, so use the following command to install `cURL` on a Mac:
+```
+brew install curl
+```
 
 #### Installing `cURL` on Linux
 Check if `cURL` is already installed by entering the following command:
@@ -372,18 +424,16 @@ sudo apt-get install curl
 
 This should work on Ubuntu or Debian.
 
-#### Installing `cURL` on Mac OS X
-Just like with Linux, `cURL` may already be installed on your Mac. Check it as follows: 
+#### Installing `cURL` on Windows
+To install `cURL` on Windows, do the following:
+* Visit the [`cURL` Download Wizard](http://curl.haxx.se/dlwiz/)
+* Select the type of package: __curl executable__
+* Select the Operating System: either Windows / Win32 or Win64
+* Select the Flavor - either `Cygwin` (if you use [Cygwin](https://www.cygwin.com/)) or `Generic` (if you don't use [Cygwin](https://www.cygwin.com/))
+* Select the Win32 Version (only if you selected Windows / Win32 above): __Unspecified__
 
-```
-curl --version
-```
+Credit for the `cURL` Windows install instructions goes to [Stack Overflow](http://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-a-windows).
 
-If it's already there, then there's nothing else to do. Otherwise, you'll need to install it.
-I use [Homebrew](http://brew.sh/) as my package installer on Mac OS X, so use the following command to install `cURL` on a Mac:
-```
-brew install curl
-```
 
 ## References
 TOC generated by NPM [md-toc](https://www.npmjs.com/package/md-toc).
