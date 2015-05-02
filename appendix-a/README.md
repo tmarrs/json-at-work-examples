@@ -3,7 +3,6 @@ Installation Guide
 Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work/blob/master/README.md).
 
 ## Contents
-- [Contents](#contents)
 - [Installing JSON Tools in the Browser](#installing-json-tools-in-the-browser)
     - [Installing JSONView in Chrome and Firefox](#installing-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
@@ -32,7 +31,8 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Java Setup on Linux](#java-setup-on-linux)
         - [Java Setup on Windows](#java-setup-on-windows)
     - [Installing Maven](#installing-maven)
-    - [Installing Spring](#installing-spring)
+        - [Installing Spring - Add to the POM](#installing-spring---add-to-the-pom)
+        - [Installing JUnit - Add to the POM](#installing-junit---add-to-the-pom)
     - [Installing Apache Tomcat](#installing-apache-tomcat)
         - [Installing Apache Tomcat on Mac OS X](#installing-apache-tomcat-on-mac-os-x)
         - [Installing Apache Tomcat on Linux](#installing-apache-tomcat-on-linux)
@@ -311,7 +311,8 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 Our Java environment depends on:
 * [Java SE](#installing-java-se)
 * [Maven](#installing-maven)
-* [Spring](#installing-spring)
+  * [Spring](#installing-spring---add-to-the-pom)
+  * [JUnit](#installing-junit---add-to-the-pom)
 * [Apache Tomcat](#installing-apache-tomcat)
 
 ### Installing Java SE
@@ -372,6 +373,7 @@ Then, do the following:
 Credit for the Java setup on Windows goes to [Robert Sindall](http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/).
 
 ### Installing Maven
+* Be sure to install [Java SE](#installing-java-se) first.
 * Visit the [Maven Download page](http://maven.apache.org/download.cgi) to download a Maven zip or tar file.
 * Follow the [Maven Installation Instructions](http://maven.apache.org/download.cgi#Installation) for your system.
 * Run `mvn --version`, and you should see something like this:
@@ -386,17 +388,55 @@ OS name: "mac os x", version: "10.10.3", arch: "x86_64", family: "mac"
 
 For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
-### Installing Spring
-FIXME.
-https://spring.io/guides/gs/maven/
-http://www.mkyong.com/spring/quick-start-maven-spring-example/
-http://spring.io/blog/2011/01/17/green-beans-getting-started-with-maven-and-spring/
+#### Installing Spring - Add to the POM
+[Spring](https://spring.io/) isn't a separate install - just add it to the Maven POM:
+
+```
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-context</artifactId>
+  <version>4.1.6.RELEASE</version>
+  <scope>runtime</scope>
+  <exclusions>
+    <exclusion>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+    </exclusion>
+  </exclusions>
+</dependency>
+```
+
+We've turned off Apache Commons Logging so we can add SLF4J and LogBack.
+
+```
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>jcl-over-slf4j</artifactId>
+  <version>1.6.3</version>
+</dependency>
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-api</artifactId>
+  <version>1.6.3</version>
+</dependency>
+```
+
+#### Installing JUnit - Add to the POM
+[JUnit](http://junit.org/) isn't a separate install - just add it to the Maven POM:
+
+```
+<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<version>4.12</version>
+</dependency>
+```
 
 ### Installing Apache Tomcat
-We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.html) to run our Spring-based Java application.
+We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.html) to run our Spring-based Java application. Be sure to install [Java SE](#installing-java-se) before installing Tomcat.
 
 #### Installing Apache Tomcat on Mac OS X
-Homebrew is the simplest way to install Tomcat on Mac OS X. Just do `brew install tomcat` from the command line. This gives you the latest version by default.
+[Homebrew](http://brew.sh/) is the simplest way to install Tomcat on Mac OS X. Just do `brew install tomcat` from the command line. This gives you the latest version by default.
 
 Start Tomcat by typing `catalina start`, and then visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. Type `catalina stop` to shut down Tomcat.
 
