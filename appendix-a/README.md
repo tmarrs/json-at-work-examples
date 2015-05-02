@@ -316,9 +316,9 @@ Our Java environment depends on:
 * [Apache Tomcat](#installing-apache-tomcat)
 
 ### Installing Java SE
-We're using Java SE (Standard Edition) 7 for this book, so please visit the [Oracle Java SE 7 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+We're using Java SE (Standard Edition) 7 for this book, so please visit the [Oracle Java SE 7 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
 
-You'll also see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your operating system.
+You'll see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your operating system.
 
 Follow the instructions below for you system. Then run `java -version`, and you should see something similar to this:
 ```
@@ -389,7 +389,7 @@ OS name: "mac os x", version: "10.10.3", arch: "x86_64", family: "mac"
 For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
 #### Installing Spring - Add to the POM
-[Spring](https://spring.io/) isn't a separate install - just add it to the Maven POM:
+[Spring](https://spring.io/) isn't a separate install - just add it to the [Maven POM (Project Object Model)](https://maven.apache.org/pom.html):
 
 ```
 <dependency>
@@ -406,7 +406,7 @@ For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/g
 </dependency>
 ```
 
-We've turned off Apache Commons Logging so we can add SLF4J and LogBack.
+We've turned off Apache Commons Logging so we can add SLF4J and LogBack to the POM.
 
 ```
 <dependency>
@@ -422,7 +422,7 @@ We've turned off Apache Commons Logging so we can add SLF4J and LogBack.
 ```
 
 #### Installing JUnit - Add to the POM
-[JUnit](http://junit.org/) isn't a separate install - just add it to the Maven POM:
+[JUnit](http://junit.org/) isn't a separate install - just add it to the [Maven POM (Project Object Model)](https://maven.apache.org/pom.html):
 
 ```
 <dependency>
