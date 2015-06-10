@@ -21,6 +21,10 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Uninstalling Node.js on Windows](#uninstalling-nodejs-on-windows)
     - [Installing Yeoman](#installing-yeoman)
         - [Installing the `webapp` Yeoman Generator](#installing-the-webapp-yeoman-generator)
+    - [Installing npm Modules](#installing-npm-modules)
+        - [Install `jsonlint`](#install-jsonlint)
+        - [Install `ujs-validate`](#install-ujs-validate)
+        - [Install `json-server`](#install-json-server)
 - [Installing Ruby on Rails (RoR)](#installing-ruby-on-rails-ror)
     - [Installing with RVM + the `rails` Gem](#installing-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
@@ -229,19 +233,19 @@ Credit for the Windows uninstall instructions goes to [Team Treehouse](http://bl
 * Select Node.js, and click the Uninstall link.
 
 
-#### Installing Yeoman
+### Installing Yeoman
 Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
 
-##### Installing the `webapp` Yeoman Generator
+#### Installing the `webapp` Yeoman Generator
 Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp). Please follow the default installation so that the test environment includes both [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
 
-#### Installing npm Modules
+### Installing npm Modules
 We use the following npm modules at the command line, so we install them globally:
 * [jsonlint](#nstalling-jsonlint)
 * [ujs-validate](#nstalling-ujs-validate)
 * [json-server](#installing-json-server)
 
-##### Installing `jsonlint`
+#### Install `jsonlint`
 This is the npm equivalent of the [JSONLint site](http://ww.jsonlint.com) used to validate a JSON document. Here's the [`jsonlint` GitHub Repository](https://github.com/zaach/jsonlint).
 
 To install:
@@ -254,7 +258,7 @@ To validate a JSON document:
 jsonlint basic.json
 ```
 
-##### Installing `ujs-validate`
+#### Install `ujs-validate`
 This is the npm equivalent of the [Validate site](http://jsonvalidate.com/) used to valid a JSON document against a JSON Schema. Here's the [`ujs-validate` GitHub Repository](https://github.com/usingjsonschema/ujs-jsonvalidate-nodejs).
 
 To install:
@@ -267,7 +271,7 @@ To validate a JSON document:
 validate basic.json basic-schema.json
 ```
 
-##### Installing `json-server`
+#### Install `json-server`
 `json-server` is a stub REST server that takes a JSON file and exposes it as a RESTful service. Here's the [`json-server` GitHub Repository](https://github.com/typicode/json-server).
 
 To install:
