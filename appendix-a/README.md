@@ -235,6 +235,50 @@ Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
 ##### Installing the `webapp` Yeoman Generator
 Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp). Please follow the default installation so that the test environment includes both [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
 
+#### Installing npm Modules
+We use the following npm modules at the command line, so we install them globally:
+* [jsonlint](#nstalling-jsonlint)
+* [ujs-validate](#nstalling-ujs-validate)
+* [json-server](#installing-json-server)
+
+##### Installing `jsonlint`
+This is the npm equivalent of the [JSONLint site](http://ww.jsonlint.com) used to validate a JSON document. Here's the [`jsonlint` GitHub Repository](https://github.com/zaach/jsonlint).
+
+To install:
+```
+npm install -g jsonlint
+```
+
+To validate a JSON document:
+```
+jsonlint basic.json
+```
+
+##### Installing `ujs-validate`
+This is the npm equivalent of the [Validate site](http://jsonvalidate.com/) used to valid a JSON document against a JSON Schema. Here's the [`ujs-validate` GitHub Repository](https://github.com/usingjsonschema/ujs-jsonvalidate-nodejs).
+
+To install:
+```
+npm install -g ujs-jsonvalidate
+```
+
+To validate a JSON document:
+```
+validate basic.json basic-schema.json
+```
+
+##### Installing `json-server`
+`json-server` is a stub REST server that takes a JSON file and exposes it as a RESTful service. Here's the [`json-server` GitHub Repository](https://github.com/typicode/json-server).
+
+To install:
+```
+npm install -g json-server
+```
+
+Run:
+```
+json-server ./speakers.json
+```
 
 ## Installing Ruby on Rails (RoR)
 There are several ways to install Ruby on Rails:
@@ -353,7 +397,7 @@ export PATH=...:${JAVA_HOME}/bin:... # Add JAVA_HOME to your PATH
 
 Then, refresh your environment: `source ~/.bashrc`
 
-Credit for Java setup on Linux goes to [nixCraft](http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/). 
+Credit for Java setup on Linux goes to [nixCraft](http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/).
 
 #### Java Setup on Windows
 The Java Windows Installer usually puts the JDK in one of the following directories:
@@ -445,7 +489,7 @@ The Mac Homebrew install instructions were inspired by the [`{{discovery_collect
 For further reference, please see:
 * http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
 * http://wolfpaulus.com/jounal/mac/tomcat8/
-             
+
 #### Installing Apache Tomcat on Linux
 * Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a tar file.
 * Untar the tar file.
@@ -460,7 +504,7 @@ export PATH=...:${CATALINA_HOME}/bin:... # Add CATALINA_HOME to your PATH
 Start Tomcat as follows:
 * `cd $CATALINA_HOME\bin`
 * Type `startup.sh` to start Tomcat.
-* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. 
+* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page.
 * Type `shutdown.sh` to shut down Tomcat.
 
 Credit for the Tomcat/Linux install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
@@ -473,7 +517,7 @@ Credit for the Tomcat/Linux install instructions goes to [Nenyang Technical Univ
 Start Tomcat as follows:
 * `cd %CATALINA_HOME%\bin`
 * Type `startup.bat` to start Tomcat.
-* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. 
+* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page.
 * Type `shutdown.bat` to shut down Tomcat.
 
 Credit for the Tomcat/Windows install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
@@ -481,15 +525,15 @@ Credit for the Tomcat/Windows install instructions goes to [Nenyang Technical Un
 
 ## Installing `jq`
 [`jq`](http://stedolan.github.io/jq/) provides JSON-based command-line processing.
-To install it, just follow the [Download instructions on the `cURL`] site(http://stedolan.github.io/jq/download/). 
+To install it, just follow the [Download instructions on the `cURL`] site(http://stedolan.github.io/jq/download/).
 
 `jq` works with and depends on [`cURL`](#installing-curl)
 
 ### Installing `cURL`
-[`cURL`](http://curl.haxx.se/) provides the ability to communicate over multiple protocols, including HTTP. We use this to make HTTP calls to RESTful APIs from the command line. 
+[`cURL`](http://curl.haxx.se/) provides the ability to communicate over multiple protocols, including HTTP. We use this to make HTTP calls to RESTful APIs from the command line.
 
 #### Installing `cURL` on Mac OS X
-Just like with Linux, `cURL` may already be installed on your Mac. Check it as follows: 
+Just like with Linux, `cURL` may already be installed on your Mac. Check it as follows:
 
 ```
 curl --version
