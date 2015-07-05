@@ -242,9 +242,9 @@ Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/genera
 
 ### Installing npm Modules
 We use the following npm modules at the command line, so we install them globally:
-* [`jsonlint`](#nstall-jsonlint)
-* [`ujs-validate`](#nstall-ujs-validate)
-* [`tinyserver`](install-tinyserver)
+* [`jsonlint`](#install-jsonlint)
+* [`ujs-validate`](#install-ujs-validate)
+* [`tinyserver`](#install-tinyserver)
 * [`json-server`](#install-json-server)
 
 #### Install `jsonlint`
