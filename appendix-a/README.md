@@ -299,9 +299,14 @@ To install:
 npm install -g json-server
 ```
 
-Run:
+To run:
 ```
-json-server ./speakers.json
+json-server -p 5000 ./speakers.json
+```
+
+To access:
+```
+http://localhost:5000/speakers
 ```
 
 ## Installing Ruby on Rails (RoR)
