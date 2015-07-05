@@ -24,6 +24,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Installing npm Modules](#installing-npm-modules)
         - [Install `jsonlint`](#install-jsonlint)
         - [Install `ujs-validate`](#install-ujs-validate)
+        - [Install `tinyserver`](#install-tinyserver)
         - [Install `json-server`](#install-json-server)
 - [Installing Ruby on Rails (RoR)](#installing-ruby-on-rails-ror)
     - [Installing with RVM + the `rails` Gem](#installing-with-rvm--the-rails-gem)
@@ -241,9 +242,10 @@ Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/genera
 
 ### Installing npm Modules
 We use the following npm modules at the command line, so we install them globally:
-* [jsonlint](#nstalling-jsonlint)
-* [ujs-validate](#nstalling-ujs-validate)
-* [json-server](#installing-json-server)
+* [`jsonlint`](#nstall-jsonlint)
+* [`ujs-validate`](#nstall-ujs-validate)
+* [`tinyserver`](install-tinyserver)
+* [`json-server`](#install-json-server)
 
 #### Install `jsonlint`
 This is the npm equivalent of the [JSONLint site](http://ww.jsonlint.com) used to validate a JSON document. Here's the [`jsonlint` GitHub Repository](https://github.com/zaach/jsonlint).
@@ -269,6 +271,24 @@ npm install -g ujs-jsonvalidate
 To validate a JSON document:
 ```
 validate basic.json basic-schema.json
+```
+
+#### Install `tinyserver`
+`tinyserver` is a simple Web Server that serves up files (as web addressable) in the current directory structure on the local host system.
+
+To install:
+```
+npm install -g tinyserver
+```
+
+To run:
+```
+tinyserver 8081
+```
+
+To access:
+```
+http://localhost:8081
 ```
 
 #### Install `json-server`
