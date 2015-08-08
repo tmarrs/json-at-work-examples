@@ -23,7 +23,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Installing the `webapp` Yeoman Generator](#installing-the-webapp-yeoman-generator)
     - [Installing npm Modules](#installing-npm-modules)
         - [Install `jsonlint`](#install-jsonlint)
-        - [Install `ujs-validate`](#install-ujs-validate)
+        - [Install `ujs-jsonvalidate`](#install-ujs-jsonvalidate)
         - [Install `tinyserver`](#install-tinyserver)
         - [Install `json-server`](#install-json-server)
 - [Installing Ruby on Rails (RoR)](#installing-ruby-on-rails-ror)
@@ -243,7 +243,7 @@ Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/genera
 ### Installing npm Modules
 We use the following npm modules at the command line, so we install them globally:
 * [`jsonlint`](#install-jsonlint)
-* [`ujs-validate`](#install-ujs-validate)
+* [`ujs-jsonvalidate`](#install-ujs-jsonvalidate)
 * [`tinyserver`](#install-tinyserver)
 * [`json-server`](#install-json-server)
 
@@ -260,8 +260,8 @@ To validate a JSON document:
 jsonlint basic.json
 ```
 
-#### Install `ujs-validate`
-This is the npm equivalent of the [Validate site](http://jsonvalidate.com/) used to valid a JSON document against a JSON Schema. Here's the [`ujs-validate` GitHub Repository](https://github.com/usingjsonschema/ujs-jsonvalidate-nodejs).
+#### Install `ujs-jsonvalidate`
+This is the npm equivalent of the [JSON Validate site](http://jsonvalidate.com/) used to valid a JSON document against a JSON Schema. Here's the [`ujs-jsonvalidate` GitHub Repository](https://github.com/usingjsonschema/ujs-jsonvalidate-nodejs).
 
 To install:
 ```
