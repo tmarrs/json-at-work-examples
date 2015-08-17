@@ -1,0 +1,12 @@
+{
+  "speaker": {
+    "firstName": "Larson",
+    "lastName": " Richard",
+    "email": "larsonrichard@ecratic.com",
+    "postedSlides": true,
+    "rating": 4.1,
+    "tags": [
+      "JavaScript", "AngularJS", "Yeoman"
+    ]
+  }
+}
