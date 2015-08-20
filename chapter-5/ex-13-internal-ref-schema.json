@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"email": {
+			"$ref": "#/definitions/emailPattern"
+		},
+		"firstName": {
+			"type": "string"
+		},
+		"lastName": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false,
+	"required": ["email", "firstName", "lastName"],
+	"definitions": {
+		"emailPattern": {
+			"type": "string",
+			"pattern": "^[\\w|-]+@[\\w|-]+\\.[A-Za-z]{2,4}$"
+		}
+	}
+}
