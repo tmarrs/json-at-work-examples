@@ -24,8 +24,7 @@
           "type": "array",
           "items": {
             "type": "string"
-          },
-          "additionalItems": false
+          }
         }
       },
       "additionalProperties": false,

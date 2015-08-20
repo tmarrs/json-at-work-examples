@@ -7,7 +7,6 @@
 			"minItems": 2,
 			"maxItems": 4,
 			"items": {
-				"type": "string",
 				"enum": [
 					"Open Source", "Java", "JavaScript", "JSON", "REST"
 				]
