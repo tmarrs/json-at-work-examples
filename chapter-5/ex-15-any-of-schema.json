@@ -12,19 +12,18 @@
 		"lastName": {
 			"type": "string"
 		},
-		"tags": {
-			"type": "array",
-			"items": {
-				"type": "string"
-			}
+		"postedSlides": {
+			"anyOf": [{
+				"type": "boolean"
+			}, {
+				"type": "string",
+				"enum": ["yes", "Yes", "no", "No"]
+			}]
 		},
-		"favoriteTopic": {
-			"type": "string"
+		"rating": {
+			"type": "number"
 		}
 	},
 	"additionalProperties": false,
-	"required": ["email", "firstName", "lastName"],
-	"dependencies": {
-		"favoriteTopic": ["tags"]
-	}
+	"required": ["email", "firstName", "lastName", "postedSlides", "rating"]
 }
