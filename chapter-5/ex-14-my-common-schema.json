@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://localhost:8081/ex-14-my-common-schema.json",
+
+  "definitions": {
+    "emailPattern": {
+      "type": "string",
+      "pattern": "^[\\w|-]+@[\\w|-]+\\.[A-Za-z]{2,4}$"
+    }
+  }
+}

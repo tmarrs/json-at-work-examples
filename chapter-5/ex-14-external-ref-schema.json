@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"email": {
+			"$ref": "http://localhost:8081/ex-14-my-common-schema.json#/definitions/emailPattern"
+		},
+		"firstName": {
+			"type": "string"
+		},
+		"lastName": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false,
+	"required": ["email", "firstName", "lastName"]
+}
