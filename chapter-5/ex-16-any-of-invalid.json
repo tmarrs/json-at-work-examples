@@ -1,7 +1,7 @@
 {
   "email": "larsonrichard@ecratic.com",
   "firstName": "Larson",
-  "lastName": " Richard",
-  "postedSlides": "maybe",
-  "rating": 4.1
+  "lastName": "Richard",
+  "postedSlides": true,
+  "rating": 5.2
 }
