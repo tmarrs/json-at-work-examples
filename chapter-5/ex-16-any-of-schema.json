@@ -3,8 +3,7 @@
 	"type": "object",
 	"properties": {
 		"email": {
-			"type": "string",
-			"pattern": "^[\\w|-]+@[\\w|-]+\\.[A-Za-z]{2,4}$"
+			"type": "string"
 		},
 		"firstName": {
 			"type": "string"
@@ -13,17 +12,28 @@
 			"type": "string"
 		},
 		"postedSlides": {
-			"type": "boolean"
+			"anyOf": [{
+				"type": "boolean"
+			}, {
+				"type": "string",
+				"enum": [
+					"yes",
+					"Yes",
+					"no",
+					"No"
+				]
+			}]
 		},
 		"rating": {
-			"type": "number",
-			"anyOf": [{
-				"maximum": 2.0
-			}, {
-				"maximum": 5.0
-			}]
+			"type": "number"
 		}
 	},
 	"additionalProperties": false,
-	"required": ["email", "firstName", "lastName", "postedSlides", "rating"]
+	"required": [
+		"email",
+		"firstName",
+		"lastName",
+		"postedSlides",
+		"rating"
+	]
 }
