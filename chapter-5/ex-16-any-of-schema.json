@@ -13,10 +13,9 @@
 			"type": "string"
 		},
 		"postedSlides": {
-			"anyOf": [{
+			"onyOf": [{
 				"type": "boolean"
 			}, {
-				"type": "string",
 				"enum": ["yes", "Yes", "no", "No"]
 			}]
 		},
