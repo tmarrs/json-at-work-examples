@@ -13,14 +13,15 @@
 			"type": "string"
 		},
 		"postedSlides": {
-			"onyOf": [{
-				"type": "boolean"
-			}, {
-				"enum": ["yes", "Yes", "no", "No"]
-			}]
+			"type": "boolean"
 		},
 		"rating": {
-			"type": "number"
+			"type": "number",
+			"anyOf": [{
+				"maximum": 2.0
+			}, {
+				"maximum": 5.0
+			}]
 		}
 	},
 	"additionalProperties": false,
