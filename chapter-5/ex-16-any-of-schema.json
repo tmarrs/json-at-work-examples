@@ -3,7 +3,8 @@
 	"type": "object",
 	"properties": {
 		"email": {
-			"type": "string"
+			"type": "string",
+			"pattern": "^[\\w|-|.]+@[\\w]+\\.[A-Za-z]{2,4}$"
 		},
 		"firstName": {
 			"type": "string"

@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "about": {
+      "id": "about",
+      "type": "string"
+    },
+    "email": {
+      "id": "email",
+      "type": "string"
+    },
+    "firstName": {
+      "id": "firstName",
+      "type": "string"
+    },
+    "lastName": {
+      "id": "lastName",
+      "type": "string"
+    },
+    "picture": {
+      "id": "picture",
+      "type": "string"
+    },
+    "tags": {
+      "id": "tags",
+      "type": "array",
+      "items": [{
+        "id": "0",
+        "type": "string"
+      }, {
+        "id": "1",
+        "type": "string"
+      }, {
+        "id": "2",
+        "type": "string"
+      }]
+    },
+    "company": {
+      "id": "company",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "about",
+    "email",
+    "firstName",
+    "lastName",
+    "picture",
+    "tags",
+    "company"
+  ]
+}

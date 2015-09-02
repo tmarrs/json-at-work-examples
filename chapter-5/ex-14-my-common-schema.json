@@ -5,7 +5,7 @@
   "definitions": {
     "emailPattern": {
       "type": "string",
-      "pattern": "^[\\w|-]+@[\\w|-]+\\.[A-Za-z]{2,4}$"
+      "pattern": "^[\\w|-|.]+@[\\w]+\\.[A-Za-z]{2,4}$"
     }
   }
 }
