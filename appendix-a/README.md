@@ -2,6 +2,7 @@ Installation Guide
 ==================
 Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work/blob/master/README.md).
 
+
 ## Contents
 - [Installing JSON Tools in the Browser](#installing-json-tools-in-the-browser)
     - [Installing JSONView in Chrome and Firefox](#installing-jsonview-in-chrome-and-firefox)
@@ -23,6 +24,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Installing the `webapp` Yeoman Generator](#installing-the-webapp-yeoman-generator)
     - [Installing npm Modules](#installing-npm-modules)
         - [Install `jsonlint`](#install-jsonlint)
+        - [Install `json`](#install-json)
         - [Install `ujs-jsonvalidate`](#install-ujs-jsonvalidate)
         - [Install `tinyserver`](#install-tinyserver)
         - [Install `http-server`](#install-http-server)
@@ -244,6 +246,7 @@ Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/genera
 ### Installing npm Modules
 We use the following npm modules at the command line, so we install them globally:
 * [`jsonlint`](#install-jsonlint)
+* [`json`](#install-json)
 * [`ujs-jsonvalidate`](#install-ujs-jsonvalidate)
 * [`tinyserver`](#install-tinyserver)
 * [`http-server`](#install-http-server)
@@ -261,6 +264,16 @@ To validate a JSON document:
 ```
 jsonlint basic.json
 ```
+
+#### Install `json`
+[`json`](https://github.com/trentm/json) provides the ability to work with JSON from the command line - it's similar to [`jq`](http://stedolan.github.io/jq/).
+
+To install:
+```
+npm install -g json
+```
+
+Please visit the [`json` GitHub repository](https://github.com/trentm/json) for usage instructions.
 
 #### Install `ujs-jsonvalidate`
 This is the npm equivalent of the [JSON Validate site](http://jsonvalidate.com/) used to valid a JSON document against a JSON Schema. Here's the [`ujs-jsonvalidate` GitHub Repository](https://github.com/usingjsonschema/ujs-jsonvalidate-nodejs).
