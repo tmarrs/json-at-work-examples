@@ -1,6 +1,6 @@
 Installation Guide
 ==================
-Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work/blob/master/README.md).
+Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work-examples/blob/master/README.md).
 
 
 ## Contents
