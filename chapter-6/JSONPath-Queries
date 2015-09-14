@@ -1,0 +1,13 @@
+JSONPath - Search against JSON file
+-----------------------------------
+$.cities    // Get all elements in the cities array.
+$.cities.length // Get the # of elements in the cities array.
+$.cities[0::2] // Get every other element in the cities array. [start:end:step]
+$.cities[(@.length-1)] or $.cities[-1:] // Get last element in the cities array.
+$..weather  // Get all weather sub-elements.
+$.cities[:3] // Get first 3 elements in cities array.
+$.cities[:3].name  // Get city name for first 3 elements in cities array.
+$.cities[?(@.main.temp > 84)].main.temp // Get temp where temp > 84.
+$.cities[?(@.main.temp >= 84 && @.main.temp <= 85.5)].main.temp // Get temp where temp between 84 and 85.5.
+$.cities[?(@.weather[0].main == 'Clouds')].weather[0].main
+$.cities[?(@.weather[0].main.match(/Clo/))].weather[0].main

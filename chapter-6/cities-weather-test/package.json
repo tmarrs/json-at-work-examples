@@ -1,0 +1,31 @@
+{
+  "name": "cities-weather-test",
+  "version": "1.0.0",
+  "description": "Unit Tests for cities (weather) API using JSON Search.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmarrs/json-at-work-examples"
+  },
+  "keywords": [
+    "JSON",
+    "Search",
+    "Mocha",
+    "Chai"
+  ],
+  "author": "Tom Marrs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmarrs/json-at-work-examples/issues"
+  },
+  "homepage": "https://github.com/tmarrs/json-at-work-examples",
+  "dependencies": {
+    "chai": "^3.2.0",
+    "jsonpath": "^0.2.0",
+    "mocha": "^2.3.2",
+    "request": "^2.61.0"
+  }
+}
