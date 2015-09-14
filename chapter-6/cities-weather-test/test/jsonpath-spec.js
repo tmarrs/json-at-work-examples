@@ -22,7 +22,6 @@ describe('cities', function() {
 
   it('should return all cities', function(done) {
     req.get(options, function(err, res, body) {
-      expect(res.statusCode).to.eql(200);
       var cities = JSON.parse(res.body);
 
       //console.log(cities);
@@ -33,7 +32,6 @@ describe('cities', function() {
 
   it('should return every other city', function(done) {
     req.get(options, function(err, res, body) {
-      expect(res.statusCode).to.eql(200);
       var cities = JSON.parse(res.body);
       var citiesEveryOther = jp.query(cities, '$[0::2]');
 
@@ -46,7 +44,6 @@ describe('cities', function() {
 
   it('should return the last city', function(done) {
     req.get(options, function(err, res, body) {
-      expect(res.statusCode).to.eql(200);
       var cities = JSON.parse(res.body);
       var lastCity = jp.query(cities, '$[(@.length-1)]');
 
@@ -58,7 +55,6 @@ describe('cities', function() {
 
   it('should return 1st 3 cities', function(done) {
     req.get(options, function(err, res, body) {
-      expect(res.statusCode).to.eql(200);
       var cities = JSON.parse(res.body);
       var citiesFirstThree = jp.query(cities, '$[:3]');
       var citiesFirstThreeNames = jp.query(cities, '$[:3].name');
@@ -75,7 +71,6 @@ describe('cities', function() {
 
   it('should return cities within a temperature range', function(done) {
     req.get(options, function(err, res, body) {
-      expect(res.statusCode).to.eql(200);
       var cities = JSON.parse(res.body);
       var citiesTempRange = jp.query(cities,
         '$[?(@.main.temp >= 84 && @.main.temp <= 85.5)].main.temp'
@@ -93,7 +88,6 @@ describe('cities', function() {
 
   it('should return cities with cloudy weather', function(done) {
     req.get(options, function(err, res, body) {
-      expect(res.statusCode).to.eql(200);
       var cities = JSON.parse(res.body);
       var citiesCloudy = jp.query(cities,
         '$[?(@.weather[0].main == "Clouds")].weather[0].main'
