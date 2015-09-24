@@ -1,18 +1,19 @@
 "use strict";
 
 var expect = require('chai').expect;
-var req = require('request');
 var jp = require('jsonpath');
-var options = {
-  url: 'http://localhost:5000/cities',
-  headers: {
-    'Accept': 'application/json'
-  }
-};
+var unirest = require('unirest');
 
 describe('cities', function() {
+  var req;
+
+  beforeEach(function() {
+    req = unirest.get('http://localhost:5000/cities')
+      .header('Accept', 'application/json');
+  });
+
   it('should return a 200 response', function(done) {
-    req.get(options, function(err, res, body) {
+    req.end(function(res) {
       expect(res.statusCode).to.eql(200);
       expect(res.headers['content-type']).to.eql(
         'application/json; charset=utf-8');
@@ -21,8 +22,8 @@ describe('cities', function() {
   });
 
   it('should return all cities', function(done) {
-    req.get(options, function(err, res, body) {
-      var cities = JSON.parse(res.body);
+    req.end(function(res) {
+      var cities = res.body;
 
       //console.log(cities);
       expect(cities.length).to.eql(110);
@@ -31,8 +32,8 @@ describe('cities', function() {
   });
 
   it('should return every other city', function(done) {
-    req.get(options, function(err, res, body) {
-      var cities = JSON.parse(res.body);
+    req.end(function(res) {
+      var cities = res.body;
       var citiesEveryOther = jp.query(cities, '$[0::2]');
 
       //console.log(citiesEveryOther);
@@ -43,8 +44,8 @@ describe('cities', function() {
   });
 
   it('should return the last city', function(done) {
-    req.get(options, function(err, res, body) {
-      var cities = JSON.parse(res.body);
+    req.end(function(res) {
+      var cities = res.body;
       var lastCity = jp.query(cities, '$[(@.length-1)]');
 
       //console.log(lastCity);
@@ -54,8 +55,8 @@ describe('cities', function() {
   });
 
   it('should return 1st 3 cities', function(done) {
-    req.get(options, function(err, res, body) {
-      var cities = JSON.parse(res.body);
+    req.end(function(res) {
+      var cities = res.body;
       var citiesFirstThree = jp.query(cities, '$[:3]');
       var citiesFirstThreeNames = jp.query(cities, '$[:3].name');
 
@@ -70,8 +71,8 @@ describe('cities', function() {
   });
 
   it('should return cities within a temperature range', function(done) {
-    req.get(options, function(err, res, body) {
-      var cities = JSON.parse(res.body);
+    req.end(function(res) {
+      var cities = res.body;
       var citiesTempRange = jp.query(cities,
         '$[?(@.main.temp >= 84 && @.main.temp <= 85.5)].main.temp'
       );
@@ -87,26 +88,33 @@ describe('cities', function() {
   });
 
   it('should return cities with cloudy weather', function(done) {
-    req.get(options, function(err, res, body) {
-      var cities = JSON.parse(res.body);
+    req.end(function(res) {
+      var cities = res.body;
       var citiesCloudy = jp.query(cities,
         '$[?(@.weather[0].main == "Clouds")].weather[0].main'
       );
+
+      checkCities(citiesCloudy);
+      done();
+    });
+  });
+
+  it('should return cities with cloudy weather using regex', function(done) {
+    req.end(function(res) {
+      var cities = res.body;
       var citiesCloudyRegex = jp.query(cities,
         '$[?(@.weather[0].main.match(/Clo/))].weather[0].main'
       );
 
-      //console.log(citiesCloudy);
-      for (var i = 0; i < citiesCloudy.length; i++) {
-        expect(citiesCloudy[i]).to.eql('Clouds');
-      }
-
-      //console.log(citiesCloudyRegex);
-      for (var j = 0; j < citiesCloudyRegex.length; j++) {
-        expect(citiesCloudyRegex[j]).to.eql('Clouds');
-      }
-
+      checkCities(citiesCloudyRegex);
       done();
     });
   });
+
+  function checkCities(cities) {
+    //console.log(cities);
+    for (var i = 0; i < cities.length; i++) {
+      expect(cities[i]).to.eql('Clouds');
+    }
+  }
 });
