@@ -102,18 +102,22 @@ cd test
 ```
 
 ## Write the Tests
-Now you're ready to start writing tests.
+Now you're ready to start writing tests in the `test` directory.
 
 
 ## Start the Test Server
 Don't forget to run the test server.
 ```
+cd ../data
+
 json-server -p 5000 ./cities-weather.json
 ```
 
 
 ## Run the Tests
-Run the tests as follows:
+Create another terminal session and run the tests as follows:
 ```
+cd ~/projects/cities-weather-test
+
 npm test
 ```
