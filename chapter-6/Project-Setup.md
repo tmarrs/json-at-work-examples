@@ -87,7 +87,7 @@ Next, install the modules we'll need:
 ```
 npm install mocha --save
 npm install chai --save
-npm install request --save
+npm install unirest --save
 npm install jsonpath --save
 npm install json-pointer --save 
 npm install JSONSelect --save 
