@@ -589,7 +589,7 @@ Credit for the Tomcat/Windows install instructions goes to [Nenyang Technical Un
 
 ## Installing `jq`
 [`jq`](http://stedolan.github.io/jq/) provides JSON-based command-line processing.
-To install it, just follow the [Download instructions on the `cURL`] site(http://stedolan.github.io/jq/download/).
+To install it, just follow the [Download instructions on the `jq` GitHub repository](http://stedolan.github.io/jq/download/).
 
 `jq` works with and depends on [`cURL`](#installing-curl)
 
