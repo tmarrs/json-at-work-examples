@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 var jsonSelect = require('JSONSelect');
 var unirest = require('unirest');
 
-describe('cities', function() {
+describe('cities-json-select', function() {
 	var req;
 
 	beforeEach(function() {

@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 var jp = require('jsonpath');
 var unirest = require('unirest');
 
-describe('cities', function() {
+describe('cities-jsonpath', function() {
   var req;
 
   beforeEach(function() {

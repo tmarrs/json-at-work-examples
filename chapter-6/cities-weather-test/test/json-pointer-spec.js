@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 var pointer = require('json-pointer');
 var unirest = require('unirest');
 
-describe('cities', function() {
+describe('cities-json-pointer', function() {
 	var req;
 
 	beforeEach(function() {
