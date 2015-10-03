@@ -21,14 +21,25 @@ describe('cities-json-pointer', function() {
 		});
 	});
 
+	it('should return the 1st city', function(done) {
+		req.end(function(res) {
+			var cities = res.body;
+			var firstCity = null;
+
+			//console.log('\n\n1st Object: ');
+			firstCity = pointer.get(cities, '/0');
+			//console.log(firstCity);
+			expect(firstCity.name).to.eql('Rancho Palos Verdes');
+			expect(firstCity.weather[0].main).to.eql('Clear');
+			done();
+		});
+	});
+
 	it('should return the name of the 2nd city', function(done) {
 		req.end(function(res) {
 			var cities = res.body;
 			var secondCityName = null;
 
-			//console.log('\n\n\n\nJSON Pointer Test');
-			//console.log('\n\n1st Object: ');
-			//console.log(pointer.get(cities, '/0'));
 			//console.log('\nName of the 2nd City: ');
 			secondCityName = pointer.get(cities, '/1/name');
 			//console.log(secondCityName);
