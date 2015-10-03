@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/tmarrs/json-at-work-examples",
   "dependencies": {
+    "JSONSelect": "^0.4.0",
     "chai": "^3.2.0",
     "json-pointer": "^0.3.0",
     "jsonpath": "^0.2.0",
