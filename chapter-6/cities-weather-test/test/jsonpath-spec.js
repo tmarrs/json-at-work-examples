@@ -54,14 +54,16 @@ describe('cities-jsonpath', function() {
     });
   });
 
-  it('should return 1st 3 cities', function(done) {
+  it('should return the 1st 3 cities', function(done) {
     req.end(function(res) {
       var cities = res.body;
       var citiesFirstThree = jp.query(cities, '$[:3]');
       var citiesFirstThreeNames = jp.query(cities, '$[:3].name');
 
       //console.log(citiesFirstThree);
+      //console.log(citiesFirstThreeNames);
       expect(citiesFirstThree.length).to.eql(3);
+      expect(citiesFirstThreeNames.length).to.eql(3);
       expect(citiesFirstThreeNames).to.eql(['Rancho Palos Verdes',
         'San Pedro', 'Rosarito'
       ]);
@@ -74,13 +76,13 @@ describe('cities-jsonpath', function() {
     req.end(function(res) {
       var cities = res.body;
       var citiesTempRange = jp.query(cities,
-        '$[?(@.main.temp >= 84 && @.main.temp <= 85.5)].main.temp'
+        '$[?(@.main.temp >= 84 && @.main.temp <= 85.5)]'
       );
 
       //console.log(citiesTempRange);
       for (var i = 0; i < citiesTempRange.length; i++) {
-        expect(citiesTempRange[i]).to.be.at.least(84);
-        expect(citiesTempRange[i]).to.be.at.most(85.5);
+        expect(citiesTempRange[i].main.temp).to.be.at.least(84);
+        expect(citiesTempRange[i].main.temp).to.be.at.most(85.5);
       }
 
       done();
@@ -90,11 +92,11 @@ describe('cities-jsonpath', function() {
   it('should return cities with cloudy weather', function(done) {
     req.end(function(res) {
       var cities = res.body;
-      var citiesCloudy = jp.query(cities,
-        '$[?(@.weather[0].main == "Clouds")].weather[0].main'
+      var citiesWeatherCloudy = jp.query(cities,
+        '$[?(@.weather[0].main == "Clouds")]'
       );
 
-      checkCities(citiesCloudy);
+      checkCitiesWeather(citiesWeatherCloudy);
       done();
     });
   });
@@ -102,19 +104,19 @@ describe('cities-jsonpath', function() {
   it('should return cities with cloudy weather using regex', function(done) {
     req.end(function(res) {
       var cities = res.body;
-      var citiesCloudyRegex = jp.query(cities,
-        '$[?(@.weather[0].main.match(/Clo/))].weather[0].main'
+      var citiesWeatherCloudyRegex = jp.query(cities,
+        '$[?(@.weather[0].main.match(/Clo/))]'
       );
 
-      checkCities(citiesCloudyRegex);
+      checkCitiesWeather(citiesWeatherCloudyRegex);
       done();
     });
   });
 
-  function checkCities(cities) {
+  function checkCitiesWeather(cities) {
     //console.log(cities);
     for (var i = 0; i < cities.length; i++) {
-      expect(cities[i]).to.eql('Clouds');
+      expect(cities[i].weather[0].main).to.eql('Clouds');
     }
   }
 });
