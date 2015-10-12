@@ -75,7 +75,7 @@ describe('cities-rql', function() {
       var firstThreeNames = [];
 
       //console.log(citiesFirstThree);
-      console.log(citiesFirstThreeNames);
+      //console.log(citiesFirstThreeNames);
       expect(citiesFirstThree.length).to.eql(3);
       expect(citiesFirstThreeNames.length).to.eql(3);
       for (var i = 0; i < citiesFirstThreeNames.length; ++i) {
