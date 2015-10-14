@@ -1,5 +1,5 @@
 {
-  "name": "cities-weather-test",
+  "name": "cities-weather-transform-test",
   "version": "1.0.0",
   "description": "JSON Transform tests.",
   "main": "index.js",
