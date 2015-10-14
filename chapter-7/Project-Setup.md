@@ -1,6 +1,6 @@
 Test Project Setup
 ==================
-Here's how to create the transform-test project with Node.
+Here's how to create the `cities-weather-transform-test` project with Node.
 
 
 ## Contents
@@ -9,6 +9,7 @@ Here's how to create the transform-test project with Node.
 - [Install Node Modules](#install-node-modules)
 - [Create Test Directory](#create-test-directory)
 - [Write the Tests](#write-the-tests)
+- [Start the Test Server](#start-the-test-server)
 - [Run the Tests](#run-the-tests)
 
 
@@ -16,11 +17,11 @@ Here's how to create the transform-test project with Node.
 First, find a suitable directory for your projects.
 `cd ~/projects`
 
-Next, create the `transform-test` directory and navigate there:
+Next, create the `cities-weather-transform-test` directory and navigate there:
 ```
-mkdir transform-test
+mkdir cities-weather-transform-test
 
-cd transform-test
+cd cities-weather-transform-test
 ```
 
 ## Create the Project with `npm init`
@@ -41,19 +42,19 @@ Use `npm install <pkg> --save` afterwards to install a package and
 save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
-name: (transform-test)
+name: (cities-weather-transform-test)
 version: (1.0.0)
 description: JSON Transform tests.
 entry point: (index.js)
 test command: mocha test
-git repository:
-keywords: JSON, Search, Transform
+git repository: ...
+keywords: JSON, Transform, Mocha, Chai
 author: Me
-license: (ISC)
+license: (ISC) MIT
 About to write to /Users/tmarrs/projects/transform-test/package.json:
 
 {
-  "name": "transform-test",
+  "name": "cities-weather-transform-test",
   "version": "1.0.0",
   "description": "JSON Transform tests.",
   "main": "index.js",
@@ -62,10 +63,13 @@ About to write to /Users/tmarrs/projects/transform-test/package.json:
   },
   "keywords": [
     "JSON",
-    "Transform"
+    "Transform",
+    "Mocha",
+    "Chai"
   ],
   "author": "Me",
-  "license": "ISC"
+  "license": "MIT"
+  ...
 }
 
 
@@ -80,7 +84,6 @@ npm install chai --save
 npm install jsonfile --save
 npm install json-patch --save
 npm install jsonapter --save 
-npm install fs --save 
 npm install jxon --save 
 ```
 
@@ -91,11 +94,22 @@ mkdir test
 ```
 
 ## Write the Tests
-Now you're ready to start writing tests.
+Now you're ready to start writing tests in the `test` directory.
+
+
+## Start the Test Server
+Don't forget to run the test server.
+```
+cd ~/projects/cities-weather-test/data // This is from the examples in Chapter 6.
+
+json-server -p 5000 ./cities-weather.json
+```
 
 
 ## Run the Tests
-Run the tests as follows:
+Create another terminal session and run the tests as follows:
 ```
+cd ~/projects/cities-weather-transform-test
+
 npm test
 ```
