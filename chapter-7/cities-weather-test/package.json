@@ -1,0 +1,36 @@
+{
+  "name": "cities-weather-test",
+  "version": "1.0.0",
+  "description": "JSON Transform tests.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmarrs/json-at-work-examples"
+  },
+  "keywords": [
+    "JSON",
+    "Transform",
+    "Mocha",
+    "Chai"
+  ],
+  "author": "Tom Marrs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmarrs/json-at-work-examples/issues"
+  },
+  "homepage": "https://github.com/tmarrs/json-at-work-examples",
+  "dependencies": {
+    "mocha": "^2.3.3",
+    "chai": "^3.3.0",
+    "json-patch": "^0.5.0",
+    "jsonapter": "0.0.2",
+    "jsonfile": "^2.2.3",
+    "jxon": "^1.5.4"
+  }
+}
