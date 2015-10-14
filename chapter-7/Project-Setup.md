@@ -1,6 +1,6 @@
 Test Project Setup
 ==================
-Here's how to create the `cities-weather-test` project with Node.
+Here's how to create the transform-test project with Node.
 
 
 ## Contents
@@ -9,7 +9,6 @@ Here's how to create the `cities-weather-test` project with Node.
 - [Install Node Modules](#install-node-modules)
 - [Create Test Directory](#create-test-directory)
 - [Write the Tests](#write-the-tests)
-- [Start the Test Server](#start-the-test-server)
 - [Run the Tests](#run-the-tests)
 
 
@@ -17,11 +16,11 @@ Here's how to create the `cities-weather-test` project with Node.
 First, find a suitable directory for your projects.
 `cd ~/projects`
 
-Next, create the `cities-weather-test` directory and navigate there:
+Next, create the `transform-test` directory and navigate there:
 ```
-mkdir cities-weather-test
+mkdir transform-test
 
-cd cities-weather-test
+cd transform-test
 ```
 
 ## Create the Project with `npm init`
@@ -31,6 +30,7 @@ Your CLI session should look like this:
 ```
 npm init
 
+npm init
 This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sane defaults.
 
@@ -41,38 +41,31 @@ Use `npm install <pkg> --save` afterwards to install a package and
 save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
-name: (cities-weather-test)
+name: (transform-test)
 version: (1.0.0)
-description: Unit Tests for cities (weather) API using JSON Search.
+description: JSON Transform tests.
 entry point: (index.js)
 test command: mocha test
-git repository: ...
-keywords: JSON, Search, Mocha, Chai
+git repository:
+keywords: JSON, Search, Transform
 author: Me
-license: (ISC) MIT
-About to write to /Users/tmarrs/projects/json-at-work-examples/chapter-6/cities-weather-test/package.json:
+license: (ISC)
+About to write to /Users/tmarrs/projects/transform-test/package.json:
 
 {
-  "name": "cities-weather-test",
+  "name": "transform-test",
   "version": "1.0.0",
-  "description": "Unit Tests for cities (weather) API using JSON Search.",
+  "description": "JSON Transform tests.",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tmarrs/json-at-work-examples"
-  },
   "keywords": [
     "JSON",
-    "Search",
-    "Mocha",
-    "Chai"
+    "Transform"
   ],
   "author": "Me",
-  "license": "MIT"
-  ...
+  "license": "ISC"
 }
 
 
@@ -84,37 +77,25 @@ Next, install the modules we'll need:
 ```
 npm install mocha --save
 npm install chai --save
-npm install unirest --save
-npm install jsonpath --save
-npm install json-pointer --save 
-npm install JSONSelect --save 
+npm install jsonfile --save
+npm install json-patch --save
+npm install jsonapter --save 
+npm install fs --save 
+npm install jxon --save 
 ```
 
 ## Create Test Directory
-Create the test directory and navigate there.
+Finally, create the test directory.
 ```
 mkdir test
-
-cd test
 ```
 
 ## Write the Tests
-Now you're ready to start writing tests in the `test` directory.
-
-
-## Start the Test Server
-Don't forget to run the test server.
-```
-cd ../data
-
-json-server -p 5000 ./cities-weather.json
-```
+Now you're ready to start writing tests.
 
 
 ## Run the Tests
-Create another terminal session and run the tests as follows:
+Run the tests as follows:
 ```
-cd ~/projects/cities-weather-test
-
 npm test
 ```
