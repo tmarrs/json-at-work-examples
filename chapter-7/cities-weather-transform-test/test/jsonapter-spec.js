@@ -4,21 +4,25 @@ var j2j = require('jsonapter').instance();
 
 var template = {
 	content: {
-  	name: {
-		  dataTransform: function(input) {
+		name: {
+			dataTransform: function(input) {
 				return input.firstName + ' ' + input.lastName;
 			}
-	  },
-		email: { dataKey: 'email' },
-		about: { dataKey: 'about' },		
+		},
+		email: {
+			dataKey: 'email'
+		},
+		about: {
+			dataKey: 'about'
+		},
 	}
 };
 
 describe('jsonapter', function() {
 	describe('run', function() {
 		it('should transform JSON', function(done) {
-			var jsonFileName = './data/speaker.json';
-			
+			var jsonFileName = '../data/speaker.json';
+
 			jsonfile.readFile(jsonFileName, function(err, jsonObj) {
 				if (!err) {
 					console.log(jsonObj);

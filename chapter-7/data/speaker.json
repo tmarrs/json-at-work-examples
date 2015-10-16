@@ -1,0 +1,12 @@
+{
+	"about": "Fred Smith is the CTO of Full Ventures, where he ...",
+	"email": "fred.smith@fullventures.com",
+	"firstName": "Fred",
+	"lastName": "Smith",
+	"tags": [
+		"JavaScript",
+		"REST",
+		"JSON"
+	],
+	"company": "Full Ventures, Inc."
+}
