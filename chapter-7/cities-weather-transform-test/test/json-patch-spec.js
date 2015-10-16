@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('chai').expect;
 var jsonfile = require('jsonfile');
 var jsonpatch = require('json-patch');

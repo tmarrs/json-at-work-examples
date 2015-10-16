@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('chai').expect;
 var jsonfile = require('jsonfile');
 var j2j = require('jsonapter').instance();

@@ -1,15 +1,19 @@
+'use strict';
+
 var expect = require('chai').expect;
 var fs = require('fs');
 var jsonfile = require('jsonfile');
 var jxon = require('jxon');
 
 describe('jxon', function() {
+	var xmlFileName = null;
 	var jsonFileName = null;
 
 	beforeEach(function() {
 		var baseDir = __dirname + '/../../data';
 
 		xmlFileName = baseDir + '/speaker.xml';
+		jsonFileName = baseDir + '/speaker.json';
 	});
 
 	describe('stringToJs', function() {
