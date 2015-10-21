@@ -26,11 +26,13 @@
   },
   "homepage": "https://github.com/tmarrs/json-at-work-examples",
   "dependencies": {
-    "mocha": "^2.3.3",
     "chai": "^3.3.0",
+    "json-merge-patch": "^0.2.3",
     "json-patch": "^0.5.0",
     "jsonapter": "0.0.2",
+    "jsonave": "0.0.3",
     "jsonfile": "^2.2.3",
-    "jxon": "^1.5.4"
+    "jxon": "^1.5.4",
+    "mocha": "^2.3.3"
   }
 }
