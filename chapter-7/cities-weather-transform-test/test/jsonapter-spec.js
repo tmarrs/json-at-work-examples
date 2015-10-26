@@ -21,25 +21,6 @@ var template = {
 	}
 };
 
-var template2 = {
-	content: {
-		name: {
-			dataKey: 'name'
-		},
-		id: {
-			dataKey: 'id'
-		},
-		weather: {
-			temp: {
-				dataKey: 'main.temp'
-			},
-			desription: {
-				dataKey: 'weather.0.description'
-			}
-		}
-	}
-};
-
 var nameTemplate = {
 	content: {
 		last: {
@@ -78,19 +59,6 @@ var weatherTemplate = {
 	}
 };
 
-var template4 = {
-	content: {
-		title: "New Report",
-		id: {
-			dataKey: 'id',
-		},
-		name: {
-			dataKey: 'name',
-		},
-		weather: weatherTemplate
-	}
-};
-
 var weatherTemplate2 = {
 	content: {
 		temp: jsonave('$.main.temp'),
@@ -118,24 +86,11 @@ var cityTemplate = {
 
 var template6 = {
 	arrayContent: [{
-		/*
-		value: function(input) {
-			console.log('I am here');
-		},
-		*/
-		/*
-		dataTransform: function(input) {
-			console.log("I am here 2");
-		},
-		*/
 		value: cityTemplate,
 		dataKey: jsonave('$.cities[*]')
 	}]
 }
 
-
-//'weather.temp': jsonave('$.main.temp'),
-//'weather.description': jsonave('$.weather[0].description'),
 
 describe('cities-jsonapter', function() {
 	var jsonFileName = null;
@@ -169,9 +124,9 @@ describe('cities-jsonapter', function() {
 	it('should transform city JSON data', function(done) {
 		jsonfile.readFile(jsonCityFileName, function(err, jsonObj) {
 			if (!err) {
-				var output = j2j.run(template2, jsonObj);
-				//console.log('\n\n\n\Transformed JSON');
-				//console.log(JSON.stringify(output, null, 2));
+				var output = j2j.run(template5, jsonObj);
+				console.log('\n\n\n\Transformed JSON');
+				console.log(JSON.stringify(output, null, 2));
 			} else {
 				throw (err);
 			}
@@ -179,21 +134,6 @@ describe('cities-jsonapter', function() {
 			done();
 		});
 	});
-	/*
-		it('should jsonave transform city JSON data', function(done) {
-			jsonfile.readFile(jsonCityFileName, function(err, jsonObj) {
-				if (!err) {
-					var output = j2j.run(template5, jsonObj);
-					console.log('\n\n\n\Transformed JSON');
-					console.log(JSON.stringify(output, null, 2));
-				} else {
-					throw (err);
-				}
-
-				done();
-			});
-		});
-		*/
 
 	it('should transform cities JSON data', function(done) {
 		jsonfile.readFile(jsonCitiesFileName, function(err, jsonObj) {
@@ -217,8 +157,8 @@ describe('cities-jsonapter', function() {
 			if (!err) {
 				var output = j2j.run(template6, jsonObj);
 
-				console.log('\n\n\n\Transformed JSON');
-				console.log(JSON.stringify(output, null, 2));
+				//console.log('\n\n\n\Transformed JSON');
+				//console.log(JSON.stringify(output, null, 2));
 			} else {
 				throw (err);
 			}
