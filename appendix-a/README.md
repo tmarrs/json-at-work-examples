@@ -120,7 +120,13 @@ Now that NVM is installed, use it to install Node:
   * Without this, neither the `node` or `npm` commands will work properly when you exit the current shell.
   * Now, exit your current shell.
 
-From a new shell, do the following health checks:
+From a new shell, upgrade to the latest version of npm:
+
+```
+npm update -g npm```
+```
+
+Then, do the following health checks:
   * `nvm ls`. You should see:
 ```
           ->  v4.2.2
@@ -133,7 +139,7 @@ From a new shell, do the following health checks:
 ```
   * `npm -v`, and it looks like:
 ```
-          2.14.7
+          3.3.10
 ```
 
 To see a full list of NVM's capabilities, type: `nvm --help`.
