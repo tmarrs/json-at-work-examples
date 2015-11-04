@@ -123,7 +123,7 @@ Now that NVM is installed, use it to install Node:
 From a new shell, upgrade to the latest version of npm:
 
 ```
-npm update -g npm```
+npm update -g npm
 ```
 
 Then, do the following health checks:
