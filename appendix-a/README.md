@@ -129,7 +129,7 @@ From a new shell, do the following health checks:
 ```
   * `node -v`, which yields:
 ```
-          vv4.2.2
+          v4.2.2
 ```
   * `npm -v`, and it looks like:
 ```
