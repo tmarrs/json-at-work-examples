@@ -70,13 +70,13 @@ Unfortunately, Google Code is shutting down due to the popularity of GitHub, so 
 
 
 ## Installing Node.js
-This book uses Node.js version `v0.10.32`.
+This book uses Node.js version `v4.2.2`.
 
 If Node.js is working properly on your machine, then you should see the following from the command line when you check the version number:
 
 ```
 json-at-work => node -v
-v0.10.32
+v4.2.2
 ```
 
 When you check out the Node.js [REPL (Request-Eval-Print-Loop)](https://nodejs.org/api/repl.html), you should see this:
@@ -96,13 +96,13 @@ First, install NVM by using one of the following methods:
 * [Manual Install](https://github.com/creationix/nvm#manual-install)
 
 Next, let's make sure that NVM runs properly. Source it from a shell as follows: ```source ~/.nvm/nvm.sh```
-Now NVM will work properly for the remainer of the installation process.
+Now NVM will work properly for the remainder of the installation process.
 
 If you're running bash, then do the following file to so that NVM is automatically sourced (i.e., configured) upon login. If you're running bash, then do the following:
 * In ```$HOME/.bashrc```, add these lines:
 ```
 source ~/.nvm/nvm.sh
-export NVM_HOME=~/.nvm/v0.10.32
+export NVM_HOME=~/.nvm/v4.2.2
 ```
 * In ```$HOME/.bashrc_profile```, add this line:
 ```
@@ -114,26 +114,26 @@ Please note that similar steps apply to Bourne Shell or Korn Shell.
 #### Install Node
 Now that NVM is installed, use it to install Node:
 * Type `nvm ls-remote` to see what remote (i.e., not on your local machine) versions of Node are available to install.
-* Install version `v0.10.32` with the following command: `nvm install v0.10.32`
+* Install version `v4.2.2` with the following command: `nvm install v4.2.2`
   * All Node versions are installed in `$HOME/.nvm`
-* Set the default Node version to be used in any new shell: `nvm alias default v0.10.32`
+* Set the default Node version to be used in any new shell: `nvm alias default v4.2.2`
   * Without this, neither the `node` or `npm` commands will work properly when you exit the current shell.
   * Now, exit your current shell.
 
 From a new shell, do the following health checks:
   * `nvm ls`. You should see:
 ```
-          ->  v0.10.32
+          ->  v4.2.2
                system
-          default -> v0.10.32
+          default -> v4.2.2
 ```
   * `node -v`, which yields:
 ```
-          v0.10.32
+          vv4.2.2
 ```
   * `npm -v`, and it looks like:
 ```
-          1.4.28
+          2.14.7
 ```
 
 To see a full list of NVM's capabilities, type: `nvm --help`.
@@ -152,7 +152,7 @@ This tip was inspired by Isaac Z. Schlueter from [How to Node](http://howtonode.
 Here's another way to avoid `sudo` - please see the [NPM Global without Sudo Guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) provided by [Sindre Sorhus](https://github.com/sindresorhus).
 
 #### Taming the REPL
-Out of the box, the default behavoir of the REPL leaves a bit to be desired because you 'undefined' after most lines of JavaScript, hitting the Enter key, breathing, etc. This is due to the fact that JavaScript functions always return something. If nothing is returned, then 'undefined' is returned by default. This behavior can be very annoying and unproductive. Here's a sample session:
+Out of the box, the default behavior of the REPL leaves a bit to be desired because you 'undefined' after most lines of JavaScript, hitting the Enter key, breathing, etc. This is due to the fact that JavaScript functions always return something. If nothing is returned, then 'undefined' is returned by default. This behavior can be very annoying and unproductive. Here's a sample session:
 
 ```
 json-at-work => node
