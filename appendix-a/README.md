@@ -63,7 +63,7 @@ Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
 
 ## Installing JSONPad
 You can download JSONPad from the [JSONPad Downloads page](https://code.google.com/p/json-pad/downloads/list).
-JSONPad in its current form runs on Adobe AIR, but it should be included in the install.
+JSONPad in its current form runs on Adobe AIR, which requires a separate install. You can download Adobe AIR at: [https://get.adobe.com/air/](https://get.adobe.com/air/).
 
 Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to
 [my own `json-pad` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool from Adobe AIR to [NW.js (formerly known as Node Webkit)](http://nwjs.io/) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
