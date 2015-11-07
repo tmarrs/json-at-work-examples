@@ -71,8 +71,9 @@ describe('cities-jsont', function() {
   };
 
   transforms[7] = {
-    'self': '[\n{cities}\n]',
-    'cities[*]': '\n{"name": "{$.name}",\n"weather": {\n"temp": {$.main.temp}, \n"description": "{$.weather[0].description}"\n}\n},'
+    'self': '{ "cities": [{cities}] }',
+    'cities[*]': '{"name": "{$.name}", ' +
+      '"weather": { "temp": {$.main.temp}, "windSpeed": {$.wind.speed}, "description": "{$.weather[0].description}" } },'
   };
 
   sources[14] = [{
@@ -195,9 +196,11 @@ describe('cities-jsont', function() {
       if (!err) {
         var jsonStr = jsonT(jsonObj, transforms[7]);
 
-        console.log(jsonStr);
-        console.log(typeof jsonStr);
+        //console.log(jsonStr);
+        //console.log(typeof jsonStr);
+        jsonStr = repairJson(jsonStr);
         console.log(repairJson(jsonStr));
+        console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
       } else {
         throw (err);
       }
