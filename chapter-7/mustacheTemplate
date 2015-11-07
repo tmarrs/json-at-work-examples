@@ -1,0 +1,41 @@
+
+
+{
+"cities": [
+{{#cities}}
+{
+  "id": "{{id}}",
+  "name": "{{name}}",
+  "weather": {
+    "temp": {{main.temp}},
+    "windSpeed": {{wind.speed}},
+    "desc": "{{weather.0.description}}"
+  }
+},
+{{/cities}}
+]
+}
+
+{
+"cities": [
+{{#cities}}
+{
+  "id": "{{id}}",
+  "name": "{{name}}",
+  "weather": {
+    "currentTemp": {{main.temp}},
+    "lowTemp": {{main.temp_min}},
+    "hiTemp": {{main.temp_max}},
+    "humidity": {{main.humidity}},
+    "windSpeed": {{wind.speed}},
+    "summary": "{{weather.0.main}}"
+    "description": "{{weather.0.description}}"
+  }
+},
+{{/cities}}
+]
+}
+
+,\s*[}\]]
+
+,  } or  ]
