@@ -1,0 +1,39 @@
+{
+  "cities": [{
+    "id": "5386035",
+    "name": "Rancho Palos Verdes",
+    "weather": {
+      "currentTemp": 84.34,
+      "lowTemp": 78.8,
+      "hiTemp": 93,
+      "humidity": 58,
+      "windSpeed": 4.1,
+      "summary": "Clear"
+      "description": "Sky is Clear"
+    }
+  }, {
+    "id": "5392528",
+    "name": "San Pedro",
+    "weather": {
+      "currentTemp": 84.02,
+      "lowTemp": 78.8,
+      "hiTemp": 91,
+      "humidity": 58,
+      "windSpeed": 4.1,
+      "summary": "Clear"
+      "description": "Sky is Clear"
+    }
+  }, {
+    "id": "3988392",
+    "name": "Rosarito",
+    "weather": {
+      "currentTemp": 82.47,
+      "lowTemp": 78.8,
+      "hiTemp": 86,
+      "humidity": 61,
+      "windSpeed": 4.6,
+      "summary": "Clouds"
+      "description": "scattered clouds"
+    }
+  }]
+}
