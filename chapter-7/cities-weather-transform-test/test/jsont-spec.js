@@ -199,8 +199,8 @@ describe('cities-jsont', function() {
         //console.log(jsonStr);
         //console.log(typeof jsonStr);
         jsonStr = repairJson(jsonStr);
-        console.log(repairJson(jsonStr));
-        console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
+        //console.log(repairJson(jsonStr));
+        //console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
       } else {
         throw (err);
       }

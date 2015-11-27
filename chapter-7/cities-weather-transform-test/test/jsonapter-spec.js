@@ -125,8 +125,8 @@ describe('cities-jsonapter', function() {
 		jsonfile.readFile(jsonCityFileName, function(err, jsonObj) {
 			if (!err) {
 				var output = j2j.run(template5, jsonObj);
-				console.log('\n\n\n\Transformed JSON');
-				console.log(JSON.stringify(output, null, 2));
+				//console.log('\n\n\n\Transformed JSON');
+				//console.log(JSON.stringify(output, null, 2));
 			} else {
 				throw (err);
 			}
