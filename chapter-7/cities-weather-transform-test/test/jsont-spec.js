@@ -104,20 +104,18 @@ describe('cities-jsont', function() {
   };
 
   function repairJson(jsonStr) {
-    var repairJsonStr = jsonStr;
+    var repairedJsonStr = jsonStr;
 
     var repairs = [
-      //[/}\s*{/gi, '}, {'], //transform[4]
-      //[/\"\s*\"/gi, '", "'] //transform[4]
-      [/,\s*}/gi, ' }'], //transform[7]
-      [/,\s*\]/gi, ' ]'] //transform[7]
+      [/,\s*}/gi, ' }'],
+      [/,\s*\]/gi, ' ]']
     ];
 
     for (var i = 0, len = repairs.length; i < len; ++i) {
-      repairJsonStr = repairJsonStr.replace(repairs[i][0], repairs[i][1]);
+      repairedJsonStr = repairedJsonStr.replace(repairs[i][0], repairs[i][1]);
     }
 
-    return repairJsonStr;
+    return repairedJsonStr;
   }
 
   beforeEach(function() {
