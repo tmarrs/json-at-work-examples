@@ -9,33 +9,7 @@ describe('cities-jsont', function() {
   var jsonCitiesFileName = null;
   var jsonCityFileName = null;
 
-
-  var sources = [];
   var transforms = [];
-
-  transforms[0] = {
-    "self": "<table>{pnt}</table>",
-    "pnt": "<tr><td>{pnt.x}</td><td>{pnt.y}</td></tr>"
-  };
-  sources[0] = {
-    pnt: {
-      x: 2,
-      y: 3
-    }
-  };
-
-  transforms[1] = {
-    "self": "<table><tr>{$}</tr></table>",
-    "self[*]": "<td>{$}</td>"
-  };
-  sources[1] = [1, 2];
-
-  transforms[3] = {
-    'self': '{\n"name": "{name}", {weather}\n}',
-    'weather': '\n"weather": {{temp}, {desc}\n}',
-    "temp": '\n"temp": {main.temp}',
-    "desc": '\n"description": "{weather[0].description}"'
-  };
 
   // transforms[4] works - kind of:
   /*
@@ -76,33 +50,6 @@ describe('cities-jsont', function() {
       '"weather": { "temp": {$.main.temp}, "windSpeed": {$.wind.speed}, "description": "{$.weather[0].description}" } },'
   };
 
-  sources[14] = [{
-    "u": "http://www.ericclapton.com/hello",
-    "d": "Eric Clapton",
-    "t": ["guitarist", "blues", "rock"]
-  }, {
-    "u": "http://www.bbking.com/",
-    "d": "B.B. King : Official Site",
-    "t": ["guitarist", "blues"]
-  }, {
-    "u": "http://www.stevieraysbluesbar.com/",
-    "d": "Louisville's House of Blues",
-    "t": ["guitarist", "blues", "rock"]
-  }];
-
-  transforms[14] = {
-    "self": "<ul>\n{$}</ul>",
-    "self[*]": " <li>\n" +
-      "  <img style='position:absolute;display:none;'" +
-      "    width='16' height='16'\n" +
-      "    onload='showImage(this)' src='{@icon($.u)}'/>\n" +
-      "  <a style='margin-left:20px;' href='{$.u}'>{$.d}</a>\n" +
-      " </li>\n",
-    "icon": function(x) {
-      return x.split('/').splice(0, 3).join('/') + '/favicon.ico';
-    }
-  };
-
   function repairJson(jsonStr) {
     var repairedJsonStr = jsonStr;
 
@@ -121,21 +68,8 @@ describe('cities-jsont', function() {
   beforeEach(function() {
     var baseDir = __dirname + '/../../data';
 
-    jsonFileName = baseDir + '/speaker.json';
     jsonCitiesFileName = baseDir + '/cities-weather-short.json';
     jsonCityFileName = baseDir + '/city-weather.json';
-  });
-
-  it('should do a very simple transform', function(done) {
-    //console.log(jsonT(sources[0], transforms[0]));
-
-    done();
-  });
-
-  it('should do a very simple transform - Part II', function(done) {
-    //console.log(jsonT(sources[14], transforms[14]));
-
-    done();
   });
 
   it('should transform city JSON data', function(done) {
