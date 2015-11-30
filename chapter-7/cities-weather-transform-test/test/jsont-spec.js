@@ -36,9 +36,28 @@ describe('cities-jsont', function() {
 
   transforms[7] = {
     'self': '{ "cities": [{cities}] }',
-    'cities[*]': '{"name": "{$.name}", ' +
-      '"weather": { "temp": {$.main.temp}, "windSpeed": {$.wind.speed}, "description": "{$.weather[0].description}" } },'
+    'cities[*]': '{ "id": "{$.id}", "name": "{$.name}", ' +
+      '"weather": { "currentTemp": {$.main.temp}, "lowTemp": {$.main.temp_min}, ' +
+      '"hiTemp": {$.main.temp_max}, "humidity": {$.main.humidity}, ' +
+      '"windSpeed": {$.wind.speed}, "summary": "{$.weather[0].main}", ' +
+      '"description": "{$.weather[0].description}" } },'
   };
+
+  /*
+  {
+    "id": "3988392",
+    "name": "Rosarito",
+    "weather": {
+      "currentTemp": 82.47,
+      "lowTemp": 78.8,
+      "hiTemp": 86,
+      "humidity": 61,
+      "windSpeed": 4.6,
+      "summary": "Clouds"
+      "description": "scattered clouds"
+    }
+  }
+  */
 
   function repairJson(jsonStr) {
     var repairedJsonStr = jsonStr;
@@ -61,19 +80,6 @@ describe('cities-jsont', function() {
     jsonCitiesFileName = baseDir + '/cities-weather-short.json';
   });
 
-  it('should transform cities JSON data', function(done) {
-    jsonfile.readFile(jsonCitiesFileName, function(readFileError,
-      jsonObj) {
-      if (!readFileError) {
-        //console.log(jsonT(jsonObj, transforms[4]));
-      } else {
-        throw (err);
-      }
-
-      done();
-    });
-  });
-
   it('should transform cities JSON data - Part II', function(done) {
     jsonfile.readFile(jsonCitiesFileName, function(readFileError,
       jsonObj) {
@@ -81,10 +87,9 @@ describe('cities-jsont', function() {
         var jsonStr = jsonT(jsonObj, transforms[7]);
 
         //console.log(jsonStr);
-        //console.log(typeof jsonStr);
         jsonStr = repairJson(jsonStr);
-        console.log(repairJson(jsonStr));
-        //console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
+        //console.log(repairJson(jsonStr));
+        console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
       } else {
         throw (readFileError);
       }
