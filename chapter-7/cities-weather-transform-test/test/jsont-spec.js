@@ -45,6 +45,7 @@ describe('cities-jsont', function() {
 
         jsonStr = repairJson(jsonStr);
         console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
+        //console.log(jsonStr);
       } else {
         throw (readFileError);
       }
