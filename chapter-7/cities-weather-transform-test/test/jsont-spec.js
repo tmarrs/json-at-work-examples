@@ -43,9 +43,7 @@ describe('cities-jsont', function() {
       if (!readFileError) {
         var jsonStr = jsonT(jsonObj, transformRules);
 
-        //console.log(jsonStr);
         jsonStr = repairJson(jsonStr);
-        //console.log(repairJson(jsonStr));
         console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
       } else {
         throw (readFileError);
