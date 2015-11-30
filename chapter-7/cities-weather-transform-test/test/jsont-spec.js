@@ -5,36 +5,9 @@ var jsonfile = require('jsonfile');
 var jsonT = require('../lib/jsont').jsonT;
 
 describe('cities-jsont', function() {
-  var jsonFileName = null;
   var jsonCitiesFileName = null;
-  var jsonCityFileName = null;
 
-  var transforms = [];
-
-  // transforms[4] works - kind of:
-  /*
-  [
-
-{"name": "Rancho Palos Verdes",
-"temp": 84.34,
-"description": "Sky is Clear"
-}
-{"name": "San Pedro",
-"temp": 84.02,
-"description": "Sky is Clear"
-}
-{"name": "Rosarito",
-"temp": 82.47,
-"description": "scattered clouds"
-}
-]
-  */
-  transforms[4] = {
-    'self': '[\n{cities}\n]',
-    'cities[*]': '\n{"name": "{$.name}",\n"weather": {\n"temp": {$.main.temp}, \n"description": "{$.weather[0].description}"\n}\n}'
-  };
-
-  transforms[7] = {
+  var transformRules = {
     'self': '{ "cities": [{cities}] }',
     'cities[*]': '{ "id": "{$.id}", "name": "{$.name}", ' +
       '"weather": { "currentTemp": {$.main.temp}, "lowTemp": {$.main.temp_min}, ' +
@@ -42,22 +15,6 @@ describe('cities-jsont', function() {
       '"windSpeed": {$.wind.speed}, "summary": "{$.weather[0].main}", ' +
       '"description": "{$.weather[0].description}" } },'
   };
-
-  /*
-  {
-    "id": "3988392",
-    "name": "Rosarito",
-    "weather": {
-      "currentTemp": 82.47,
-      "lowTemp": 78.8,
-      "hiTemp": 86,
-      "humidity": 61,
-      "windSpeed": 4.6,
-      "summary": "Clouds"
-      "description": "scattered clouds"
-    }
-  }
-  */
 
   function repairJson(jsonStr) {
     var repairedJsonStr = jsonStr;
@@ -80,11 +37,11 @@ describe('cities-jsont', function() {
     jsonCitiesFileName = baseDir + '/cities-weather-short.json';
   });
 
-  it('should transform cities JSON data - Part II', function(done) {
+  it('should transform cities JSON data', function(done) {
     jsonfile.readFile(jsonCitiesFileName, function(readFileError,
       jsonObj) {
       if (!readFileError) {
-        var jsonStr = jsonT(jsonObj, transforms[7]);
+        var jsonStr = jsonT(jsonObj, transformRules);
 
         //console.log(jsonStr);
         jsonStr = repairJson(jsonStr);
