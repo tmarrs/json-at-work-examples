@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cities>
+    {{#cities}}
+      <city>
+        <id>{{id}}</id>
+        <name>{{name}}</name>
+        <weather>
+          {{#main}}
+            <currentTemp>{{temp}}</currentTemp>
+            <lowTemp>{{temp_min}}</lowTemp>
+            <hiTemp>{{temp_max}}</hiTemp>
+            <humidity>{{humidity}}</humidity>
+          {{/main}}
+          <windSpeed>{{wind.speed}}</windSpeed>
+          {{#weather.0}}
+            <summary>{{main}}</summary>
+            <description>{{description}}</description>
+          {{/weather.0}}
+        </weather>
+      </city>
+    {{/cities}}
+</cities>

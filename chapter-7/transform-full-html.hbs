@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>OpenWeather - California Cities</title>
+  </head>
+  <body>
+    <h1>OpenWeather - California Cities</h1>
+    <table class="weatherTable">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>ID</th>
+          <th>Current Temp</th>
+          <th>Low Temp</th>
+          <th>High Temp</th>
+          <th>Humidity</th>
+          <th>Wind Speed</th>
+          <th>Summary</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      {{#each cities~}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{id}}</td>
+        {{~#main}}
+          <td>{{temp}}</td>
+          <td>{{temp_min}}</td>
+          <td>{{temp_max}}</td>
+          <td>{{humidity}}</td>
+        {{/main~}}
+        <td>{{wind.speed}}</td>
+        {{~#with weather}}
+          <td>{{0.main}}</td>
+          <td>{{0.description}}</td>
+        {{/with~}}
+      </tr>
+      {{/each~}}
+    </table>
+  </body>
+
+</html>
