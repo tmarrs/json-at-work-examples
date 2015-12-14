@@ -1,0 +1,11 @@
+table.weatherTable, table.weatherTable th, table.weatherTable td {
+   border: 1px solid black;
+   border-collapse: collapse;
+   border-width: 1px;
+   border-style: solid;
+   padding: 8px;
+}
+
+table.weatherTable th {
+  background-color: #dedede;
+}
