@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>OpenWeather - California Cities</title>
+    <link rel="stylesheet" href="weather.css">
   </head>
   <body>
     <h1>OpenWeather - California Cities</h1>
@@ -22,21 +23,21 @@
         </tr>
       </thead>
       {{#cities}}
-      <tr>
-        <td>{{name}}</td>
-        <td>{{id}}</td>
-        {{#main}}
-          <td>{{temp}}</td>
-          <td>{{temp_min}}</td>
-          <td>{{temp_max}}</td>
-          <td>{{humidity}}</td>
-        {{/main}}
-        <td>{{wind.speed}}</td>
-        {{#weather.0}}
-          <td>{{main}}</td>
-          <td>{{description}}</td>
-        {{/weather.0}}
-      </tr>
+        <tr>
+          <td>{{name}}</td>
+          <td>{{id}}</td>
+          {{#main}}
+            <td>{{temp}}</td>
+            <td>{{temp_min}}</td>
+            <td>{{temp_max}}</td>
+            <td>{{humidity}}</td>
+          {{/main}}
+          <td>{{wind.speed}}</td>
+          {{#weather.0}}
+            <td>{{main}}</td>
+            <td>{{description}}</td>
+          {{/weather.0}}
+        </tr>
       {{/cities}}
     </table>
   </body>

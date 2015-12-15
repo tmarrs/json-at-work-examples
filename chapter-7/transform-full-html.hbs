@@ -22,21 +22,21 @@
         </tr>
       </thead>
       {{#each cities~}}
-      <tr>
-        <td>{{name}}</td>
-        <td>{{id}}</td>
-        {{~#main}}
-          <td>{{temp}}</td>
-          <td>{{temp_min}}</td>
-          <td>{{temp_max}}</td>
-          <td>{{humidity}}</td>
-        {{/main~}}
-        <td>{{wind.speed}}</td>
-        {{~#with weather}}
-          <td>{{0.main}}</td>
-          <td>{{0.description}}</td>
-        {{/with~}}
-      </tr>
+        <tr>
+          <td>{{name}}</td>
+          <td>{{id}}</td>
+          {{~#main}}
+            <td>{{temp}}</td>
+            <td>{{temp_min}}</td>
+            <td>{{temp_max}}</td>
+            <td>{{humidity}}</td>
+          {{/main~}}
+          <td>{{wind.speed}}</td>
+          {{~#with weather}}
+            <td>{{0.main}}</td>
+            <td>{{0.description}}</td>
+          {{/with~}}
+        </tr>
       {{/each~}}
     </table>
   </body>
