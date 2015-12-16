@@ -31,6 +31,8 @@ describe('cities-mustache', function() {
 
             console.log('\n\n\nHTML Output:\n' + html);
             done();
+          } else {
+            throw (readTemplateFileError);
           }
         });
       } else {
