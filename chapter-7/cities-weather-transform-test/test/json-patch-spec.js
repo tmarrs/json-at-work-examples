@@ -51,6 +51,11 @@ var citiesTemplate = [{
   path: '/wind'
 }];
 
+function isJsonPatchError(error) {
+  return (error instanceof Object &&
+    error.name === 'PatchConflictError');
+}
+
 describe('cities-json-patch', function() {
   var jsonFileName = null;
   var jsonCitiesFileName = null;
@@ -73,8 +78,10 @@ describe('cities-json-patch', function() {
           console.log('\n\n\n\Patched JSON');
           console.log(JSON.stringify(output, null, 2));
         } catch (transformError) {
-          console.error(transformError);
-          throw (transformError);
+          if (!isJsonPatchError(transformError)) {
+            console.error(transformError);
+            throw (transformError);
+          }
         }
       } else {
         console.error(fileReadError);
