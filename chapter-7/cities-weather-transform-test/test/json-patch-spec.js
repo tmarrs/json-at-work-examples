@@ -77,18 +77,17 @@ describe('cities-json-patch', function() {
           console.log(jsonObj);
           console.log('\n\n\n\Patched JSON');
           console.log(JSON.stringify(output, null, 2));
+          done();
         } catch (transformError) {
           if (!isJsonPatchError(transformError)) {
             console.error(transformError);
-            throw (transformError);
+            done(transformError);
           }
         }
       } else {
         console.error(fileReadError);
-        throw (fileReadError);
+        done(fileReadError);
       }
-
-      done();
     });
   });
 
