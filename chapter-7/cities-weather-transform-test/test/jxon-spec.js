@@ -26,11 +26,10 @@ describe('jxon', function() {
 					var output = jxon.stringToJs(xmlData);
 					//console.log('\n\n\n\Transformed JSON');
 					//console.log(JSON.stringify(output));
+					done();
 				} else {
-					throw (err);
+					done(err);
 				}
-
-				done();
 			});
 		});
 	});
@@ -47,11 +46,10 @@ describe('jxon', function() {
 					var xml = jxon.jsToString(jsonObj);
 					//console.log('\n\n\n\Transformed XML');
 					//console.log(xml);
+					done();
 				} else {
-					throw (err);
+					done(err);
 				}
-
-				done();
 			});
 		});
 	});

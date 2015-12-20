@@ -32,7 +32,7 @@ describe('cities-handlebars', function() {
             console.log('\n\n\nHTML Output:\n' + html);
             done();
           } else {
-            throw (readTemplateFileError);
+            done(readTemplateFileError);
           }
         });
       } else {

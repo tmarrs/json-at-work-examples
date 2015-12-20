@@ -113,11 +113,10 @@ describe('cities-jsonapter', function() {
 				var output = j2j.run(template, jsonObj);
 				//console.log('\n\n\n\Transformed JSON');
 				//console.log(JSON.stringify(output, null, 2));
+				done();
 			} else {
-				throw (err);
+				done(err);
 			}
-
-			done();
 		});
 	});
 
@@ -127,11 +126,10 @@ describe('cities-jsonapter', function() {
 				var output = j2j.run(template5, jsonObj);
 				//console.log('\n\n\n\Transformed JSON');
 				//console.log(JSON.stringify(output, null, 2));
+				done();
 			} else {
-				throw (err);
+				done(err);
 			}
-
-			done();
 		});
 	});
 
@@ -142,13 +140,13 @@ describe('cities-jsonapter', function() {
 				for (var i in jsonObj['cities']) {
 					output.push(j2j.run(template5, jsonObj['cities'][i]));
 				}
+
 				//console.log('\n\n\n\Transformed JSON');
 				//console.log(JSON.stringify(output, null, 2));
+				done();
 			} else {
-				throw (err);
+				done(err);
 			}
-
-			done();
 		});
 	});
 
@@ -159,11 +157,11 @@ describe('cities-jsonapter', function() {
 
 				//console.log('\n\n\n\Transformed JSON');
 				//console.log(JSON.stringify(output, null, 2));
-			} else {
-				throw (err);
-			}
 
-			done();
+				done();
+			} else {
+				done(err);
+			}
 		});
 	});
 

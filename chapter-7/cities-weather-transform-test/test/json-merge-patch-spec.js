@@ -77,11 +77,11 @@ describe('cities-json-merge-patch', function() {
         //console.log(JSON.stringify(output));
         //var patch = jsonmergepatch.generate(source, target);
         //console.log(patch);
-      } else {
-        throw (err);
-      }
 
-      done();
+        done();
+      } else {
+        done(err);
+      }
     });
   });
 
@@ -95,11 +95,11 @@ describe('cities-json-merge-patch', function() {
         //console.log(JSON.stringify(output));
         //var target = jsonmergepatch.apply(source, patch2);
         //console.log(target);
-      } else {
-        throw (err);
-      }
 
-      done();
+        done();
+      } else {
+        done(err);
+      }
     });
   });
 });

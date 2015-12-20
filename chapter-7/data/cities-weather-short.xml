@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cities>
+    <city>
+        <id>5386035</id>
+        <name>Rancho Palos Verdes</name>
+        <coord>
+            <lon>-118.387016</lon>
+            <lat>33.744461</lat>
+        </coord>
+        <main temp="84.34" pressure="1012" humidity="58" temp_min="78.8" temp_max="93"/>
+        <dt>1442171078</dt>
+        <wind>
+            <speed>4.1</speed>
+            <deg>300</deg>
+        </wind>
+        <clouds>
+            <all>5</all>
+        </clouds>
+        <weather>
+            <id>800</id>
+            <main>Clear</main>
+            <description>Sky is Clear</description>
+            <icon>02d</icon>
+        </weather>
+    </city>
+    <city>
+        <id>5392528</id>
+        <name>San Pedro</name>
+        <coord>
+            <lon>-118.29229</lon>
+            <lat>33.735851</lat>
+        </coord>
+        <main>
+            <temp>84.02</temp>
+            <pressure>1012</pressure>
+            <humidity>58</humidity>
+            <temp_min>78.8</temp_min>
+            <temp_max>91</temp_max>
+        </main>
+        <dt>1442171080</dt>
+        <wind>
+            <speed>4.1</speed>
+            <deg>300</deg>
+        </wind>
+        <clouds>
+            <all>5</all>
+        </clouds>
+        <weather>
+            <id>800</id>
+            <main>Clear</main>
+            <description>Sky is Clear</description>
+            <icon>02d</icon>
+        </weather>
+    </city>
+    <city>
+        <id>3988392</id>
+        <name>Rosarito</name>
+        <coord>
+            <lon>-117.033333</lon>
+            <lat>32.333328</lat>
+        </coord>
+        <main>
+            <temp>82.47</temp>
+            <pressure>1012</pressure>
+            <humidity>61</humidity>
+            <temp_min>78.8</temp_min>
+            <temp_max>86</temp_max>
+        </main>
+        <dt>1442170905</dt>
+        <wind>
+            <speed>4.6</speed>
+            <deg>240</deg>
+        </wind>
+        <clouds>
+            <all>32</all>
+        </clouds>
+        <weather>
+            <id>802</id>
+            <main>Clouds</main>
+            <description>scattered clouds</description>
+            <icon>03d</icon>
+        </weather>
+    </city>
+</cities>

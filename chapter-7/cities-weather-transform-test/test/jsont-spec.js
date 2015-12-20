@@ -46,11 +46,10 @@ describe('cities-jsont', function() {
         jsonStr = repairJson(jsonStr);
         console.log(JSON.stringify(JSON.parse(jsonStr), null, 2));
         //console.log(jsonStr);
+        done();
       } else {
-        throw (readFileError);
+        done(readFileError);
       }
-
-      done();
     });
   });
 });
