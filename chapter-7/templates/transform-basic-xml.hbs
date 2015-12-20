@@ -12,10 +12,10 @@
             <humidity>{{humidity}}</humidity>
           {{/main}}
           <windSpeed>{{wind.speed}}</windSpeed>
-          {{#with weather}}
-            <summary>{{0.main}}</summary>
-            <description>{{0.description}}</description>
-          {{/with}}
+          {{#each weather}}
+            <summary>{{main}}</summary>
+            <description>{{description}}</description>
+          {{/each}}
         </weather>
       </city>
     {{/each}}
