@@ -19,13 +19,18 @@ describe('json-xml', function() {
   });
 
   it('should transform cities JSON data to XML', function(done) {
-    /*  
-    var obj = {name: "Super", Surname: "Man", age: 23};
-     
-    var builder = new xml2js.Builder();
-    var xml = builder.buildObject(obj);
-    */
-    done();
+    jsonfile.readFile(jsonCitiesFileName, function(readJsonFileError,
+      jsonObj) {
+      if (!readJsonFileError) {
+        var builder = new xml2js.Builder();
+        var xml = builder.buildObject(jsonObj);
+
+        console.log('\n\n\nXML Output:\n' + xml);
+        done();
+      } else {
+        done(readJsonFileError);
+      }
+    });
   });
 
   it('should transform cities XML data to JSON', function(done) {
@@ -36,7 +41,7 @@ describe('json-xml', function() {
 
         parser.parseString(xmlData, function(error, xmlObj) {
           if (!error) {
-            console.log('\n\n\nParsed XML Output:\n' +
+            console.log('\n\n\nJSON Output:\n' +
               JSON.stringify(xmlObj, null, 2));
 
             done();

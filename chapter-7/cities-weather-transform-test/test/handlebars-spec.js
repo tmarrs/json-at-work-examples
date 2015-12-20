@@ -36,7 +36,7 @@ describe('cities-handlebars', function() {
           }
         });
       } else {
-        throw (readJsonFileError);
+        done(readJsonFileError);
       }
     });
   });
