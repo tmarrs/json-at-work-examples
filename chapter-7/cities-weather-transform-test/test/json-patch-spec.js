@@ -51,11 +51,6 @@ var citiesTemplate = [{
   path: '/wind'
 }];
 
-function isJsonPatchError(error) {
-  return (error instanceof Object &&
-    error.name === 'PatchConflictError');
-}
-
 describe('cities-json-patch', function() {
   var jsonFileName = null;
   var jsonCitiesFileName = null;
@@ -79,10 +74,9 @@ describe('cities-json-patch', function() {
           console.log(JSON.stringify(output, null, 2));
           done();
         } catch (transformError) {
-          if (!isJsonPatchError(transformError)) {
-            console.error(transformError);
-            done(transformError);
-          }
+          expect(transformError).to.be.an.instanceof(Object);
+          expect(transformError.name).to.eql('PatchConflictError');
+          done();
         }
       } else {
         console.error(fileReadError);
