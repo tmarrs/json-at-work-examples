@@ -495,12 +495,12 @@ Credit for the Java setup on Windows goes to [Robert Sindall](http://www.roberts
 * Follow the [Maven Installation Instructions](http://maven.apache.org/download.cgi#Installation) for your system.
 * Run `mvn --version`, and you should see something like this:
 ```
-Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 09:22:22-0600)
-Maven home: /Users/tmarrs/apache-maven-3.1.1
-Java version: 1.7.0_40, vendor: Oracle Corporation
-Java home: /Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T09:41:47-07:00)
+Maven home: /Users/tmarrs/apache-maven-3.3.9
+Java version: 1.8.0_72, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/jre
 Default locale: en_US, platform encoding: UTF-8
-OS name: "mac os x", version: "10.10.3", arch: "x86_64", family: "mac"
+OS name: "mac os x", version: "10.11.2", arch: "x86_64", family: "mac"
 ```
 
 For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
