@@ -433,15 +433,15 @@ Our Java environment depends on:
 * [Apache Tomcat](#installing-apache-tomcat)
 
 ### Installing Java SE
-We're using Java SE (Standard Edition) 7 for this book, so please visit the [Oracle Java SE 7 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html).
+We're using Java SE (Standard Edition) 8 for this book, so please visit the [Oracle Java SE 8 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
-You'll see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper downlaod for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your operating system.
+You'll see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper download for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your operating system.
 
 Follow the instructions below for you system. Then run `java -version`, and you should see something similar to this:
 ```
-java version "1.7.0_40"
-Java(TM) SE Runtime Environment (build 1.7.0_40-b43)
-Java HotSpot(TM) 64-Bit Server VM (build 24.0-b56, mixed mode)
+java version "1.8.0_72"
+Java(TM) SE Runtime Environment (build 1.8.0_72-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 25.72-b15, mixed mode)
 ```
 
 #### Java Setup on Mac OS X
