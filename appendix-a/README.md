@@ -4,6 +4,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
 
 
 ## Contents
+- [Contents](#contents)
 - [Installing JSON Tools in the Browser](#installing-json-tools-in-the-browser)
     - [Installing JSONView in Chrome and Firefox](#installing-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
@@ -41,6 +42,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Installing Maven](#installing-maven)
         - [Installing Spring - Add to the POM](#installing-spring---add-to-the-pom)
         - [Installing JUnit - Add to the POM](#installing-junit---add-to-the-pom)
+    - [Using Eclipse with Maven](#using-eclipse-with-maven)
     - [Installing Apache Tomcat](#installing-apache-tomcat)
         - [Installing Apache Tomcat on Mac OS X](#installing-apache-tomcat-on-mac-os-x)
         - [Installing Apache Tomcat on Linux](#installing-apache-tomcat-on-linux)
@@ -427,6 +429,7 @@ Our Java environment depends on:
 * [Maven](#installing-maven)
   * [Spring](#installing-spring---add-to-the-pom)
   * [JUnit](#installing-junit---add-to-the-pom)
+  * [Eclipse](#using-eclipse-with-maven)
 * [Apache Tomcat](#installing-apache-tomcat)
 
 ### Installing Java SE
@@ -545,6 +548,9 @@ We've turned off Apache Commons Logging so we can add SLF4J and LogBack to the P
 	<version>4.12</version>
 </dependency>
 ```
+
+### Using Eclipse with Maven
+Use the following Maven command to integrate with Eclipse: `mvn ecplise:eclipse`
 
 ### Installing Apache Tomcat
 We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.html) to run our Spring-based Java application. Be sure to install [Java SE](#installing-java-se) before installing Tomcat.
