@@ -1,5 +1,0 @@
-- Use PNG file for the code examples. [Done]
-- Replicate serialization/de-serialization examples from chapter 2.
-- Get Server & JSON file from Chapter 5. [Done]
-- Use writeup on JSON server from Chapter 6-7. [Done]
-- Use speakers example. [Done]
