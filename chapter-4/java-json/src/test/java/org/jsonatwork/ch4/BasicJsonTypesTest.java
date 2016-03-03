@@ -8,7 +8,10 @@ import static org.junit.Assert.*;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
@@ -17,6 +20,7 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 /**
  * @author tmarrs
@@ -32,7 +36,8 @@ public class BasicJsonTypesTest {
 			Writer writer = new StringWriter();
 			int age = 39;
 			String fullName = new String("Larson Richard");
-			String[] tags = new String[] { "json", "rest", "api", "oauth" };
+			List<String> tags = new ArrayList<String>(
+					                          Arrays.asList("json", "rest", "api", "oauth"));
 			boolean registered = true;
 
 			writer.write("age = ");
@@ -42,6 +47,7 @@ public class BasicJsonTypesTest {
 			writer.write("\ntags = ");
 			mapper.writeValue(writer, tags);
 			writer.write("\nregistered = ");
+			mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
 			mapper.writeValue(writer, registered);
 			System.out.println(writer.toString());
 			assertTrue(true);
