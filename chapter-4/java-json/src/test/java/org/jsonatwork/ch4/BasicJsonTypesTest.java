@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.jsonatwork.ch4;
 
 import static org.junit.Assert.*;

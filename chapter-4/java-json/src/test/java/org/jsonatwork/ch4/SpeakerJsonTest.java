@@ -4,11 +4,9 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -26,7 +24,7 @@ public class SpeakerJsonTest {
 	private static final String SPEAKERS_JSON_FILE_NAME = "speakers.json";
 
 	@Test
-	public void testSerialize() {
+	public void serializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			String[] tags = {"json", "rest", "api", "oauth"};
@@ -58,7 +56,7 @@ public class SpeakerJsonTest {
 	}
 	
 	@Test
-	public void testDeSerialize() {
+	public void deSerializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			File speakerFile = getSpeakerFile(SpeakerJsonTest.SPEAKER_JSON_FILE_NAME);
@@ -81,7 +79,7 @@ public class SpeakerJsonTest {
 	}
 	
 	@Test
-	public void testDeSerialize2() {
+	public void deSerializeMultipleObjects() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			File speakersFile = getSpeakerFile(SpeakerJsonTest.SPEAKERS_JSON_FILE_NAME);
@@ -89,7 +87,7 @@ public class SpeakerJsonTest {
 					TypeFactory.defaultInstance().constructCollectionType(List.class,  
 							Speaker.class));
 
-			System.out.println("\n");
+			System.out.println("\n\n\nAll Speakers\n");
 			for (Speaker speaker: speakers) {
 				System.out.println(speaker);	
 			}
