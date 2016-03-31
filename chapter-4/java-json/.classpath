@@ -64,19 +64,19 @@
       <attribute value="jar:file:/Users/tmarrs/.m2/repository/org/json/json/20140107/json-20140107-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/net/javacrumbs/json-unit/json-unit/1.9.0/json-unit-1.9.0.jar" sourcepath="M2_REPO/net/javacrumbs/json-unit/json-unit/1.9.0/json-unit-1.9.0-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/net/javacrumbs/json-unit/json-unit/1.10.0/json-unit-1.10.0.jar" sourcepath="M2_REPO/net/javacrumbs/json-unit/json-unit/1.10.0/json-unit-1.10.0-sources.jar">
     <attributes>
-      <attribute value="jar:file:/Users/tmarrs/.m2/repository/net/javacrumbs/json-unit/json-unit/1.9.0/json-unit-1.9.0-javadoc.jar!/" name="javadoc_location"/>
+      <attribute value="jar:file:/Users/tmarrs/.m2/repository/net/javacrumbs/json-unit/json-unit/1.10.0/json-unit-1.10.0-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/net/javacrumbs/json-unit/json-unit-core/1.9.0/json-unit-core-1.9.0.jar" sourcepath="M2_REPO/net/javacrumbs/json-unit/json-unit-core/1.9.0/json-unit-core-1.9.0-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/net/javacrumbs/json-unit/json-unit-core/1.10.0/json-unit-core-1.10.0.jar" sourcepath="M2_REPO/net/javacrumbs/json-unit/json-unit-core/1.10.0/json-unit-core-1.10.0-sources.jar">
     <attributes>
-      <attribute value="jar:file:/Users/tmarrs/.m2/repository/net/javacrumbs/json-unit/json-unit-core/1.9.0/json-unit-core-1.9.0-javadoc.jar!/" name="javadoc_location"/>
+      <attribute value="jar:file:/Users/tmarrs/.m2/repository/net/javacrumbs/json-unit/json-unit-core/1.10.0/json-unit-core-1.10.0-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/net/javacrumbs/json-unit/json-unit-fluent/1.9.0/json-unit-fluent-1.9.0.jar" sourcepath="M2_REPO/net/javacrumbs/json-unit/json-unit-fluent/1.9.0/json-unit-fluent-1.9.0-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/net/javacrumbs/json-unit/json-unit-fluent/1.10.0/json-unit-fluent-1.10.0.jar" sourcepath="M2_REPO/net/javacrumbs/json-unit/json-unit-fluent/1.10.0/json-unit-fluent-1.10.0-sources.jar">
     <attributes>
-      <attribute value="jar:file:/Users/tmarrs/.m2/repository/net/javacrumbs/json-unit/json-unit-fluent/1.9.0/json-unit-fluent-1.9.0-javadoc.jar!/" name="javadoc_location"/>
+      <attribute value="jar:file:/Users/tmarrs/.m2/repository/net/javacrumbs/json-unit/json-unit-fluent/1.10.0/json-unit-fluent-1.10.0-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/junit/junit/4.11/junit-4.11.jar" sourcepath="M2_REPO/junit/junit/4.11/junit-4.11-sources.jar">
