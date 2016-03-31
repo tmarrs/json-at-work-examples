@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 
-public class SpeakerJsonTest {
+public class SpeakerJsonFlatFileTest {
 
 	private static final String SPEAKER_JSON_FILE_NAME = "speaker.json";
 	private static final String SPEAKERS_JSON_FILE_NAME = "speakers.json";
@@ -59,7 +59,7 @@ public class SpeakerJsonTest {
 	public void deSerializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			File speakerFile = getSpeakerFile(SpeakerJsonTest.SPEAKER_JSON_FILE_NAME);
+			File speakerFile = getSpeakerFile(SpeakerJsonFlatFileTest.SPEAKER_JSON_FILE_NAME);
 			Speaker speaker = mapper.readValue(speakerFile, Speaker.class);
 			
 			System.out.println("\n" + speaker + "\n");
@@ -82,7 +82,7 @@ public class SpeakerJsonTest {
 	public void deSerializeMultipleObjects() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			File speakersFile = getSpeakerFile(SpeakerJsonTest.SPEAKERS_JSON_FILE_NAME);
+			File speakersFile = getSpeakerFile(SpeakerJsonFlatFileTest.SPEAKERS_JSON_FILE_NAME);
 			List<Speaker> speakers = mapper.readValue(speakersFile, 
 					TypeFactory.defaultInstance().constructCollectionType(List.class,  
 							Speaker.class));
