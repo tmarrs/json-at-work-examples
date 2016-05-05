@@ -4,9 +4,11 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -14,6 +16,7 @@ import org.junit.Test;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.type.TypeFactory;
@@ -28,7 +31,7 @@ public class SpeakerJsonFlatFileTest {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			String[] tags = {"json", "rest", "api", "oauth"};
-			Speaker speaker = new Speaker(39, "Larson Richard", tags, true);
+			Speaker speaker = new Speaker(1, 39, "Larson Richard", tags, true);
 
 			mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
 			mapper.writeValue(System.out, speaker);
@@ -83,9 +86,19 @@ public class SpeakerJsonFlatFileTest {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			File speakersFile = getSpeakerFile(SpeakerJsonFlatFileTest.SPEAKERS_JSON_FILE_NAME);
-			List<Speaker> speakers = mapper.readValue(speakersFile, 
+			/*List<Speaker> speakers = mapper.readValue(speakersFile, 
 					TypeFactory.defaultInstance().constructCollectionType(List.class,  
-							Speaker.class));
+							Speaker.class));*/
+			
+			
+			JsonNode arrNode = mapper.readTree(speakersFile).get("speakers");
+			List<Speaker> speakers = new ArrayList<Speaker>();
+			if (arrNode.isArray()) {
+			    for (JsonNode objNode : arrNode) {
+			        System.out.println(objNode);
+			        speakers.add(mapper.convertValue(objNode, Speaker.class));
+			    }
+			}
 
 			System.out.println("\n\n\nAll Speakers\n");
 			for (Speaker speaker: speakers) {

@@ -84,9 +84,14 @@
       <attribute value="jar:file:/Users/tmarrs/.m2/repository/junit/junit/4.11/junit-4.11-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21-sources.jar">
     <attributes>
-      <attribute value="jar:file:/Users/tmarrs/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5-javadoc.jar!/" name="javadoc_location"/>
+      <attribute value="jar:file:/Users/tmarrs/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21.jar" sourcepath="M2_REPO/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/tmarrs/.m2/repository/org/slf4j/slf4j-simple/1.7.21/slf4j-simple-1.7.21-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/com/mashape/unirest/unirest-java/1.4.8/unirest-java-1.4.8.jar" sourcepath="M2_REPO/com/mashape/unirest/unirest-java/1.4.8/unirest-java-1.4.8-sources.jar">

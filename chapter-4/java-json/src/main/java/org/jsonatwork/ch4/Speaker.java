@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Speaker {
+	private int id;
 	private int age;
 	private String fullName;
 	private List<String> tags = new ArrayList<String>(); 
@@ -14,20 +15,25 @@ public class Speaker {
 		super();
 	}
 
-	public Speaker(int age, String fullName, List<String> tags, boolean registered) {
+	public Speaker(int id, int age, String fullName, List<String> tags, boolean registered) {
 		super();
+		this.id = id;
 		this.age = age;
 		this.fullName = fullName;
 		this.tags = tags;
 		this.registered = registered;
 	}
 	
-	public Speaker(int age, String fullName, String[] tags, boolean registered) {
-		super();
-		this.age = age;
-		this.fullName = fullName;
-		this.tags = Arrays.asList(tags);
-		this.registered = registered;
+	public Speaker(int id, int age, String fullName, String[] tags, boolean registered) {
+		this(id, age, fullName, Arrays.asList(tags), registered);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public int getAge() {
@@ -64,7 +70,8 @@ public class Speaker {
 
 	@Override
 	public String toString() {
-		return String.format("Speaker [age=%s, fullName=%s, tags=%s, registered=%s]", age, fullName, tags, registered);
+		return String.format("Speaker [id=%s, age=%s, fullName=%s, tags=%s, registered=%s]", id, age, fullName, tags,
+				registered);
 	}
 
 }
