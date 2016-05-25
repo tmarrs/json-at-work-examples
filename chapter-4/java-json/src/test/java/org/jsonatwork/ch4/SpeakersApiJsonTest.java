@@ -24,15 +24,15 @@ import com.mashape.unirest.http.HttpResponse;
 import static net.javacrumbs.jsonunit.fluent.JsonFluentAssert.assertThatJson;
 
 public class SpeakersApiJsonTest {
-	private static final String SPEAKERS_BASE_URI = "http://localhost:5000/speakers";
-	private static final String SPEAKER_3_URI = SPEAKERS_BASE_URI + "/3";
+	private static final String SPEAKERS_ALL_URI = "http://localhost:5000/speakers";
+	private static final String SPEAKER_3_URI = SPEAKERS_ALL_URI + "/3";
 
 	@Test
 	public void testApiAllSpeakersJson() {
 		
 		try {
 			String json = null;
-			HttpResponse <String> resp = Unirest.get(SpeakersApiJsonTest.SPEAKERS_BASE_URI)
+			HttpResponse <String> resp = Unirest.get(SpeakersApiJsonTest.SPEAKERS_ALL_URI)
 			       .asString();
 			
 			assertEquals(HttpStatus.SC_OK, resp.getStatus());
