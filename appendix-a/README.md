@@ -34,6 +34,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
     - [Installing with RVM + the `rails` Gem](#installing-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
 - [Installing MySQL](#installing-mysql)
+- [Installing MongoDB](#installing-mongodb)
 - [Installing The Java Environment](#installing-the-java-environment)
     - [Installing Java SE](#installing-java-se)
         - [Java Setup on Mac OS X](#java-setup-on-mac-os-x)
@@ -196,6 +197,7 @@ You now have a Node REPL that does what you want - no more annoying 'undefined'.
 
 
 ### Install Node.js on Windows
+FIXME - NVM works well on Windows now.
 NVM works well on Mac OS X and Linux, but it doesn't work on Windows. You can try the following options on Windows:
 * [nvmw](https://github.com/hakobera/nvmw)
 * [nvm-windows](https://github.com/coreybutler/nvm-windows)
@@ -398,10 +400,13 @@ You can easily upgrade to new versions of Ruby and Rails by:
 * Then install the `rails` as shown above.
 
 ### Rails on Windows
+FIXME - I was able to setup RoR on Windows. Re-do this section.
+
 Ruby on Rails is difficult to setup on Windows. Try the [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
 
 ## Installing MySQL
+FIXME - We may not do a full-blown RoR project in Chapter 3.
 The Ruby on Rails examples require [MySQL](https://www.mysql.com/) because Rails insists on a database. Of course, it's possible to run a Ruby on Rails project without a database, but that takes a lot of configuration and you're definitely swimming upstream. Just give Rails what it wants, and install [MySQL](https://www.mysql.com/).
 
 This book uses MySQL 5.6, and you can download and install it on your operating system by following the [MySQL Installation Instructions](https://dev.mysql.com/doc/refman/5.6/en/installing.html).
@@ -422,6 +427,8 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 * [MySQL's Post Installation Setup and Testing](https://dev.mysql.com/doc/refman/5.6/en/postinstallation.html)
 * [Joe Fallon's blog](http://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/)
 
+## Installing MongoDB
+FIXME - TBD
 
 ## Installing The Java Environment
 Our Java environment depends on:
