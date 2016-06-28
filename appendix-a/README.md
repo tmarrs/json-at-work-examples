@@ -55,6 +55,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Installing `cURL` on Windows](#installing-curl-on-windows)
 - [References](#references)
 
+FIXME - Change "Installing" to "Install".
 
 ## Installing JSON Tools in the Browser
 ### Installing JSONView in Chrome and Firefox
