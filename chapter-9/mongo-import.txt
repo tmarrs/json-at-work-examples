@@ -1,0 +1,1 @@
+mongoimport --db=jsaw --collection=speakers --upsert --jsonArray --file=speakers.json 

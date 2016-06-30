@@ -1,0 +1,3 @@
+mongoexport --db=jsaw --collection=speakers --pretty --jsonArray --out=my-speakers.json
+
+cat my-speakers.json | jq '.[] | {fullName, age}'
