@@ -1,3 +1,8 @@
 mongoexport --db=jsaw --collection=speakers --pretty --jsonArray --out=my-speakers.json
 
 cat my-speakers.json | jq '.[] | {fullName, age}'
+
+
+mongoexport --db=jsaw --collection=speakers --pretty --jsonArray | jq '[.[] | del(._id)]'
+
+mongoexport --db=jsaw --collection=speakers --pretty --jsonArray | jq '[.[] | del(._id)]'
