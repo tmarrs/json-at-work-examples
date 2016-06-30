@@ -1,5 +1,9 @@
-db.speakers.insert({fullName: 'Larson Richard', age: 39});
-db.speakers.find();
-db.speakers.count();
-db.speakers.save({fullName: 'Ester Clements', age: 29});
-db.speakers.drop();
+db.speakers.insert({
+  fullName: 'Carl ClojureDev',
+  tags: ['Clojure', 'Functional Programming'],
+  age: 45,
+  registered: false
+})
+
+db.speakers.find()
+db.speakers.count()
