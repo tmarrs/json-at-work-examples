@@ -5,11 +5,11 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
 
 ## Contents
 - [Contents](#contents)
-- [Installing JSON Tools in the Browser](#installing-json-tools-in-the-browser)
-    - [Installing JSONView in Chrome and Firefox](#installing-jsonview-in-chrome-and-firefox)
+- [Install JSON Tools in the Browser](#install-json-tools-in-the-browser)
+    - [Install JSONView in Chrome and Firefox](#install-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
-- [Installing JSONPad](#installing-jsonpad)
-- [Installing Node.js](#installing-nodejs)
+- [Install JSONPad](#install-jsonpad)
+- [Install Node.js](#install-nodejs)
     - [Install Node.js on Mac OS X and Linux with NVM](#install-nodejs-on-mac-os-x-and-linux-with-nvm)
         - [Install and Configure NVM](#install-and-configure-nvm)
         - [Install Node](#install-node)
@@ -17,63 +17,61 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Avoiding `sudo` with npm - Option 2](#avoiding-sudo-with-npm---option-2)
         - [Taming the REPL](#taming-the-repl)
     - [Install Node.js on Windows](#install-nodejs-on-windows)
-    - [Uninstalling Node.js](#uninstalling-nodejs)
-        - [Uninstalling Node.js on Mac OS X](#uninstalling-nodejs-on-mac-os-x)
-        - [Uninstalling Node.js on Linux](#uninstalling-nodejs-on-linux)
-        - [Uninstalling Node.js on Windows](#uninstalling-nodejs-on-windows)
-    - [Installing Yeoman](#installing-yeoman)
-        - [Installing the `webapp` Yeoman Generator](#installing-the-webapp-yeoman-generator)
-    - [Installing npm Modules](#installing-npm-modules)
+    - [Uninstall Node.js](#uninstall-nodejs)
+        - [Uninstall Node.js on Mac OS X](#uninstall-nodejs-on-mac-os-x)
+        - [Uninstall Node.js on Linux](#uninstall-nodejs-on-linux)
+        - [Uninstall Node.js on Windows](#uninstall-nodejs-on-windows)
+    - [Install Yeoman](#install-yeoman)
+        - [Install the `webapp` Yeoman Generator](#install-the-webapp-yeoman-generator)
+    - [Install npm Modules](#install-npm-modules)
         - [Install `jsonlint`](#install-jsonlint)
         - [Install `json`](#install-json)
         - [Install `ujs-jsonvalidate`](#install-ujs-jsonvalidate)
         - [Install `tinyserver`](#install-tinyserver)
         - [Install `http-server`](#install-http-server)
         - [Install `json-server`](#install-json-server)
-- [Installing Ruby on Rails (RoR)](#installing-ruby-on-rails-ror)
-    - [Installing with RVM + the `rails` Gem](#installing-with-rvm--the-rails-gem)
+        - [Install +crest+](#install-crest)
+- [Install Ruby on Rails (RoR)](#install-ruby-on-rails-ror)
+    - [Install with RVM + the `rails` Gem](#install-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
-- [Installing MySQL](#installing-mysql)
-- [Installing MongoDB](#installing-mongodb)
-- [Installing The Java Environment](#installing-the-java-environment)
-    - [Installing Java SE](#installing-java-se)
+- [Install MySQL](#install-mysql)
+- [Install MongoDB](#install-mongodb)
+- [Install The Java Environment](#install-the-java-environment)
+    - [Install Java SE](#install-java-se)
         - [Java Setup on Mac OS X](#java-setup-on-mac-os-x)
         - [Java Setup on Linux](#java-setup-on-linux)
         - [Java Setup on Windows](#java-setup-on-windows)
-    - [Installing Maven](#installing-maven)
-        - [Installing Spring - Add to the POM](#installing-spring---add-to-the-pom)
-        - [Installing JUnit - Add to the POM](#installing-junit---add-to-the-pom)
+    - [Install Maven](#install-maven)
+        - [Install Spring - Add to the POM](#install-spring---add-to-the-pom)
+        - [Install JUnit - Add to the POM](#install-junit---add-to-the-pom)
     - [Using Eclipse with Maven](#using-eclipse-with-maven)
-    - [Installing Apache Tomcat](#installing-apache-tomcat)
-        - [Installing Apache Tomcat on Mac OS X](#installing-apache-tomcat-on-mac-os-x)
-        - [Installing Apache Tomcat on Linux](#installing-apache-tomcat-on-linux)
-        - [Installing Apache Tomcat on Windows](#installing-apache-tomcat-on-windows)
-- [Installing `jq`](#installing-jq)
-    - [Installing `cURL`](#installing-curl)
-        - [Installing `cURL` on Mac OS X](#installing-curl-on-mac-os-x)
-        - [Installing `cURL` on Linux](#installing-curl-on-linux)
-        - [Installing `cURL` on Windows](#installing-curl-on-windows)
+    - [Install Apache Tomcat](#install-apache-tomcat)
+        - [Install Apache Tomcat on Mac OS X](#install-apache-tomcat-on-mac-os-x)
+        - [Install Apache Tomcat on Linux](#install-apache-tomcat-on-linux)
+        - [Install Apache Tomcat on Windows](#install-apache-tomcat-on-windows)
+- [Install `jq`](#install-jq)
+    - [Install `cURL`](#install-curl)
+        - [Install `cURL` on Mac OS X](#install-curl-on-mac-os-x)
+        - [Install `cURL` on Linux](#install-curl-on-linux)
+        - [Install `cURL` on Windows](#install-curl-on-windows)
 - [References](#references)
 
-FIXME - Change "Installing" to "Install".
-
-## Installing JSON Tools in the Browser
-### Installing JSONView in Chrome and Firefox
+## Install JSON Tools in the Browser
+### Install JSONView in Chrome and Firefox
 Please follow the installation instructions on the [JSONView site](http://jsonview.com/) for your browser.
 
 ### JSONLint
 Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
 
 
-## Installing JSONPad
+## Install JSONPad
 You can download JSONPad from the [JSONPad Downloads page](https://code.google.com/p/json-pad/downloads/list).
 JSONPad in its current form runs on Adobe AIR, which requires a separate install. You can download Adobe AIR at: [https://get.adobe.com/air/](https://get.adobe.com/air/).
 
-Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to
-[my own `json-pad` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool from Adobe AIR to [NW.js (formerly known as Node Webkit)](http://nwjs.io/) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
+Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to [my own `json-pad` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool from Adobe AIR to [NW.js (formerly known as Node Webkit)](http://nwjs.io/) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
 
 
-## Installing Node.js
+## Install Node.js
 This book uses Node.js version `v4.2.2`.
 
 If Node.js is working properly on your machine, then you should see the following from the command line when you check the version number:
@@ -207,10 +205,10 @@ If NVM doesn't work for your Windows environment, then try one of the following 
 * Please follow [Team Treehouse's instructions for installing Node on Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
 * Use [Nitrous.io](https://www.nitrous.io/) to run your Node.js environment in the Cloud rather than on Windows. Please note that Nitrous.io has both free and commercial usage plans.
 
-### Uninstalling Node.js
+### Uninstall Node.js
 If you have a previous installation of Node.js that isn't quite working properly anymore, you may need to completely uninstall it from your machine. This includes both the `node` and `npm` executables.
 
-#### Uninstalling Node.js on Mac OS X
+#### Uninstall Node.js on Mac OS X
 Uninstalls can be complicated, and credit for the Mac uninstall instructions goes to [Clay at Hungred Dot Com](http://hungred.com/how-to/completely-removing-nodejs-npm/). If `homebrew` was used to install Node.js, then simply type `brew uninstall node` at the prompt.
 
 If you didn't use `homebrew`, do the following:
@@ -226,7 +224,7 @@ rm -rf /usr/local/lib/dtrace/node.d
 rm -rf $USER/.npm
 ```
 
-#### Uninstalling Node.js on Linux
+#### Uninstall Node.js on Linux
 Credit for the Linux uninstall instructions goes to [Stack Overflow](http://stackoverflow.com/questions/5650169/uninstall-node-js-using-linux-command-line) and [GitHub](https://github.com/joyent/node/issues/4058).
 Do the following:
 * Find the node installation by typing `which node`. Let's assume it's at `/usr/local/bin/node`
@@ -240,7 +238,7 @@ sudo rm -rf lib/node
 sudo rm -rf share/man/*/node.*
 ```
 
-#### Uninstalling Node.js on Windows
+#### Uninstall Node.js on Windows
 Credit for the Windows uninstall instructions goes to [Team Treehouse](http://blog.teamtreehouse.com/install-node-js-npm-windows). Here are the steps:
 * Open the Windows Control Panel.
 * Choose “Programs and Features”.
@@ -248,13 +246,13 @@ Credit for the Windows uninstall instructions goes to [Team Treehouse](http://bl
 * Select Node.js, and click the Uninstall link.
 
 
-### Installing Yeoman
+### Install Yeoman
 Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
 
-#### Installing the `webapp` Yeoman Generator
+#### Install the `webapp` Yeoman Generator
 Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp). Please follow the default installation so that the test environment includes both [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
 
-### Installing npm Modules
+### Install npm Modules
 We use the following npm modules at the command line, so we install them globally:
 * [`jsonlint`](#install-jsonlint)
 * [`json`](#install-json)
@@ -355,14 +353,47 @@ To access:
 http://localhost:5000/speakers
 ```
 
-## Installing Ruby on Rails (RoR)
+#### Install +crest+
+Crest is a small REST server that provides a RESTful wrapper for MongoDB. Please visit the 
+[Crest Github Repository](https://github.com/cordazar/crest). The Global +npm+ install
+would be the simplest way to install +crest+, but this is broken. Instead, do a +git clone+ as follows:
+* `cd` to the directory where your other development projects reside. We'll call this directory `projects` - `cd projects`
+* Clone the repository: `git clone git://github.com/Cordazar/crest.git`
+* Navigate to the +crest+ directory: `cd crest`
+* Update the +config.json+ file to remove the +username+ and +password+. Of course this isn't secure,
+but you can re-add these fields and set them to proper values later. We just want to get started quickly. The +config.json+ should look like this:
+```
+{
+  "db": {
+    "port": 27017,
+    "host": "localhost"
+  },
+  "server": {
+    "port": 3500,
+    "address": "0.0.0.0"
+  },
+  "flavor": "normal",
+  "debug": true
+}
+```
+* Be sure to install and start MongoDB(#install-mongodb) first.
+* In a separate tab or command shell, start +crest+:
+```
+node server
+
+DEBUG: util.js is loaded
+DEBUG: rest.js is loaded
+crest listening at http://:::3500
+```
+
+## Install Ruby on Rails (RoR)
 There are several ways to install Ruby on Rails:
 * [Rails Installer](http://railsinstaller.org)
 * [ruby-install](https://github.com/postmodern/ruby-install)
 * [RVM (Ruby Version Manager)](https://rvm.io/) + the `rails` gem
 * [+rbenv+](https://github.com/sstephenson/rbenv) + the `rails` gem
 
-### Installing with RVM + the `rails` Gem
+### Install with RVM + the `rails` Gem
 I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux. If this doesn't work on Windows, try [Rails on Windows](#rails-on -windows).
 
 Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
@@ -406,7 +437,7 @@ FIXME - I was able to setup RoR on Windows. Re-do this section.
 Ruby on Rails is difficult to setup on Windows. Try the [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
 
-## Installing MySQL
+## Install MySQL
 FIXME - We may not do a full-blown RoR project in Chapter 3.
 The Ruby on Rails examples require [MySQL](https://www.mysql.com/) because Rails insists on a database. Of course, it's possible to run a Ruby on Rails project without a database, but that takes a lot of configuration and you're definitely swimming upstream. Just give Rails what it wants, and install [MySQL](https://www.mysql.com/).
 
@@ -428,19 +459,19 @@ After installing MySQL, you'll need to start the server. You'll probably want to
 * [MySQL's Post Installation Setup and Testing](https://dev.mysql.com/doc/refman/5.6/en/postinstallation.html)
 * [Joe Fallon's blog](http://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/)
 
-## Installing MongoDB
-FIXME - TBD
+## Install MongoDB
+Please see the [MongoDB installation documentation](https://docs.mongodb.com/manual/installation/) and follow the instructions to install and start MongoDB on your platform.
 
-## Installing The Java Environment
+## Install The Java Environment
 Our Java environment depends on:
-* [Java SE](#installing-java-se)
-* [Maven](#installing-maven)
-  * [Spring](#installing-spring---add-to-the-pom)
-  * [JUnit](#installing-junit---add-to-the-pom)
+* [Java SE](#install-java-se)
+* [Maven](#install-maven)
+  * [Spring](#install-spring---add-to-the-pom)
+  * [JUnit](#install-junit---add-to-the-pom)
   * [Eclipse](#using-eclipse-with-maven)
-* [Apache Tomcat](#installing-apache-tomcat)
+* [Apache Tomcat](#install-apache-tomcat)
 
-### Installing Java SE
+### Install Java SE
 We're using Java SE (Standard Edition) 8 for this book, so please visit the [Oracle Java SE 8 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 You'll see the term "JDK" (Java Developer Kit) on that page. JDK is the old name for Java SE. Just look for "Java SE Development Kit", accept the license agreement, and do the proper download for your operating system. After you've downloaded and run the installer, you'll want to setup your Java command line environment for your operating system.
@@ -497,8 +528,8 @@ Then, do the following:
 
 Credit for the Java setup on Windows goes to [Robert Sindall](http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/).
 
-### Installing Maven
-* Be sure to install [Java SE](#installing-java-se) first.
+### Install Maven
+* Be sure to install [Java SE](#install-java-se) first.
 * Visit the [Maven Download page](http://maven.apache.org/download.cgi) to download a Maven zip or tar file.
 * Follow the [Maven Installation Instructions](http://maven.apache.org/download.cgi#Installation) for your system.
 * Run `mvn --version`, and you should see something like this:
@@ -513,7 +544,7 @@ OS name: "mac os x", version: "10.11.2", arch: "x86_64", family: "mac"
 
 For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
-#### Installing Spring - Add to the POM
+#### Install Spring - Add to the POM
 [Spring](https://spring.io/) isn't a separate install - just add it to the [Maven POM (Project Object Model)](https://maven.apache.org/pom.html):
 
 ```
@@ -546,7 +577,7 @@ We've turned off Apache Commons Logging so we can add SLF4J and LogBack to the P
 </dependency>
 ```
 
-#### Installing JUnit - Add to the POM
+#### Install JUnit - Add to the POM
 [JUnit](http://junit.org/) isn't a separate install - just add it to the [Maven POM (Project Object Model)](https://maven.apache.org/pom.html):
 
 ```
@@ -560,21 +591,21 @@ We've turned off Apache Commons Logging so we can add SLF4J and LogBack to the P
 ### Using Eclipse with Maven
 Use the following Maven command to integrate with Eclipse: `mvn ecplise:eclipse`
 
-### Installing Apache Tomcat
-We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.html) to run our Spring-based Java application. Be sure to install [Java SE](#installing-java-se) before installing Tomcat.
+### Install Apache Tomcat
+We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.html) to run our Spring-based Java application. Be sure to install [Java SE](#install-java-se) before Install Tomcat.
 
-#### Installing Apache Tomcat on Mac OS X
+#### Install Apache Tomcat on Mac OS X
 [Homebrew](http://brew.sh/) is the simplest way to install Tomcat on Mac OS X. Just do `brew install tomcat` from the command line. This gives you the latest version by default.
 
 Start Tomcat by typing `catalina start`, and then visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. Type `catalina stop` to shut down Tomcat.
 
-The Mac Homebrew install instructions were inspired by the [`{{discovery_collection}} blog`](http://blog.bolshchikov.net/post/50277857673/installing-tomcat-on-macos-with-homebrew). You can follow the additional steps listed there to further confgure your application directory structure.
+The Mac Homebrew install instructions were inspired by the [`{{discovery_collection}} blog`](http://blog.bolshchikov.net/post/50277857673/install-tomcat-on-macos-with-homebrew). You can follow the additional steps listed there to further confgure your application directory structure.
 
 For further reference, please see:
 * http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
 * http://wolfpaulus.com/jounal/mac/tomcat8/
 
-#### Installing Apache Tomcat on Linux
+#### Install Apache Tomcat on Linux
 * Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a tar file.
 * Untar the tar file.
 * Add `CATALINA_HOME` to `.bashrc`:
@@ -593,7 +624,7 @@ Start Tomcat as follows:
 
 Credit for the Tomcat/Linux install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
 
-#### Installing Apache Tomcat on Windows
+#### Install Apache Tomcat on Windows
 * Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a zip file.
 * Unzip the file.
 * Add `CATALINA_HOME` as a System Variable (see the [Java Setup on Windows](#java-setup-on-windows) for an example for an example of how to set a Windows System Variable).
@@ -607,16 +638,16 @@ Start Tomcat as follows:
 Credit for the Tomcat/Windows install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
 
 
-## Installing `jq`
+## Install `jq`
 [`jq`](http://stedolan.github.io/jq/) provides JSON-based command-line processing.
 To install it, just follow the [Download instructions on the `jq` GitHub repository](http://stedolan.github.io/jq/download/).
 
-`jq` works with and depends on [`cURL`](#installing-curl)
+`jq` works with and depends on [`cURL`](#install-curl)
 
-### Installing `cURL`
+### Install `cURL`
 [`cURL`](http://curl.haxx.se/) provides the ability to communicate over multiple protocols, including HTTP. We use this to make HTTP calls to RESTful APIs from the command line.
 
-#### Installing `cURL` on Mac OS X
+#### Install `cURL` on Mac OS X
 Just like with Linux, `cURL` may already be installed on your Mac. Check it as follows:
 
 ```
@@ -629,7 +660,7 @@ I use [Homebrew](http://brew.sh/) as my package installer on Mac OS X, so use th
 brew install curl
 ```
 
-#### Installing `cURL` on Linux
+#### Install `cURL` on Linux
 Check if `cURL` is already installed by entering the following command:
 
 ```
@@ -644,7 +675,7 @@ sudo apt-get install curl
 
 This should work on Ubuntu or Debian.
 
-#### Installing `cURL` on Windows
+#### Install `cURL` on Windows
 To install `cURL` on Windows, do the following:
 * Visit the [`cURL` Download Wizard](http://curl.haxx.se/dlwiz/)
 * Select the type of package: __curl executable__
