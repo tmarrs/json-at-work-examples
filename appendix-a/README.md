@@ -357,11 +357,11 @@ http://localhost:5000/speakers
 Crest is a small REST server that provides a RESTful wrapper for MongoDB. Please visit the 
 [Crest Github Repository](https://github.com/cordazar/crest). The Global +npm+ install
 would be the simplest way to install +crest+, but this is broken. Instead, do a +git clone+ as follows:
-* `cd` to the directory where your other development projects reside. We'll call this directory `projects` - `cd projects`
+* `cd` to the directory where your other development projects reside. We'll call this directory `projects`: `cd projects`
 * Clone the repository: `git clone git://github.com/Cordazar/crest.git`
-* Navigate to the +crest+ directory: `cd crest`
-* Update the +config.json+ file to remove the `username` and `password`. Of course this isn't secure,
-but you can re-add these fields and set them to proper values later - just make sure that the settings match your MongoDB password. We just want to get started quickly. The +config.json+ should look like this:
+* Navigate to the `crest` directory: `cd crest`
+* Update the `config.json` file to remove the `username` and `password`. Of course this isn't secure,
+but you can re-add these fields and set them to proper values later - just make sure that the settings match your MongoDB password. We just want to get started quickly. The `config.json` file should now look like this:
 ```
 {
   "db": {
