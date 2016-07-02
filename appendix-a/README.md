@@ -30,7 +30,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Install `tinyserver`](#install-tinyserver)
         - [Install `http-server`](#install-http-server)
         - [Install `json-server`](#install-json-server)
-        - [Install +crest+](#install-crest)
+        - [Install `crest`](#install-crest)
 - [Install Ruby on Rails (RoR)](#install-ruby-on-rails-ror)
     - [Install with RVM + the `rails` Gem](#install-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
@@ -353,7 +353,7 @@ To access:
 http://localhost:5000/speakers
 ```
 
-#### Install +crest+
+#### Install `crest`
 Crest is a small REST server that provides a RESTful wrapper for MongoDB. Please visit the 
 [Crest Github Repository](https://github.com/cordazar/crest). The Global +npm+ install
 would be the simplest way to install +crest+, but this is broken. Instead, do a +git clone+ as follows:
