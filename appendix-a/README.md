@@ -360,8 +360,8 @@ would be the simplest way to install +crest+, but this is broken. Instead, do a 
 * `cd` to the directory where your other development projects reside. We'll call this directory `projects` - `cd projects`
 * Clone the repository: `git clone git://github.com/Cordazar/crest.git`
 * Navigate to the +crest+ directory: `cd crest`
-* Update the +config.json+ file to remove the +username+ and +password+. Of course this isn't secure,
-but you can re-add these fields and set them to proper values later. We just want to get started quickly. The +config.json+ should look like this:
+* Update the +config.json+ file to remove the `username` and `password`. Of course this isn't secure,
+but you can re-add these fields and set them to proper values later - just make sure that the settings match your MongoDB password. We just want to get started quickly. The +config.json+ should look like this:
 ```
 {
   "db": {
