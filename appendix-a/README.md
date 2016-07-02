@@ -376,8 +376,8 @@ but you can re-add these fields and set them to proper values later - just make 
   "debug": true
 }
 ```
-* Be sure to install and start MongoDB(#install-mongodb) first.
-* In a separate tab or command shell, start +crest+:
+* Be sure to [install and start MongoDB](#install-mongodb) first.
+* In a separate tab or command shell, start `crest`:
 ```
 node server
 
