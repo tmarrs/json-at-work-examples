@@ -8,6 +8,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
 - [Install JSON Tools in the Browser](#install-json-tools-in-the-browser)
     - [Install JSONView in Chrome and Firefox](#install-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
+    - [Install Postman](#install-postman)
 - [Install JSONPad](#install-jsonpad)
 - [Install Node.js](#install-nodejs)
     - [Install Node.js on Mac OS X and Linux with NVM](#install-nodejs-on-mac-os-x-and-linux-with-nvm)
@@ -56,12 +57,18 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Install `cURL` on Windows](#install-curl-on-windows)
 - [References](#references)
 
+
 ## Install JSON Tools in the Browser
 ### Install JSONView in Chrome and Firefox
 Please follow the installation instructions on the [JSONView site](http://jsonview.com/) for your browser.
 
 ### JSONLint
 Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
+
+### Install Postman
+Postman provides the ability to fully test a RESTful API. It can send HTTP `GET`,
+`POST`, `PUT`, and `DELETE` requests and set HTTP Headers. You can install it as a Chrome extension
+or as a standalone GUI application on a Mac. Please visit the [Postman site](https://www.getpostman.com/) for installation instructions.
 
 
 ## Install JSONPad
@@ -394,7 +401,7 @@ There are several ways to install Ruby on Rails:
 * [+rbenv+](https://github.com/sstephenson/rbenv) + the `rails` gem
 
 ### Install with RVM + the `rails` Gem
-I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux. If this doesn't work on Windows, try [Rails on Windows](#rails-on -windows).
+I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux. If this doesn't work on Windows, try [Rails on Windows](#rails-on-windows).
 
 Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
 
