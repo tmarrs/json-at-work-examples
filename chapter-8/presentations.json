@@ -1,0 +1,18 @@
+[{
+  "speakerId": "123456",
+  "title": "Enterprise Node",
+  "abstract": "Many developers just see Node as a way to build web APIs or applications ...",
+  "audience": [
+    "Architects",
+    "Developers"
+  ]
+}, {
+  "speakerId": "123456",
+  "title": "How to Design and Build Great APIs",
+  "abstract": "Companies now leverage APIs as part of their online strategy ...",
+  "audience": [
+    "Managers",
+    "Architects",
+    "Developers"
+  ]
+}]

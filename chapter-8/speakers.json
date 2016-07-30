@@ -1,0 +1,35 @@
+[{
+  "id": "123456",
+  "fullName": "Larson Richard",
+  "email": "larson.richard@myconference.com",
+  "tags": [
+    "JavaScript",
+    "AngularJS",
+    "Yeoman"
+  ],
+  "age": 39,
+  "registered": true
+}, {
+  "id": "223456",
+  "fullName": "Ester Clements",
+  "email": "ester.clements@myconference.com",
+  "tags": [
+    "REST",
+    "Ruby on Rails",
+    "APIs"
+  ],
+  "age": 29,
+  "registered": true
+}, {
+  "id": "223456",
+  "fullName": "Christensen Fisher",
+  "email": "christensen.fisher@myconference.com",
+  "tags": [
+    "Java",
+    "Spring",
+    "Maven",
+    "REST"
+  ],
+  "age": 45,
+  "registered": false
+}]
