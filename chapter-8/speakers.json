@@ -1,6 +1,7 @@
 [{
   "id": "123456",
-  "fullName": "Larson Richard",
+  "firstName": "Larson",
+  "lastName": "Richard",
   "email": "larson.richard@myconference.com",
   "tags": [
     "JavaScript",
@@ -11,7 +12,8 @@
   "registered": true
 }, {
   "id": "223456",
-  "fullName": "Ester Clements",
+  "firstName": "Ester",
+  "lastName": "Clements",
   "email": "ester.clements@myconference.com",
   "tags": [
     "REST",
@@ -22,7 +24,8 @@
   "registered": true
 }, {
   "id": "223456",
-  "fullName": "Christensen Fisher",
+  "firstName": "Christensen",
+  "lastName": "Fisher",
   "email": "christensen.fisher@myconference.com",
   "tags": [
     "Java",

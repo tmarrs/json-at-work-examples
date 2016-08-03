@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "id": "id",
+    "firstName": "givenName",
+    "lastName": "familyName",
+    "email": "email",
+    "tags": "http://schema.org/speaker/tags",
+    "age": "age",
+    "registered": "http://schema.org/speaker/registered"
+  },
+  "@id": "http://myconference.api.com/speakers/123456",
+  "id": "123456",
+  "firstName": "Larson",
+  "lastName": "Richard",
+  "email": "larson.richard@myconference.com",
+  "tags": [
+    "JavaScript",
+    "AngularJS",
+    "Yeoman"
+  ],
+  "age": 39,
+  "registered": true,
+  "presentations": "http://myconference.api.com/speakers/123456/presentations"
+}

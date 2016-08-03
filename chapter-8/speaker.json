@@ -1,0 +1,13 @@
+[{
+  "id": "123456",
+  "firstName": "Larson",
+  "lastName": "Richard",
+  "email": "larson.richard@myconference.com",
+  "tags": [
+    "JavaScript",
+    "AngularJS",
+    "Yeoman"
+  ],
+  "age": 39,
+  "registered": true
+}]
