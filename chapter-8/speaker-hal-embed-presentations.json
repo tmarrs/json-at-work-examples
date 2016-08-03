@@ -1,0 +1,52 @@
+{
+  "_links": {
+    "self": {
+      "href": "http://myconference.api.com/speakers/123456"
+    },
+    "presentations": {
+      "href": "http://myconference.api.com/speakers/123456/presentations"
+    }
+  },
+  "size": "2",
+  "_embedded": {
+    "presentations": [{
+      "_links": {
+        "self": {
+          "href": "http://myconference.api.com/speakers/123456/presentations/1123"
+        }
+      },
+      "id": "1123",
+      "title": "Enterprise Node",
+      "abstract": "Many developers just see Node as a way to build web APIs or applications ...",
+      "audience": [
+        "Architects",
+        "Developers"
+      ]
+    }, {
+      "_links": {
+        "self": {
+          "href": "http://myconference.api.com/speakers/123456/presentations/2123"
+        }
+      },
+      "id": "2123",
+      "title": "How to Design and Build Great APIs",
+      "abstract": "Companies now leverage APIs as part of their online strategy ...",
+      "audience": [
+        "Managers",
+        "Architects",
+        "Developers"
+      ]
+    }]
+  },
+  "id": "123456",
+  "firstName": "Larson",
+  "lastName": "Richard",
+  "email": "larson.richard@myconference.com",
+  "tags": [
+    "JavaScript",
+    "AngularJS",
+    "Yeoman"
+  ],
+  "age": 39,
+  "registered": true
+}

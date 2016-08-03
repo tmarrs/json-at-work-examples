@@ -1,0 +1,28 @@
+{
+  "collection": {
+    "version": "1.0",
+    "href": "http://myconference.api.com/speakers",
+    "items": [{
+      "href": "http://myconference.api.com/speakers/123456",
+      "data": [{
+        "name": "id",
+        "value": "123456"
+      }, {
+        "name": "firstName",
+        "value": "Larson"
+      }, {
+        "name": "lastName",
+        "value": "Richard"
+      }, {
+        "name": "email",
+        "value": "larson.richard@myconference.com"
+      }, {
+        "name": "age",
+        "value": "39"
+      }, {
+        "name": "registered",
+        "value": "true"
+      }]
+    }]
+  }
+}
