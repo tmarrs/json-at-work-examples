@@ -1,4 +1,9 @@
 {
+  "_links": {
+    "self": {
+      "href": "http://myconference.api.com/speakers/123456"
+    }
+  },
   "id": "123456",
   "firstName": "Larson",
   "lastName": "Richard",
