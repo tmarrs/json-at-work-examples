@@ -1,10 +1,12 @@
 {
-  "@context": {
-    "@vocab": "http://schema.org/",
-    "presentations": {
-      "@type": "@id"
+  "@context": [
+    "http://www.w3.org/ns/hydra/core", {
+      "@vocab": "https://schema.org/",
+      "presentations": {
+        "@type": "@id"
+      }
     }
-  },
+  ],
   "presentations": [{
     "@id": "http://myconference.api.com/speakers/123456/presentations/1123",
     "id": "1123",
@@ -26,5 +28,19 @@
       "Architects",
       "Developers"
     ]
-  }]
+  }],
+  "operation": {
+    "@type": "AddPresentation",
+    "method": "POST",
+    "expects": {
+      "@id": "http://schema.org/id",
+      "supportedProperty": [{
+        "property": "title",
+        "range": "Text"
+      }, {
+        "property": "abstract",
+        "range": "Text"
+      }]
+    }
+  }
 }
