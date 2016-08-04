@@ -1,12 +1,5 @@
 {
-  "class": "speaker",
-  "links": [{
-    "rel": ["self"],
-    "href": "http://myconference.api.com/speakers/123456"
-  }, {
-    "rel": ["presentations"],
-    "href": "http://myconference.api.com/speakers/123456/presentations"
-  }],
+  "class": ["speaker"],
   "properties": {
     "id": "123456",
     "firstName": "Larson",
@@ -19,5 +12,29 @@
     ],
     "age": 39,
     "registered": true
-  }
+  },
+  "actions": [{
+    "name": "add-presentation",
+    "title": "Add Presentation",
+    "method": "POST",
+    "href": "http://myconference.api.com/speakers/123456/presentations",
+    "type": "application/x-www-form-urlencoded",
+    "fields": [{
+      "name": "title",
+      "type": "text"
+    }, {
+      "name": "abstract",
+      "type": "text"
+    }, {
+      "name": "audience",
+      "type": "text"
+    }]
+  }],
+  "links": [{
+    "rel": ["self"],
+    "href": "http://myconference.api.com/speakers/123456"
+  }, {
+    "rel": ["presentations"],
+    "href": "http://myconference.api.com/speakers/123456/presentations"
+  }]
 }
