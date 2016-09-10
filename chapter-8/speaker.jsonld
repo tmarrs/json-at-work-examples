@@ -1,13 +1,12 @@
 {
   "@context": {
-    "@vocab": "http://schema.org/",
-    "id": "id",
+    "@vocab": "http://schema.org/Person",
     "firstName": "givenName",
     "lastName": "familyName",
     "email": "email",
-    "tags": "http://schema.org/speaker/tags",
+    "tags": "http://myconference.schema.com/Speaker/tags",
     "age": "age",
-    "registered": "http://schema.org/speaker/registered"
+    "registered": "http://myconference.schema.com/Speaker/registered"
   },
   "@id": "http://myconference.api.com/speakers/123456",
   "id": "123456",
