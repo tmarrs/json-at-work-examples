@@ -5,9 +5,6 @@
     },
     "presentations": {
       "href": "http://myconference.api.com/speakers/123456/presentations"
-    },
-    "next": {
-      "href": "http://myconference.api.com?limit=25&offset=50"
     }
   },
   "id": "123456",
