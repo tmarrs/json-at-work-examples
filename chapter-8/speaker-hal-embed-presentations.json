@@ -7,7 +7,6 @@
       "href": "http://myconference.api.com/speakers/123456/presentations"
     }
   },
-  "size": "2",
   "_embedded": {
     "presentations": [{
       "_links": {
