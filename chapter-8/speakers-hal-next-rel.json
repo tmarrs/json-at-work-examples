@@ -1,0 +1,39 @@
+{
+  "_links": {
+    "self": {
+      "href": "http://myconference.api.com/speakers"
+    },
+    "next": {
+      "href": "http://myconference.api.com?limit=25&offset=25"
+    },
+    "find": {
+      "href": "http://myconference.api.com/speakers{?id}",
+      "templated": true
+    }
+  },
+  "speakers": [{
+    "id": "123456",
+    "firstName": "Larson",
+    "lastName": "Richard",
+    "email": "larson.richard@myconference.com",
+    "tags": [
+      "JavaScript",
+      "AngularJS",
+      "Yeoman"
+    ],
+    "age": 39,
+    "registered": true
+  }, {
+    "id": "223456",
+    "firstName": "Ester",
+    "lastName": "Clements",
+    "email": "ester.clements@myconference.com",
+    "tags": [
+      "REST",
+      "Ruby on Rails",
+      "APIs"
+    ],
+    "age": 29,
+    "registered": true
+  }]
+}
