@@ -1,0 +1,22 @@
+{
+  "links": {
+    "self": "http://myconference.api.com/speakers/123456",
+    "presentations": "http://myconference.api.com/speakers/123456/presentations"
+  },
+  "data": [{
+    "type": "speaker",
+    "id": "123456",
+    "attributes": {
+      "firstName": "Larson",
+      "lastName": "Richard",
+      "email": "larson.richard@myconference.com",
+      "tags": [
+        "JavaScript",
+        "AngularJS",
+        "Yeoman"
+      ],
+      "age": 39,
+      "registered": true
+    }
+  }]
+}

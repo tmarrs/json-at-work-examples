@@ -1,6 +1,6 @@
 {
   "links": {
-    "self": "http://example.com/speakers",
+    "self": "http://myconference.api.com/speakers",
     "next": "http://myconference.api.com/speakers?limit=25&offset=25"
   },
   "data": [{
