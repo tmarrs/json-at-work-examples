@@ -114,7 +114,7 @@ json-server -p 5000 ./cities-weather.json
 ## Run the Tests
 Create another terminal session and run the tests as follows:
 ```
-cd ~/projects/cities-weather-test
+cd ~/projects/json-at-work-examples/chapter-6/cities-weather-test
 
 npm test
 ```
