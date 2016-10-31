@@ -47,7 +47,7 @@ description: Unit Tests for speakers API with HAL.
 entry point: (index.js)
 test command: mocha test
 git repository: ...
-keywords: JSON, Search, Mocha, Chai
+keywords: JSON, HAL, Mocha, Chai
 author: Me
 license: (ISC) MIT
 About to write to /Users/tmarrs/projects/json-at-work-examples/chapter-8/speakers-hal-test/package.json:
@@ -66,7 +66,7 @@ About to write to /Users/tmarrs/projects/json-at-work-examples/chapter-8/speaker
   },
   "keywords": [
     "JSON",
-    "Search",
+    "HAL",
     "Mocha",
     "Chai"
   ],
@@ -82,12 +82,10 @@ Is this ok? (yes)
 ## Install Node Modules
 Next, install the modules we'll need:
 ```
-npm install mocha --save
-npm install chai --save
-npm install unirest --save
-npm install jsonpath --save
-npm install json-pointer --save 
-npm install JSONSelect --save 
+npm install mocha --save-dev
+npm install chai --save-dev
+npm install unirest --save-dev
+npm install hal-body --save-dev
 ```
 
 ## Create Test Directory
@@ -107,7 +105,7 @@ Don't forget to run the test server.
 ```
 cd ../data
 
-json-server -p 5000 ./cities-weather.json
+json-server -p 5000 ./speakers-hal-next-rel.json
 ```
 
 
