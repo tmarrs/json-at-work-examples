@@ -1,9 +1,6 @@
 {
   "speakers": {
     "_links": {
-      "self": {
-        "href": "http://myconference.api.com/speakers"
-      },
       "next": {
         "href": "http://myconference.api.com?limit=25&offset=25"
       },

@@ -2,11 +2,13 @@
 
 var expect = require('chai').expect;
 var unirest = require('unirest');
+var halfred = require('halfred');
 
 describe('speakers-hal', function() {
   var req;
 
   beforeEach(function() {
+    halfred.enableValidation();
     req = unirest.get('http://localhost:5000/speakers')
       .header('Accept', 'application/json');
   });
@@ -20,13 +22,19 @@ describe('speakers-hal', function() {
     });
   });
 
-  it('should return all speakers', function(done) {
+  it('should return the HAL response - halfred', function(done) {
     req.end(function(res) {
       var speakers = res.body;
 
-      console.log(speakers);
+      // console.log(speakers);
+
+      var resource = halfred.parse(speakers);
+      console.log(resource);
+      console.log('\nLinks: ')
+      console.log(resource.allLinks());
+      console.log('\nValidation Issues: ');
+      console.log(resource.validationIssues());
       done();
     });
   });
-
 });

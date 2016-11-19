@@ -53,7 +53,7 @@ license: (ISC) MIT
 About to write to /Users/tmarrs/projects/json-at-work-examples/chapter-8/speakers-hal-test/package.json:
 
 {
-  "name": "cities-weather-test",
+  "name": "speakers-hal-test",
   "version": "1.0.0",
   "description": "Unit Tests for speakers API with HAL.",
   "main": "index.js",
@@ -105,7 +105,7 @@ Don't forget to run the test server.
 ```
 cd ../data
 
-json-server -p 5000 ./speakers-hal-next-rel.json
+json-server -p 5000 ./speakers-hal-server-next-rel.json
 ```
 
 
