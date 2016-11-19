@@ -22,18 +22,27 @@ describe('speakers-hal', function() {
     });
   });
 
-  it('should return the HAL response - halfred', function(done) {
+  it('should return a valid HAL response validated by halfred', function(
+    done) {
     req.end(function(res) {
-      var speakers = res.body;
+      var speakersHALResponse = res.body;
 
-      // console.log(speakers);
-
-      var resource = halfred.parse(speakers);
+      var resource = halfred.parse(speakersHALResponse);
+      var speakers = resource.speakers;
+      var speaker1 = null;
+      console.log('\nValidation Issues: ');
+      console.log(resource.validationIssues());
+      expect(resource.validationIssues()).to.be.empty;
       console.log(resource);
       console.log('\nLinks: ')
       console.log(resource.allLinks());
-      console.log('\nValidation Issues: ');
-      console.log(resource.validationIssues());
+      console.log('\nSpeakers Array: ');
+      console.log(speakers);
+      expect(speakers).to.not.be.null;
+      expect(speakers).to.not.be.empty;
+      speaker1 = speakers[0];
+      expect(speaker1.firstName).to.not.be.null;
+      expect(speaker1.firstName).to.eql('Larson');
       done();
     });
   });
