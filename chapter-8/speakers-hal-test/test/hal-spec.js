@@ -30,14 +30,11 @@ describe('speakers-hal', function() {
       var resource = halfred.parse(speakersHALResponse);
       var speakers = resource.speakers;
       var speaker1 = null;
+
       console.log('\nValidation Issues: ');
       console.log(resource.validationIssues());
       expect(resource.validationIssues()).to.be.empty;
       console.log(resource);
-      console.log('\nLinks: ')
-      console.log(resource.allLinks());
-      console.log('\nSpeakers Array: ');
-      console.log(speakers);
       expect(speakers).to.not.be.null;
       expect(speakers).to.not.be.empty;
       speaker1 = speakers[0];
