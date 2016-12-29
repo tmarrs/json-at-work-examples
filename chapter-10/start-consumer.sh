@@ -13,5 +13,5 @@ if [ $# -ne 1 ] ; then
   exit 1
 fi
 
-kafka-console-consumer --zookeeper localhost:2181 \
-                       --topic $1
+kafka-console-consumer --bootstrap-server localhost:9092 \
+                       --topic $1 --from-beginning
