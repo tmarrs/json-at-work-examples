@@ -1,0 +1,27 @@
+{
+  "name": "myconference",
+  "version": "1.0.0",
+  "description": "Kafka Prducer/Consumer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmarrs/json-at-work-examples.git"
+  },
+  "keywords": [
+    "Kafka",
+    "Node",
+    "JSON"
+  ],
+  "author": "Tom Marrs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmarrs/json-at-work-examples/issues"
+  },
+  "homepage": "https://github.com/tmarrs/json-at-work-examples#readme",
+  "dependencies": {
+    "kafka-node": "^1.0.7"
+  }
+}
