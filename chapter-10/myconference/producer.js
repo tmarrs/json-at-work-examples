@@ -1,3 +1,5 @@
+'use strict'
+
 var kafka = require('kafka-node'),
   Producer = kafka.Producer,
   KeyedMessage = kafka.KeyedMessage,
@@ -5,7 +7,7 @@ var kafka = require('kafka-node'),
   producer = new Producer(client),
   km = new KeyedMessage('key', 'message'),
   payloads = [{
-    topic: 'new-topics-recvd',
+    topic: 'new-proposals-recvd',
     messages: '"message": "Next message - From Node - Really Works!!"}'
   }];
 
@@ -15,4 +17,6 @@ producer.on('ready', function() {
   });
 });
 
-//producer.on('error', function(err) {})
+producer.on('error', function(err) {
+  console.log(err);
+});
