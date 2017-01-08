@@ -14,4 +14,4 @@ if [ $# -ne 1 ] ; then
 fi
 
 kafka-console-consumer --bootstrap-server localhost:9092 \
-                       --topic $1 --from-beginning
+                       --topic $1
