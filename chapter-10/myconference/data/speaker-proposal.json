@@ -1,0 +1,37 @@
+{
+  "firstName": "Larson",
+  "lastName": "Richard",
+  "email": "larson.richard@myconference.com",
+  "title": "Enterprise Node",
+  "abstract": "Many developers just see Node as a way to build web APIs or applications ...",
+  "conference": {
+    "name": "Ultimate JavaScript by MyConference",
+    "beginDate": "2017-11-06",
+    "endDate": "2017-11-10"
+  },
+  "session": {
+    "type": "How-To",
+    "length": "3 hours"
+  },
+  "topic": {
+    "primary": "Node.js",
+    "secondary": [
+      "REST",
+      "Architecture",
+      "JavaScript"
+    ]
+  },
+  "audience": {
+    "takeaway": "Audience members will learn how to ...",
+    "jobTitles": [
+      "Architects",
+      "Developers"
+    ],
+    "level": "Intermediate"
+  },
+  "installation": [
+    "Git",
+    "Laptop",
+    "Node.js"
+  ]
+}

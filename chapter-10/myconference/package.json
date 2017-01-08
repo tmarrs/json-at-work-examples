@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/tmarrs/json-at-work-examples#readme",
   "dependencies": {
-    "kafka-node": "^1.0.7"
+    "hb-interpolate": "^1.0.0",
+    "kafka-node": "^1.1.0",
+    "nodemailer": "^2.7.0"
   }
 }
