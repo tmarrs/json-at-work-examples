@@ -25,7 +25,7 @@ consumer.on('message', function(message) {
 });
 
 function processProposal(proposal) {
-  var proposalAccepted = Math.random() >= 0.5;
+  var proposalAccepted = decideOnProposal();
   var proposalMessage = JSON.stringify(proposal.value);
 
   console.log('proposalMessage = ' + proposalMessage);
@@ -39,7 +39,9 @@ function processProposal(proposal) {
   }
 }
 
-// FIXME: Choose to accept/reject randomly: http://stackoverflow.com/questions/36756331/js-generate-random-boolean
+function decideOnProposal() {
+  return Math.random() >= 0.5;
+}
 
 function acceptProposal(proposalMessage) {
   // FIXME: Add JSON data for approval.
