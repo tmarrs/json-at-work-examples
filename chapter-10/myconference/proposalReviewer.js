@@ -26,8 +26,11 @@ consumer.on('message', function(message) {
 
 function processProposal(proposal) {
   var proposalAccepted = decideOnProposal();
+  var rawProposalMessage = proposal.value;
   var proposalMessage = JSON.stringify(proposal.value);
 
+  console.log('\n\n');
+  console.log('rawProposalMessage = ' + rawProposalMessage);
   console.log('proposalMessage = ' + proposalMessage);
   console.log('Decision - proposal has been [' +
     (proposalAccepted ? 'Accepted' : 'Rejected') + ']');
@@ -46,14 +49,12 @@ function decideOnProposal() {
 function acceptProposal(proposalMessage) {
   // FIXME: Add JSON data for approval.
   publishMessage(proposalMessage);
-  commitTopic(); // FIXME: Still needed?
 }
 
 
 function rejectProposal(proposalMessage) {
   // FIXME: Add JSON data for approval.
   publishMessage(proposalMessage);
-  commitTopic(); // FIXME: Still needed?
 }
 
 function publishMessage(message) {
@@ -64,17 +65,6 @@ function publishMessage(message) {
 
   producer.send(payloads, function(err, data) {
     console.log(data);
-  });
-}
-
-// FIXME: Do we still need this if we set autoCommit to true?
-function commitTopic() {
-  consumer.commit(function(err, data) {
-    if (err) {
-      console.log('error committing message', err);
-    } else {
-      console.log('committed message', data);
-    }
   });
 }
 
