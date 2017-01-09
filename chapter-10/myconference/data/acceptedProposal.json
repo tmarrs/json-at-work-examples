@@ -1,0 +1,50 @@
+{
+  "decision": {
+    "accepted": true,
+    "timeSlot": {
+      "date": "2017-11-06",
+      "time": "10:OO"
+    }
+  },
+  "proposal": {
+    "speaker": {
+      "firstName": "Larson",
+      "lastName": "Richard",
+      "email": "larson.richard@ecratic.com",
+      "bio": "Larson Richard is the CTO of ... and he founded a JavaScript meetup in ..."
+    },
+    "session": {
+      "title": "Enterprise Node",
+      "abstract": "Many developers just see Node as a way to build web APIs or applications ...",
+      "type": "How-To",
+      "length": "3 hours"
+    },
+    "conference": {
+      "name": "Ultimate JavaScript by MyConference",
+      "beginDate": "2017-11-06",
+      "endDate": "2017-11-10"
+    },
+    "topic": {
+      "primary": "Node.js",
+      "secondary": [
+        "REST",
+        "Architecture",
+        "JavaScript"
+      ]
+    },
+    "audience": {
+      "takeaway": "Audience members will learn how to ...",
+      "jobTitles": [
+        "Architects",
+        "Developers"
+      ],
+      "level": "Intermediate"
+    },
+    "installation": [
+      "Git",
+      "Laptop",
+      "Node.js"
+    ]
+  }
+
+}
