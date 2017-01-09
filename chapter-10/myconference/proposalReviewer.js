@@ -2,11 +2,13 @@
 
 var kafka = require('kafka-node');
 
-// FIXME: Add constant for Consumer Topic name.
+const NEW_PROPOSALS_RECEIVED_TOPIC = 'new-proposals-recvd';
+const PROPOSALS_REVIEWED_TOPIC = 'proposals-reviewed';
+
 var consumerClient = new kafka.Client(),
   consumer = new kafka.Consumer(
     consumerClient, [{
-      topic: 'new-proposals-recvd'
+      topic: NEW_PROPOSALS_RECEIVED_TOPIC
     }], {
       autoCommit: true
     }
@@ -19,22 +21,43 @@ var producerClient = new kafka.Client(),
 // Use JSON.parse() and JSON.stringify() to process JSON.
 consumer.on('message', function(message) {
   console.log('received message', message);
-  publishMessage();
-  commitTopic();
+  processProposal(message);
 });
 
-// FIXME: processProposal() calls the methods below.
-// FIXME: Need higher-level methods called sendApproval() and sendRejection()
-// FIXME: Choose to accept/reject randomly: http://stackoverflow.com/questions/36756331/js-generate-random-boolean
-//  var acceptProposal = Math.random() >= 0.5; // Wrap with a function.
+function processProposal(proposal) {
+  var proposalAccepted = Math.random() >= 0.5;
+  var proposalMessage = JSON.stringify(proposal.value);
 
-// FIXME: Remove hardcoding.
-//    Message should be a parameter.
-// FIXME: Add constant for Producer Topic name. 
-function publishMessage() {
+  console.log('proposalMessage = ' + proposalMessage);
+  console.log('Decision - proposal has been [' +
+    (proposalAccepted ? 'Accepted' : 'Rejected') + ']');
+
+  if (proposalAccepted) {
+    acceptProposal(proposalMessage);
+  } else {
+    rejectProposal(proposalMessage);
+  }
+}
+
+// FIXME: Choose to accept/reject randomly: http://stackoverflow.com/questions/36756331/js-generate-random-boolean
+
+function acceptProposal(proposalMessage) {
+  // FIXME: Add JSON data for approval.
+  publishMessage(proposalMessage);
+  commitTopic(); // FIXME: Still needed?
+}
+
+
+function rejectProposal(proposalMessage) {
+  // FIXME: Add JSON data for approval.
+  publishMessage(proposalMessage);
+  commitTopic(); // FIXME: Still needed?
+}
+
+function publishMessage(message) {
   var payloads = [{
-    topic: 'proposals-reviewed',
-    messages: '"message": "Proposal has been reviewed"}'
+    topic: PROPOSALS_REVIEWED_TOPIC,
+    messages: message
   }];
 
   producer.send(payloads, function(err, data) {
