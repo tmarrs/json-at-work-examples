@@ -26,11 +26,11 @@ consumer.on('message', function(message) {
 
 function processProposal(proposal) {
   var proposalAccepted = decideOnProposal();
-  var rawProposalMessage = proposal.value;
-  var proposalMessage = JSON.stringify(proposal.value);
+  var proposalMessage = proposal.value;
+  //var proposalMessage = JSON.stringify(proposal.value);
 
   console.log('\n\n');
-  console.log('rawProposalMessage = ' + rawProposalMessage);
+  //console.log('rawProposalMessage = ' + rawProposalMessage);
   console.log('proposalMessage = ' + proposalMessage);
   console.log('Decision - proposal has been [' +
     (proposalAccepted ? 'Accepted' : 'Rejected') + ']');
@@ -47,14 +47,34 @@ function decideOnProposal() {
 }
 
 function acceptProposal(proposalMessage) {
-  // FIXME: Add JSON data for approval.
-  publishMessage(proposalMessage);
+  var acceptedProposal = {
+    decision: {
+      accepted: true,
+      timeSlot: {
+        date: "2017-11-06",
+        time: "10:OO"
+      }
+    },
+    proposal: proposalMessage
+  };
+
+  var acceptedProposalMessage = JSON.stringify(acceptedProposal);
+  console.log('Accepted Proposal = ' + acceptedProposalMessage);
+  publishMessage(acceptedProposalMessage);
 }
 
 
 function rejectProposal(proposalMessage) {
-  // FIXME: Add JSON data for approval.
-  publishMessage(proposalMessage);
+  var rejectedProposal = {
+    decision: {
+      accepted: false
+    },
+    proposal: proposalMessage
+  };
+
+  var rejectedProposalMessage = JSON.stringify(rejectedProposal);
+  console.log('Rejected Proposal = ' + rejectedProposalMessage);
+  publishMessage(rejectedProposalMessage);
 }
 
 function publishMessage(message) {
