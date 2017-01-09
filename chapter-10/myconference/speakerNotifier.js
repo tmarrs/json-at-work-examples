@@ -3,31 +3,29 @@
 var kafka = require('kafka-node');
 var nodeMailer = require('nodemailer');
 
-// FIXME: Add constant for Topic name.
+const PROPOSALS_REVIEWED_TOPIC = 'proposals-reviewed';
+const MAILCATCHER_SMTP_HOST = 'localhost';
+const MAILCATCHER_SMTP_PORT = 1025;
+
 var consumerClient = new kafka.Client(),
   consumer = new kafka.Consumer(
     consumerClient, [{
-      topic: 'proposals-reviewed'
+      topic: PROPOSALS_REVIEWED_TOPIC
     }], {
       autoCommit: true
     }
   );
 
-var producerClient = new kafka.Client(),
-  producer = new kafka.Producer(producerClient);
-
-// FIXME: Add constants for SMTP.
-var smtpConfig = {
-  host: 'localhost',
-  port: 1025,
+var mailCatcherSmtpConfig = {
+  host: MAILCATCHER_SMTP_HOST,
+  port: MAILCATCHER_SMTP_PORT,
 };
 
-var transporter = nodeMailer.createTransport(smtpConfig);
+var transporter = nodeMailer.createTransport(mailCatcherSmtpConfig);
 
 consumer.on('message', function(message) {
   console.log('received message', message);
   sendEmail();
-  commitTopic();
 });
 
 // FIXME: Remove hardcoding.
@@ -51,17 +49,6 @@ function sendEmail() {
       console.log(error);
     } else {
       console.log('Email Message sent: ' + info.response);
-    }
-  });
-}
-
-// FIXME: Do we still need this if we set autoCommit to true?
-function commitTopic() {
-  consumer.commit(function(err, data) {
-    if (err) {
-      console.log('error committing message', err);
-    } else {
-      console.log('committed message', data);
     }
   });
 }
