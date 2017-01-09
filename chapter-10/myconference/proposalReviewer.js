@@ -52,7 +52,7 @@ function acceptProposal(proposalMessage) {
       accepted: true,
       timeSlot: {
         date: "2017-11-06",
-        time: "10:OO"
+        time: "10:00"
       }
     },
     proposal: proposalMessage
