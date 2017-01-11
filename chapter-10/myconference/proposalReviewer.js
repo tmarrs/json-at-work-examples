@@ -1,9 +1,13 @@
 'use strict';
 
 var kafka = require('kafka-node');
+var fs = require('fs');
+var Ajv = require('ajv');
 
 const NEW_PROPOSALS_RECEIVED_TOPIC = 'new-proposals-recvd';
 const PROPOSALS_REVIEWED_TOPIC = 'proposals-reviewed';
+const SPEAKER_PROPOSAL_SCHEMA_FILE_NAME =
+  './schemas/speakerProposalSchema.json';
 
 var consumerClient = new kafka.Client(),
   consumer = new kafka.Consumer(
@@ -35,11 +39,31 @@ function processProposal(proposal) {
   console.log('Decision - proposal has been [' +
     (proposalAccepted ? 'Accepted' : 'Rejected') + ']');
 
-  if (proposalAccepted) {
+  if (isSpeakerProposalValid(proposalMessageObj) && proposalAccepted) {
     acceptProposal(proposalMessageObj);
   } else {
     rejectProposal(proposalMessageObj);
   }
+}
+
+function isSpeakerProposalValid(proposalMessage) {
+  var ajv = Ajv({
+    allErrors: true
+  });
+
+  var speakerProposalSchemaContent = fs.readFileSync(
+    SPEAKER_PROPOSAL_SCHEMA_FILE_NAME);
+
+  var valid = ajv.validate(speakerProposalSchemaContent, proposalMessage);
+
+  if (valid) {
+    console.log('\n\nJSON Validation: Speaker proposal is valid');
+  } else {
+    console.log('\n\nJSON Validation: Error - Speaker proposal is invalid');
+    console.log(ajv.errors + '\n');
+  }
+
+  return valid;
 }
 
 function decideOnProposal() {
