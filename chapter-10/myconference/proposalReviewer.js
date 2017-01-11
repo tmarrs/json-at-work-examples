@@ -27,16 +27,18 @@ consumer.on('message', function(message) {
 function processProposal(proposal) {
   var proposalAccepted = decideOnProposal();
   var proposalMessage = proposal.value;
+  var proposalMessageObj = JSON.parse(proposalMessage);
 
   console.log('\n\n');
   console.log('proposalMessage = ' + proposalMessage);
+  console.log('proposalMessageObj = ' + proposalMessageObj);
   console.log('Decision - proposal has been [' +
     (proposalAccepted ? 'Accepted' : 'Rejected') + ']');
 
   if (proposalAccepted) {
-    acceptProposal(proposalMessage);
+    acceptProposal(proposalMessageObj);
   } else {
-    rejectProposal(proposalMessage);
+    rejectProposal(proposalMessageObj);
   }
 }
 
@@ -53,14 +55,13 @@ function acceptProposal(proposalMessage) {
         time: "10:00"
       }
     },
-    proposal: JSON.parse(proposalMessage)
+    proposal: proposalMessage
   };
 
   var acceptedProposalMessage = JSON.stringify(acceptedProposal);
   console.log('Accepted Proposal = ' + acceptedProposalMessage);
   publishMessage(acceptedProposalMessage);
 }
-
 
 function rejectProposal(proposalMessage) {
   var rejectedProposal = {
