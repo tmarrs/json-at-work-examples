@@ -20,7 +20,7 @@ var producerClient = new kafka.Client(),
 // Use incoming JSON message.
 // Use JSON.parse() and JSON.stringify() to process JSON.
 consumer.on('message', function(message) {
-  console.log('received message', message);
+  console.log('received kafka message', message);
   processProposal(message);
 });
 
