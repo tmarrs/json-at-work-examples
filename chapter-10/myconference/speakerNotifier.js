@@ -17,14 +17,10 @@ const REJECTED_PROPOSAL_HB_TEMPLATE_FILE_NAME =
 
 const UTF_8 = 'utf8';
 
-var consumerClient = new kafka.Client(),
-  consumer = new kafka.Consumer(
-    consumerClient, [{
-      topic: PROPOSALS_REVIEWED_TOPIC
-    }], {
-      autoCommit: true
-    }
-  );
+var consumer = new kafka.ConsumerGroup({
+  fromOffset: 'latest',
+  autoCommit: true
+}, PROPOSALS_REVIEWED_TOPIC);
 
 var mailCatcherSmtpConfig = {
   host: MAILCATCHER_SMTP_HOST,
@@ -37,6 +33,21 @@ consumer.on('message', function(message) {
   console.log('received message', message);
 
   notifySpeaker(message.value);
+});
+
+process.on('SIGINT', function() {
+  console.log(
+    'SIGINT received - Proposal Reviewer closing. Committing current offset on Topic: ' +
+    PROPOSALS_REVIEWED_TOPIC + ' ...'
+  );
+
+  consumer.close(true, function() {
+    console.log(
+      'Finished committing current offset. Exiting with graceful shutdown ...'
+    );
+
+    process.exit();
+  });
 });
 
 function notifySpeaker(notification) {
