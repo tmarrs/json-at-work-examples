@@ -11,15 +11,15 @@ getJsonFileNameFromCli()
         JSON_MESSAGE_FILE_NAME_FROM_CLI=$OPTARG
         ;;
       \?)
-        echo "Invalid option: -$OPTARG $USAGE" >&2
+        echo "Invalid option: -$OPTARG ${USAGE}" >&2
         exit 1
         ;;
       :)
-        echo "Option -$OPTARG requires an argument. $USAGE" >&2
+        echo "Option -$OPTARG requires an argument. ${USAGE}" >&2
         exit 1
         ;;
       *)
-        echo "Unimplemented option: -$OPTARG - $USAGE" >&2
+        echo "Unimplemented option: -$OPTARG - ${USAGE}" >&2
         exit 1
         ;;
     esac
@@ -27,23 +27,23 @@ getJsonFileNameFromCli()
 }
 
 if [ $# -eq 0 ] ; then
-  echo "No arguments supplied - $USAGE"
+  echo "No arguments supplied - ${USAGE}"
   exit 1
 fi
 
-if [ $# -eq 2 ] ; then
+if [ $# -eq 2 ] ; then # Message supplied as CLI param.
   MESSAGE_FROM_CLI=$1
   TOPIC_NAME_FROM_CLI=$2
-elif [ $# -eq 3 ] ; then
+elif [ $# -eq 3 ] ; then # JSON file supplied as CLI param.
   getJsonFileNameFromCli $@
   TOPIC_NAME_FROM_CLI=$3
 else
-  echo "Incorrect # of arguments - $USAGE"
+  echo "Incorrect # of arguments - ${USAGE}"
   exit 1
 fi
 
 if [[ -z $TOPIC_NAME_FROM_CLI ]] ; then
-  echo "No topic - [$USAGE]"
+  echo "No topic - [${USAGE}]"
   exit 1
 fi
 

@@ -4,12 +4,12 @@
 USAGE="usage: ${0##*/} <Topic Name>"
 
 if [ $# -eq 0 ] ; then
-  echo "No arguments supplied - $USAGE"
+  echo "No arguments supplied - ${USAGE}"
   exit 1
 fi
 
 if [ $# -ne 1 ] ; then
-  echo "Incorrect # of arguments - $USAGE"
+  echo "Incorrect # of arguments - ${USAGE}"
   exit 1
 fi
 
