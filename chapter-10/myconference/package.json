@@ -1,7 +1,7 @@
 {
   "name": "myconference",
   "version": "1.0.0",
-  "description": "Kafka Prducer/Consumer.",
+  "description": "Kafka Producer/Consumer.",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
