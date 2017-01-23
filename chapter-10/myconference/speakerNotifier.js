@@ -34,6 +34,10 @@ consumer.on('message', function(message) {
   notifySpeaker(message.value);
 });
 
+consumer.on('error', function(err) {
+  console.log(err);
+});
+
 process.on('SIGINT', function() {
   console.log(
     'SIGINT received - Proposal Reviewer closing. Committing current offset on Topic: ' +
@@ -95,7 +99,3 @@ function sendEmail(mailOptions) {
     }
   });
 }
-
-consumer.on('error', function(err) {
-  console.log(err);
-});

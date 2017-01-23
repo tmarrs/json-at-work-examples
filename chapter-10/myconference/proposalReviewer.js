@@ -24,6 +24,10 @@ consumer.on('message', function(message) {
   processProposal(message);
 });
 
+consumer.on('error', function(err) {
+  console.log(err);
+});
+
 process.on('SIGINT', function() {
   console.log(
     'SIGINT received - Proposal Reviewer closing. Committing current offset on Topic: ' +
@@ -121,10 +125,6 @@ function publishMessage(message) {
     console.log(data);
   });
 }
-
-consumer.on('error', function(err) {
-  console.log(err);
-});
 
 producer.on('error', function(err) {
   console.log(err);
