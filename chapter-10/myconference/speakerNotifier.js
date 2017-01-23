@@ -30,8 +30,7 @@ var mailCatcherSmtpConfig = {
 var transporter = nodeMailer.createTransport(mailCatcherSmtpConfig);
 
 consumer.on('message', function(message) {
-  console.log('received message', message);
-
+  // console.log('received message', message);
   notifySpeaker(message.value);
 });
 
