@@ -32,14 +32,14 @@ Your CLI session should look like this:
 npm init
 
 npm init
-This utility will walk you through creating a package.json file.
-It only covers the most common items, and tries to guess sane defaults.
+This utility will walk you through creating a `package.json` file.
+It only covers the most common items, and tries to guess reasonable defaults.
 
 See `npm help json` for definitive documentation on these fields
 and exactly what they do.
 
 Use `npm install <pkg> --save` afterwards to install a package and
-save it as a dependency in the package.json file.
+save it as a dependency in the `package.json` file.
 
 Press ^C at any time to quit.
 name: (cities-weather-transform-test)
