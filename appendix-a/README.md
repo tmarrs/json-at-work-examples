@@ -673,7 +673,7 @@ To install `cURL` on Windows, do the following:
 Credit for the `cURL` Windows install instructions goes to [Stack Overflow](http://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-a-windows).
 
 ## Install Apache Kafka
-We use [Apche Kafka](http://kafka.apache.org/) in Chapter 10 for JSON-based messaging. Kafka depends
+We use [Apache Kafka](http://kafka.apache.org/) in Chapter 10 for JSON-based messaging. Kafka depends
 on [Apache Zookeeper](http://zookeeper.apache.org/), so you'll need to install Zookeeper, too.
 Before going any further, please be sure to [install The Java Environment](#install-the-java-environment) on your machine (because Kafka is based on Java).
 
