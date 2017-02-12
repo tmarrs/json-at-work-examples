@@ -35,7 +35,6 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
 - [Install Ruby on Rails (RoR)](#install-ruby-on-rails-ror)
     - [Install with RVM + the `rails` Gem](#install-with-rvm--the-rails-gem)
     - [Rails on Windows](#rails-on-windows)
-- [Install MySQL](#install-mysql)
 - [Install MongoDB](#install-mongodb)
 - [Install The Java Environment](#install-the-java-environment)
     - [Install Java SE](#install-java-se)
@@ -447,28 +446,6 @@ FIXME - I was able to setup RoR on Windows. Re-do this section.
 
 Ruby on Rails is difficult to setup on Windows. Try the [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
-
-## Install MySQL
-FIXME - We may not do a full-blown RoR project in Chapter 3.
-The Ruby on Rails examples require [MySQL](https://www.mysql.com/) because Rails insists on a database. Of course, it's possible to run a Ruby on Rails project without a database, but that takes a lot of configuration and you're definitely swimming upstream. Just give Rails what it wants, and install [MySQL](https://www.mysql.com/).
-
-This book uses MySQL 5.6, and you can download and install it on your operating system by following the [MySQL Installation Instructions](https://dev.mysql.com/doc/refman/5.6/en/installing.html).
-
-Or if you're on a Mac, you have a simpler installation procedure. You can use [Homebrew](http://brew.sh/) as follows:
-
-```
-brew install mysql
-```
-
-To uninstall, you would do the opposite:
-
-```
-brew uninstall mysql
-```
-
-After installing MySQL, you'll need to start the server. You'll probably want to ensure that MySQL starts automatically upon system startup. For further details on MySQL installation, startup, and configuration, please visit:
-* [MySQL's Post Installation Setup and Testing](https://dev.mysql.com/doc/refman/5.6/en/postinstallation.html)
-* [Joe Fallon's blog](http://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/)
 
 ## Install MongoDB
 Please see the [MongoDB installation documentation](https://docs.mongodb.com/manual/installation/) and follow the instructions to install and start MongoDB on your platform.
