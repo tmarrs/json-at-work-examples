@@ -55,6 +55,10 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
         - [Install `cURL` on Mac OS X](#install-curl-on-mac-os-x)
         - [Install `cURL` on Linux](#install-curl-on-linux)
         - [Install `cURL` on Windows](#install-curl-on-windows)
+- [Install Apache Kafka](#install-apache-kafka)
+    - [Install Kafka on Mac OS X](#install-kafka-on-mac-os-x)
+    - [Install Kafka on UNIX](#install-kafka-on-unix)
+    - [Install Kafka on Windows](#install-kafka-on-windows)
 - [References](#references)
 
 
@@ -520,8 +524,7 @@ Credit for Java setup on Linux goes to [nixCraft](http://www.cyberciti.biz/faq/l
 
 #### Java Setup on Windows
 The Java Windows Installer usually puts the JDK in one of the following directories:
-* `C:\Program Files\Java`
-* `C:\Program Files (x86)\Java`
+`C:\Program Files\Java` or `C:\Program Files (x86)\Java`.
 
 Then, do the following:
 * Right-click the `My Computer` icon on your desktop and select `Properties`.
@@ -606,7 +609,7 @@ We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.h
 
 Start Tomcat by typing `catalina start`, and then visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. Type `catalina stop` to shut down Tomcat.
 
-The Mac Homebrew install instructions were inspired by the [`{{discovery_collection}} blog`](http://blog.bolshchikov.net/post/50277857673/install-tomcat-on-macos-with-homebrew). You can follow the additional steps listed there to further confgure your application directory structure.
+The Mac Homebrew install instructions were inspired by the [`{{discovery_collection}} blog`](http://blog.bolshchikov.net/post/50277857673/install-tomcat-on-macos-with-homebrew). You can follow the additional steps listed there to further configure your application directory structure.
 
 For further reference, please see:
 * http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
@@ -691,6 +694,62 @@ To install `cURL` on Windows, do the following:
 * Select the Win32 Version (only if you selected Windows / Win32 above): __Unspecified__
 
 Credit for the `cURL` Windows install instructions goes to [Stack Overflow](http://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-a-windows).
+
+## Install Apache Kafka
+We use [Apche Kafka](http://kafka.apache.org/) in Chapter 10 for JSON-based messaging. Kafka depends
+on [Apache Zookeeper](http://zookeeper.apache.org/), so you'll need to install Zookeeper, too.
+Before going any further, please be sure to [install The Java Environment](#install-the-java-environment) on your machine (because Kafka is based on Java).
+
+### Install Kafka on Mac OS X
+[Homebrew](http://brew.sh/) is the easiest way to install Kafka on Mac OS X.
+Do the following from the command line:
+```
+brew install kafka
+```
+
+This installs both Kafka and Zookeeper. You're done.
+
+### Install Kafka on UNIX
+Install Zookeeper as follows:
+* Download Zookeeper from the [Zookeeper Releases page](http://zookeeper.apache.org/releases.html#download).
+* Extract the TAR file from the GZipped file you downloaded: `tar -zxf zookeeper-3.4.9.tar.gz` (Current/latest Zookeeper download)
+* Add System Environment Variables:
+  * In `~/.bashrc`: 
+```
+export ZOOKEEPER_HOME = <Zookeeper-Install-Path>/zookeeper-3.4.9
+export PATH=$PATH:$ZOOKEEPER_HOME/bin
+```
+
+Install Kafka as follows:
+* Download Kafka from the [Kafka Downloads page](http://kafka.apache.org/downloads.html).
+* Extract the TAR file from the GZipped file you downloaded: `tar -zxf  kafka_2.11-0.10.1.1.tgz` (Current/latest Kafka download)
+* * Add System Environment Variables:
+  * In `~/.bashrc`: 
+```
+export KAFKA_HOME = <Kafka-Install-Path>/zookeeper-3.4.9
+export PATH=$PATH:$KAFKA_HOME/bin
+```
+
+Credit for the Apache Kafka installation on Windows instructions goes to [TutorialsPoint](https://www.tutorialspoint.com/apache_kafka/apache_kafka_installation_steps.htm).
+
+
+### Install Kafka on Windows
+Install Zookeeper as follows:
+* Download Zookeeper from the [Zookeeper Downloads page](http://zookeeper.apache.org/releases.html#download).
+* Use your favorite Zip tool to unzip the Zookeeper file to the `C:` drive.
+* Add System Variables as follows:
+  * In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
+  * Create the following new System Variable: `ZOOKEEPER_HOME = C:\zookeeper-3.4.9` (Current/latest Zookeeper download)
+  * Add Zookeeper to your `PATH` by editing that variable and adding `;%ZOOKEEPER_HOME%\bin;` at the end.
+Install Kafka as follows:
+* Download Kafka from the [Kafka Downloads page](http://kafka.apache.org/downloads.html).
+* Use your favorite Zip tool to unzip the Kafka file to the `C:` drive.
+* * Add System Variables as follows:
+  * In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
+  * Create the following new System Variable: `KAFKA_HOME = C:\kafka_2.11-0.10.1.1` (Current/latest Kafka download)
+  * Add Kafka to your `PATH` by editing that variable and adding `;%KAFKA_HOME%\bin;` at the end.
+
+Credit for the Apache Kafka installation on Windows instructions goes to [Gopal Tiwari's article on DZone](https://dzone.com/articles/running-apache-kafka-on-windows-os).
 
 
 ## References
