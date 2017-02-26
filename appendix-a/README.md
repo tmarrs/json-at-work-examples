@@ -63,7 +63,7 @@ Installation Guide for [__JSON at Work__](https://github.com/tmarrs/json-at-work
 
 ## Install JSON Tools in the Browser
 ### Install JSONView in Chrome and Firefox
-Please follow the installation instructions on the [JSONView site](http://jsonview.com/) for your browser.
+JSONView pretty-prints JSON in Chrome or Firefox. Please follow the installation instructions on the [JSONView site](http://jsonview.com/) for your browser.
 
 ### JSONLint
 Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
