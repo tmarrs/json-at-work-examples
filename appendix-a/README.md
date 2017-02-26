@@ -71,7 +71,7 @@ Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
 ### Install Postman
 Postman provides the ability to fully test a RESTful API. It can send HTTP `GET`,
 `POST`, `PUT`, and `DELETE` requests and set HTTP Headers. You can install it as a Chrome extension
-or as a standalone GUI application on a Mac. Please visit the [Postman site](https://www.getpostman.com/) for installation instructions.
+or as a standalone GUI application on Mac OS X, Linux, or Windows. Please visit the [Postman site](https://www.getpostman.com/) for installation instructions.
 
 
 ## Install JSONPad
