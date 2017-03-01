@@ -1,5 +1,5 @@
-Chapter 4
-=========
+Chapter 4 Code
+==============
 
 ## Contents
 - [Testing and Compiling](#testing-and-compiling)
