@@ -206,14 +206,12 @@ You now have a Node REPL that does what you want - no more annoying 'undefined'.
 
 
 ### Install Node.js on Windows
-FIXME - NVM works well on Windows now.
-NVM works well on Mac OS X and Linux, but it doesn't work on Windows. You can try the following options on Windows:
-* [nvmw](https://github.com/hakobera/nvmw)
-* [nvm-windows](https://github.com/coreybutler/nvm-windows)
+NVM also works well on on Windows. You can try the following options on Windows, Use [nvm-windows](https://github.com/coreybutler/nvm-windows)
 
-If NVM doesn't work for your Windows environment, then try one of the following options:
-* Please follow [Team Treehouse's instructions for installing Node on Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
-* Use [Nitrous.io](https://www.nitrous.io/) to run your Node.js environment in the Cloud rather than on Windows. Please note that Nitrous.io has both free and commercial usage plans.
+FIXME - Fill in this section.
+
+If this doesn't work, you may want to avoid this headache and use [CodingGround](https://www.tutorialspoint.com/codingground.htm) to run your Node.js environment in the Cloud rather than on Windows.
+
 
 ### Uninstall Node.js
 If you have a previous installation of Node.js that isn't quite working properly anymore, you may need to completely uninstall it from your machine. This includes both the `node` and `npm` executables.
@@ -404,7 +402,7 @@ There are several ways to install Ruby on Rails:
 * [+rbenv+](https://github.com/sstephenson/rbenv) + the `rails` gem
 
 ### Install with RVM + the `rails` Gem
-I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux. If this doesn't work on Windows, try [Rails on Windows](#rails-on-windows).
+I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux.
 
 Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
 
@@ -442,9 +440,11 @@ You can easily upgrade to new versions of Ruby and Rails by:
 * Then install the `rails` as shown above.
 
 ### Rails on Windows
-FIXME - I was able to setup RoR on Windows. Re-do this section.
+Use [Rails Installer](http://railsinstaller.org) for a Windows environment. 
 
-Ruby on Rails is difficult to setup on Windows. Try the [Rails Installer](http://railsinstaller.org) for a Windows environment. If this doesn't work, you may want to avoid this headache and use [Nitrous.io](https://www.nitrous.io/) to run your Ruby on Rails environment in the Cloud rather than on Windows.
+FIXME - Add more installation instructions.
+
+If this doesn't work, you may want to avoid this headache and use [CodingGround](https://www.tutorialspoint.com/codingground.htm) to run your Ruby on Rails environment in the Cloud rather than on Windows.
 
 
 ## Install MongoDB
