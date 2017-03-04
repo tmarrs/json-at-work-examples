@@ -15,7 +15,7 @@ describe('cities-handlebars', function() {
 
     jsonCitiesFileName = baseDir + '/data/cities-weather-short.json';
     htmlTemplateFileName = baseDir +
-      '/templates/transform-full-html.hbs';
+      '/templates/transform-html.hbs';
   });
 
 
