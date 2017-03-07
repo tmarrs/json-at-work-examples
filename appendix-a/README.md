@@ -632,7 +632,7 @@ To install it, just follow the [Download instructions on the `jq` GitHub reposit
 `jq` works with and depends on [`cURL`](#install-curl)
 
 ## Install `cURL`
-[`cURL`](http://curl.haxx.se/) provides the ability to communicate over multiple protocols, including HTTP. We use this to make HTTP calls to RESTful APIs from the command line.
+[`cURL`](http://curl.haxx.se/) provides the ability to communicate over multiple protocols, including HTTP. Use this to make HTTP calls to RESTful APIs from the command line.
 
 ### Install `cURL` on Mac OS X
 Just like with Linux, `cURL` may already be installed on your Mac. Check it as follows:
