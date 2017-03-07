@@ -8,7 +8,7 @@
       "hiTemp": 93,
       "humidity": 58,
       "windSpeed": 4.1,
-      "summary": "Clear"
+      "summary": "Clear",
       "description": "Sky is Clear"
     }
   }, {
@@ -20,7 +20,7 @@
       "hiTemp": 91,
       "humidity": 58,
       "windSpeed": 4.1,
-      "summary": "Clear"
+      "summary": "Clear",
       "description": "Sky is Clear"
     }
   }, {
@@ -32,7 +32,7 @@
       "hiTemp": 86,
       "humidity": 61,
       "windSpeed": 4.6,
-      "summary": "Clouds"
+      "summary": "Clouds",
       "description": "scattered clouds"
     }
   }]
