@@ -283,7 +283,7 @@ jsonlint basic.json
 ```
 
 #### Install `json`
-[`json`](https://github.com/trentm/json) provides the ability to work with JSON from the command line - it's similar to [`jq`](http://stedolan.github.io/jq/).
+[`json`](https://github.com/trentm/json) provides the ability to work with JSON (i.e., pretty-printing, etc.) from the command line - it's similar to [`jq`](http://stedolan.github.io/jq/), but not as powerful.
 
 To install:
 ```
@@ -291,6 +291,7 @@ npm install -g json
 ```
 
 Please visit the [`json` GitHub repository](https://github.com/trentm/json) for usage instructions.
+[`json` is available as an npm module](https://www.npmjs.com/package/json).
 
 #### Install `ujs-jsonvalidate`
 This is the npm equivalent of the [JSON Validate site](http://jsonvalidate.com/) used to valid a JSON document against a JSON Schema. Here's the [`ujs-jsonvalidate` GitHub Repository](https://github.com/usingjsonschema/ujs-jsonvalidate-nodejs).
