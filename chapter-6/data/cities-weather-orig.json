@@ -1,9 +1,7 @@
 {
-  "other": {
-    "cod": "200",
-    "calctime": 0.006,
-    "cnt": 110
-  },
+  "cod": 200,
+  "calctime": 0.006,
+  "cnt": 110,
   "list": [{
     "id": 5386035,
     "name": "Rancho Palos Verdes",
