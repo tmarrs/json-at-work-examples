@@ -1,5 +1,13 @@
 'use strict';
 
+/* Attribution: Cities Weather data provided by OpenWeatherMap API ([http://openweathermap.org])
+   under Creative Commons Share A Like License (https://creativecommons.org/licenses/by-sa/4.0)
+   Changes were made to the data to work with json-server.
+   This does not imply an endorsement by the licensor.
+   
+	 This code is distributed under Creative Commons Share A Like License.
+*/
+
 var expect = require('chai').expect;
 var jsonfile = require('jsonfile');
 var jsonpatch = require('json-patch');
