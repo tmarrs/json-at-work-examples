@@ -140,11 +140,11 @@ describe('cities-jq', function() {
             input: 'json'
           })
         .then(function(citiesWeatherCloudyJson) { // Returns JSON String.
-          console.log(citiesWeatherCloudyJson);
+          //console.log(citiesWeatherCloudyJson);
           var citiesWeatherCloudy = JSON.parse(
             citiesWeatherCloudyJson);
 
-          console.log(citiesWeatherCloudy);
+          //console.log(citiesWeatherCloudy);
           checkCitiesWeather(citiesWeatherCloudy);
 
           done();
@@ -156,19 +156,31 @@ describe('cities-jq', function() {
     });
   });
 
-  /*
-    it('should return cities with cloudy weather using regex', function(done) {
-      req.end(function(res) {
-        var cities = res.body;
-        var citiesWeatherCloudyRegex = jp.query(cities,
-          '$[?(@.weather[0].main.match(/Clo/))]'
-        );
+  it('should return cities with cloudy weather using regex', function(done) {
+    req.end(function(res) {
+      var cities = res.body;
 
-        checkCitiesWeather(citiesWeatherCloudyRegex);
-        done();
-      });
+      jq.run(
+          '[.[] | select(.weather[0].main | test("^Clo"; "i"))]',
+          cities, {
+            input: 'json'
+          })
+        .then(function(citiesWeatherCloudyJson) { // Returns JSON String.
+          //console.log(citiesWeatherCloudyJson);
+          var citiesWeatherCloudy = JSON.parse(
+            citiesWeatherCloudyJson);
+
+          //console.log(citiesWeatherCloudy);
+          checkCitiesWeather(citiesWeatherCloudy);
+
+          done();
+        })
+        .catch(function(error) {
+          console.error(error);
+          done(error);
+        });
     });
-  */
+  });
 
   function checkCitiesWeather(cities) {
     //console.log(cities);
