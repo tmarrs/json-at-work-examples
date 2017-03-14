@@ -131,5 +131,30 @@ describe('cities-jq', function() {
     });
   });
 
+  /*
+    it('should return cities with cloudy weather', function(done) {
+      req.end(function(res) {
+        var cities = res.body;
+        var citiesWeatherCloudy = jp.query(cities,
+          '$[?(@.weather[0].main == "Clouds")]'
+        );
+
+        checkCitiesWeather(citiesWeatherCloudy);
+        done();
+      });
+    });
+
+    it('should return cities with cloudy weather using regex', function(done) {
+      req.end(function(res) {
+        var cities = res.body;
+        var citiesWeatherCloudyRegex = jp.query(cities,
+          '$[?(@.weather[0].main.match(/Clo/))]'
+        );
+
+        checkCitiesWeather(citiesWeatherCloudyRegex);
+        done();
+      });
+    });
+  */
 
 });
