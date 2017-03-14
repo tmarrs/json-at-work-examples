@@ -86,8 +86,9 @@ npm install mocha --save
 npm install chai --save
 npm install unirest --save
 npm install jsonpath --save
-npm install json-pointer --save 
-npm install JSONSelect --save 
+npm install json-pointer --save
+npm install node-jq --save
+npm install underscore --save
 ```
 
 ## Create Test Directory
