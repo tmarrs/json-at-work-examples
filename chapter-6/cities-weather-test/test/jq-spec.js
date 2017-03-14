@@ -99,8 +99,6 @@ describe('cities-jq', function() {
       });
   }
 
-
-
   it('should return cities within a temperature range', function(done) {
     req.end(function(res) {
       var cities = res.body;
@@ -131,19 +129,34 @@ describe('cities-jq', function() {
     });
   });
 
-  /*
-    it('should return cities with cloudy weather', function(done) {
-      req.end(function(res) {
-        var cities = res.body;
-        var citiesWeatherCloudy = jp.query(cities,
-          '$[?(@.weather[0].main == "Clouds")]'
-        );
 
-        checkCitiesWeather(citiesWeatherCloudy);
-        done();
-      });
+  it('should return cities with cloudy weather', function(done) {
+    req.end(function(res) {
+      var cities = res.body;
+
+      jq.run(
+          '[.[] | select(.weather[0].main == "Clouds")]',
+          cities, {
+            input: 'json'
+          })
+        .then(function(citiesWeatherCloudyJson) { // Returns JSON String.
+          console.log(citiesWeatherCloudyJson);
+          var citiesWeatherCloudy = JSON.parse(
+            citiesWeatherCloudyJson);
+
+          console.log(citiesWeatherCloudy);
+          checkCitiesWeather(citiesWeatherCloudy);
+
+          done();
+        })
+        .catch(function(error) {
+          console.error(error);
+          done(error);
+        });
     });
+  });
 
+  /*
     it('should return cities with cloudy weather using regex', function(done) {
       req.end(function(res) {
         var cities = res.body;
@@ -156,5 +169,12 @@ describe('cities-jq', function() {
       });
     });
   */
+
+  function checkCitiesWeather(cities) {
+    //console.log(cities);
+    for (var i = 0; i < cities.length; i++) {
+      expect(cities[i].weather[0].main).to.eql('Clouds');
+    }
+  }
 
 });
