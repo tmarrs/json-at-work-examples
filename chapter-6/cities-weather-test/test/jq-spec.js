@@ -129,7 +129,6 @@ describe('cities-jq', function() {
     });
   });
 
-
   it('should return cities with cloudy weather', function(done) {
     req.end(function(res) {
       var cities = res.body;
