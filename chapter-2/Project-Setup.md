@@ -51,7 +51,7 @@ git repository: ...
 keywords: JSON, Mocha, Chai
 author: Me
 license: (ISC) MIT
-About to write to /Users/tmarrs/projects/json-at-work-examples/chapter-2/speakers-test/package.json:
+About to write to .../chapter-2/speakers-test/package.json:
 
 {
   "name": "speakers-test",
