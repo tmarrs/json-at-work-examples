@@ -50,7 +50,7 @@ git repository: ...
 keywords: Kafka", Node, JSON
 author: Me
 license: (ISC) MIT
-About to write to .../package.json:
+About to write to .../chapter-10/myconference/package.json:
 
 {
   "name": "myconference",
