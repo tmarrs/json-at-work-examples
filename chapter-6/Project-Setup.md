@@ -51,7 +51,7 @@ git repository: ...
 keywords: JSON, Search, Mocha, Chai
 author: Me
 license: (ISC) MIT
-About to write to /Users/tmarrs/projects/json-at-work-examples/chapter-6/cities-weather-test/package.json:
+About to write to .../chapter-6/cities-weather-test/package.json:
 
 {
   "name": "cities-weather-test",
