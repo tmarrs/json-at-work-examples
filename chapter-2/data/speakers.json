@@ -1,0 +1,40 @@
+{
+  "speakers": [
+    {
+      "about": "Incididunt mollit cupidatat magna excepteur do tempor ex non eiusmod magna exercitation proident nisi non. Sunt ad consequat eu non esse excepteur. Veniam quis Lorem ea labore ullamco veniam nisi do sunt. Nisi irure sit qui irure mollit ad aliquip non culpa sint reprehenderit ullamco.\r\n",
+      "company": "Ecratic",
+      "email": "larsonrichard@ecratic.com",
+      "firstName": "Larson",
+      "id": 0,
+      "lastName": " Richard",
+      "picture": "http://placehold.it/32x32",
+      "tags": [
+        "JavaScript", "AngularJS", "Yeoman"
+      ]
+    },
+    {
+      "about": "Labore tempor irure adipisicing consectetur velit. Ipsum Lorem non mollit aliquip. Fugiat est irure quis laboris minim anim esse fugiat et culpa exercitation. Dolor cillum excepteur officia Lorem ullamco magna et cupidatat dolor incididunt occaecat adipisicing consectetur in. Ullamco ullamco commodo nulla eiusmod. Lorem Lorem non sunt laboris ut et elit mollit deserunt nostrud est et id adipisicing.\r\n",
+      "company": "Acusage",
+      "email": "esterclements@acusage.com",
+      "firstName": "Ester",
+      "id": 1,
+      "lastName": "Clements",
+      "picture": "http://placehold.it/32x32",
+      "tags": [
+        "REST", "Ruby on Rails", "APIs"
+      ]
+    },
+    {
+      "about": "Proident ex Lorem et Lorem ad. Do voluptate officia minim in nisi ut sit nisi ex eu nostrud do ut. Aute ad dolor tempor dolor aute nisi deserunt deserunt ut deserunt cillum quis. Ipsum nulla sit reprehenderit consequat incididunt incididunt dolore et magna aliquip ut ex. Cupidatat exercitation ipsum dolore nisi incididunt anim est. Culpa veniam ut excepteur aliqua exercitation.\r\n",
+      "company": "Talkola",
+      "email": "christensenfisher@talkola.com",
+      "firstName": "Christensen",
+      "id": 2,
+      "lastName": "Fisher",
+      "picture": "http://placehold.it/32x32",
+      "tags": [
+        "Java", "Spring", "Maven", "REST"
+      ]
+    }
+  ]
+}
