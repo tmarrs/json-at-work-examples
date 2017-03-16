@@ -52,7 +52,7 @@ git repository: ...
 keywords: JSON, Transform, Mocha, Chai
 author: Me
 license: (ISC) MIT
-About to write to /Users/tmarrs/projects/transform-test/package.json:
+About to write to .../chapter-7/cities-weather-transform-test/package.json:
 
 {
   "name": "cities-weather-transform-test",
