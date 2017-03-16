@@ -1,0 +1,29 @@
+{
+  "name": "speakers-test",
+  "version": "1.0.0",
+  "description": "Unit Tests for speakers API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmarrs/json-at-work-examples.git"
+  },
+  "keywords": [
+    "JSON",
+    "Mocha",
+    "Chai"
+  ],
+  "author": "Tom Marrs <thomasamarrs@comcast.net> (https://github.com/tmarrs)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmarrs/json-at-work-examples/issues"
+  },
+  "homepage": "https://github.com/tmarrs/json-at-work-examples#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "unirest": "^0.5.1"
+  }
+}
