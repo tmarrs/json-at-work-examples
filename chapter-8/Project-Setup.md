@@ -51,7 +51,7 @@ git repository: ...
 keywords: JSON, HAL, Mocha, Chai
 author: Me
 license: (ISC) MIT
-About to write to /Users/tmarrs/projects/json-at-work-examples/chapter-8/speakers-hal-test/package.json:
+About to write to .../chapter-8/speakers-hal-test/package.json:
 
 {
   "name": "speakers-hal-test",
