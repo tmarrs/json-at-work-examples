@@ -82,9 +82,9 @@ Is this ok? (yes)
 ## Install Node Modules
 Next, install the modules we'll need:
 ```
-npm install mocha --save-dev
-npm install chai --save-dev
-npm install unirest --save-dev
+npm install mocha --save
+npm install chai --save
+npm install unirest --save
 ```
 
 ## Create Test Directory
