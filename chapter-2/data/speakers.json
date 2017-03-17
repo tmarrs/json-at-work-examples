@@ -9,7 +9,9 @@
       "lastName": " Richard",
       "picture": "http://placehold.it/32x32",
       "tags": [
-        "JavaScript", "AngularJS", "Yeoman"
+        "JavaScript",
+        "AngularJS",
+        "Yeoman"
       ]
     },
     {
@@ -21,7 +23,9 @@
       "lastName": "Clements",
       "picture": "http://placehold.it/32x32",
       "tags": [
-        "REST", "Ruby on Rails", "APIs"
+        "REST",
+        "Ruby on Rails",
+        "APIs"
       ]
     },
     {
@@ -33,7 +37,10 @@
       "lastName": "Fisher",
       "picture": "http://placehold.it/32x32",
       "tags": [
-        "Java", "Spring", "Maven", "REST"
+        "Java",
+        "Spring",
+        "Maven",
+        "REST"
       ]
     }
   ]
