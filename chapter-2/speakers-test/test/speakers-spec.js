@@ -19,6 +19,7 @@ describe('speakers', function() {
       expect(res.statusCode).to.eql(200);
       expect(res.headers['content-type']).to.eql(
         'application/json; charset=utf-8');
+
       done();
     });
   });
