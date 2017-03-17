@@ -1,3 +1,6 @@
 {
-  "generator-jasmine": {}
+  "generator-mocha": {
+    "ui": "bdd",
+    "rjs": false
+  }
 }
