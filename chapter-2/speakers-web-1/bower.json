@@ -1,5 +1,5 @@
 {
-  "name": "speaker-web-1",
+  "name": "speakers-web-1",
   "private": true,
   "dependencies": {
     "bootstrap": "~4.0.0-alpha.6"
