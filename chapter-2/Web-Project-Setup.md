@@ -44,7 +44,7 @@ cd speakers-web-1
 
 ### Create the Project
 Now, create your Yeoman project. Choose Bootstrap and leave out Sass and Modernizr.
-After making that selection, then choose Bootstrap 4. Your CLI session should look like this:
+After making that selection, then choose Bootstrap 4. Finally, choose "BDD" as your style of DSL (i.e., Mocha and Chai). Your CLI session should look like this:
 
 ```
 yo webapp
