@@ -6,9 +6,11 @@ Here's how to create Chapter 2's `speakers-web-1`, `speakers-web-2`, and`speaker
 ## Contents
 - [Install Yeoman](#install-yeoman)
 - [Install the `generator-webapp` Yeoman Generator](#install-the-generator-webapp-yeoman-generator)
-- [Iteration 1 - Generate Web App](#iteration-1---generate-web-app)
+- [Iteration 1 - Generate The Web Application](#iteration-1---generate-the-web-application)
     - [Create the Project Directory](#create-the-project-directory)
     - [Create the Project](#create-the-project)
+    - [Start The Web Application](#start-the-web-application)
+    - [Shutdown The Web Application](#shutdown-the-web-application)
 - [References](#references)
 
 
@@ -27,8 +29,13 @@ Install the `generator-webapp` Yeoman Generator as follows:
 npm install -g generator-webapp
 ```
 
+You still need Grunt to run some of the gulp tasks:
+```
+npm install -g grunt-cli
+```
 
-## Iteration 1 - Generate Web App
+
+## Iteration 1 - Generate The Web Application
 We'll use the `generator-webapp` Yeoman Generator to create a simple web app.
 
 ### Create the Project Directory
@@ -113,6 +120,12 @@ chai#3.5.0 bower_components/chai
 mocha#3.2.0 bower_components/mocha
 
 ```
+
+### Start The Web Application
+To start the application, type `gulp serve`
+
+### Shutdown The Web Application
+To stop the application, enter `Ctrl+C`
 
 
 ## References
