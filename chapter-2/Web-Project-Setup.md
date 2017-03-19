@@ -1,12 +1,12 @@
 Test Project Setup
 ==================
-Here's how to create Chapter 2's `speakers-web-1`, `speakers-web-2`, and`speakers-web-2` projects with Yeoman.
+Here's how to create Chapter 2's `speakers-web-1`, `speakers-web-2`, and`speakers-web-3` projects with Yeoman.
 
 
 ## Contents
 - [Install Yeoman](#install-yeoman)
 - [Install the `generator-webapp` Yeoman Generator](#install-the-generator-webapp-yeoman-generator)
-- [Iteration 1 - Generate The Web Application](#iteration-1---generate-the-web-application)
+- [Generate The Web Application](#generate-the-web-application)
     - [Create the Project Directory](#create-the-project-directory)
     - [Create the Project](#create-the-project)
     - [Start The Web Application](#start-the-web-application)
@@ -35,7 +35,7 @@ npm install -g grunt-cli
 ```
 
 
-## Iteration 1 - Generate The Web Application
+## Generate The Web Application
 We'll use the `generator-webapp` Yeoman Generator to create a simple web app.
 
 ### Create the Project Directory
@@ -48,6 +48,8 @@ mkdir speakers-web-1
 
 cd speakers-web-1
 ```
+
+Note: You'll follow the same steps for the `speakers-web-2` and`speakers-web-3` projects.
 
 ### Create the Project
 Now, create your Yeoman project. Choose Bootstrap and leave out Sass and Modernizr.
