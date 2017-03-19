@@ -1,0 +1,13 @@
+<!--
+[speakers-mustache-template.html]
+This is the template for items in the speakers array when the app first loads
+-->
+<script id="speakerTemplate" type="text/html">
+  {{#.}}
+    <tr>
+      <td>{{firstName}} {{lastName}}</td>
+      <td>{{about}}</td>
+      <td>{{tags}}</td>
+    </tr>
+  {{/.}}
+</script>
