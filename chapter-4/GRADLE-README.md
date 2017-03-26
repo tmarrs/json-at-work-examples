@@ -43,3 +43,7 @@ https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-
 
 7) Run a Unit test.
 https://www.testwithspring.com/lesson/running-unit-tests-with-gradle/
+
+
+Spring Boot REST: https://spring.io/guides/gs/rest-service/
+(put this into another file)
