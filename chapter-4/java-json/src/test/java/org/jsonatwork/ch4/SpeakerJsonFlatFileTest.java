@@ -2,24 +2,15 @@ package org.jsonatwork.ch4;
 
 import static org.junit.Assert.*;
 
-import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.net.*;
+import java.util.*;
 
 import org.junit.Test;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.type.*;
 
 public class SpeakerJsonFlatFileTest {
 
@@ -48,7 +39,7 @@ public class SpeakerJsonFlatFileTest {
 			fail(ioe.getMessage());
 		}
 	}
-	
+
 	private File getSpeakerFile(String speakerFileName) throws URISyntaxException {
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 		URL fileUrl = classLoader.getResource(speakerFileName);
@@ -57,16 +48,16 @@ public class SpeakerJsonFlatFileTest {
 
 		return speakerFile;
 	}
-	
+
 	@Test
 	public void deSerializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			File speakerFile = getSpeakerFile(
 										SpeakerJsonFlatFileTest.SPEAKER_JSON_FILE_NAME);
-	
+
 			Speaker speaker = mapper.readValue(speakerFile, Speaker.class);
-			
+
 			System.out.println("\n" + speaker + "\n");
 		} catch (URISyntaxException use) {
 			use.printStackTrace();
@@ -82,14 +73,14 @@ public class SpeakerJsonFlatFileTest {
 			fail(ioe.getMessage());
 		}
 	}
-	
+
 	@Test
 	public void deSerializeMultipleObjects() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 			File speakersFile = getSpeakerFile(
 							SpeakerJsonFlatFileTest.SPEAKERS_JSON_FILE_NAME);
-			
+
 			JsonNode arrNode = mapper.readTree(speakersFile).get("speakers");
 			List<Speaker> speakers = new ArrayList<Speaker>();
 			if (arrNode.isArray()) {
@@ -102,9 +93,9 @@ public class SpeakerJsonFlatFileTest {
 			assertEquals(3, speakers.size());
 			System.out.println("\n\n\nAll Speakers\n");
 			for (Speaker speaker: speakers) {
-				System.out.println(speaker);	
+				System.out.println(speaker);
 			}
-			
+
 			System.out.println("\n");
 			assertTrue(true);
 		} catch (URISyntaxException use) {

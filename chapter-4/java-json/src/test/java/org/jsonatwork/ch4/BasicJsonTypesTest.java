@@ -2,22 +2,14 @@ package org.jsonatwork.ch4;
 
 import static org.junit.Assert.*;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.io.Writer;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 import org.junit.Test;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.core.type.*;
+import com.fasterxml.jackson.databind.*;
 
 /**
  * @author tmarrs
@@ -34,7 +26,7 @@ public class BasicJsonTypesTest {
 			String fullName = new String("Larson Richard");
 			List<String> tags = new ArrayList<String>(
 					              Arrays.asList("json", "rest", "api", "oauth"));
-			
+
 			boolean registered = true;
 
 			writer.write("age = ");
@@ -57,17 +49,17 @@ public class BasicJsonTypesTest {
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 			fail(ioe.getMessage());
-		}		
+		}
 	}
 
 	@Test
-	public void deSerializeBasicTypes() {	
+	public void deSerializeBasicTypes() {
 		try {
 			String ageJson = "{ \"age\": 39 }";
 			ObjectMapper mapper = new ObjectMapper();
-			Map<String, Integer> ageMap = mapper.readValue(ageJson, 
+			Map<String, Integer> ageMap = mapper.readValue(ageJson,
 					                        new TypeReference<HashMap<String,Integer>>() {});
-			
+
 			System.out.println("age = " + ageMap.get("age") + "\n\n\n");
       assertTrue(true);
 		} catch (JsonMappingException jme) {
