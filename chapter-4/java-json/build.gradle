@@ -1,0 +1,47 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+ext {
+    jdkVersion = "1.8"
+    jacksonVersion = "2.8.7"
+    slf4jVersion = "1.7.25"
+    jsonUnitVersion = "1.20.0"
+    commonsIoVersion = "1.3.2"
+    unirestVersion = "1.4.9"
+    junitVersion = "4.12"
+}
+
+sourceCompatibility = jdkVersion
+targetCompatibility = jdkVersion
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
+
+repositories {
+  mavenCentral()
+}
+
+test {
+  testLogging {
+    showStandardStreams = true // Show standard output & standard error.
+  }
+  ignoreFailures = false
+}
+
+dependencies {
+  compile (
+    [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jacksonVersion],
+    [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion],
+    [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion],
+    [group: 'org.apache.commons', name: 'commons-io', version: commonsIoVersion],
+    [group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion],
+    [group: 'org.slf4j', name: 'slf4j-simple', version: slf4jVersion],
+    [group: 'com.mashape.unirest', name: 'unirest-java', version: unirestVersion]
+  )
+  testCompile (
+    [group: 'junit', name: 'junit', version: junitVersion],
+    [group: 'net.javacrumbs.json-unit', name: 'json-unit', version: jsonUnitVersion],
+    [group: 'net.javacrumbs.json-unit', name: 'json-unit-fluent', version: jsonUnitVersion]    
+  )
+}
