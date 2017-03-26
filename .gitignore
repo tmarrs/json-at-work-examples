@@ -1,6 +1,8 @@
 **/node_modules/
 
 **/target
+**/build
+**/.gradle
 
 .DS_Store
 **/npm-debug.log

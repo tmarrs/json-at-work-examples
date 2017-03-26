@@ -32,8 +32,8 @@ public class SpeakersApiJsonTest {
 		
 		try {
 			String json = null;
-			HttpResponse <String> resp = Unirest.get(SpeakersApiJsonTest.SPEAKERS_ALL_URI)
-			       .asString();
+			HttpResponse <String> resp = Unirest.get(
+						SpeakersApiJsonTest.SPEAKERS_ALL_URI).asString();
 			
 			assertEquals(HttpStatus.SC_OK, resp.getStatus());
 			json = resp.getBody();
@@ -41,7 +41,8 @@ public class SpeakersApiJsonTest {
 			assertThatJson(json).node("").isArray();
 			assertThatJson(json).node("").isArray().ofLength(3);
 			assertThatJson(json).node("[0]").isObject();
-			assertThatJson(json).node("[0].fullName").isStringEqualTo("Larson Richard");
+			assertThatJson(json).node("[0].fullName")
+							.isStringEqualTo("Larson Richard");
 			assertThatJson(json).node("[0].tags").isArray();
 			assertThatJson(json).node("[0].tags").isArray().ofLength(3);
 			assertThatJson(json).node("[0].tags[1]").isStringEqualTo("AngularJS");
@@ -57,14 +58,15 @@ public class SpeakersApiJsonTest {
 		
 		try {
 			String json = null;
-			HttpResponse <String> resp = Unirest.get(SpeakersApiJsonTest.SPEAKER_3_URI)
-			                                    .asString();
+			HttpResponse <String> resp = Unirest.get(
+							SpeakersApiJsonTest.SPEAKER_3_URI).asString();
 			
 			assertEquals(HttpStatus.SC_OK, resp.getStatus());
 			json = resp.getBody();
 			System.out.println(json);
 			assertThatJson(json).node("").isObject();
-			assertThatJson(json).node("fullName").isStringEqualTo("Christensen Fisher");
+			assertThatJson(json).node("fullName")
+							.isStringEqualTo("Christensen Fisher");
 			assertThatJson(json).node("tags").isArray();
 			assertThatJson(json).node("tags").isArray().ofLength(4);
 			assertThatJson(json).node("tags[2]").isStringEqualTo("Maven");

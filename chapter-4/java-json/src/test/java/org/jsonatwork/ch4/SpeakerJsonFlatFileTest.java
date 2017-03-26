@@ -62,7 +62,9 @@ public class SpeakerJsonFlatFileTest {
 	public void deSerializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			File speakerFile = getSpeakerFile(SpeakerJsonFlatFileTest.SPEAKER_JSON_FILE_NAME);
+			File speakerFile = getSpeakerFile(
+										SpeakerJsonFlatFileTest.SPEAKER_JSON_FILE_NAME);
+	
 			Speaker speaker = mapper.readValue(speakerFile, Speaker.class);
 			
 			System.out.println("\n" + speaker + "\n");
@@ -85,11 +87,8 @@ public class SpeakerJsonFlatFileTest {
 	public void deSerializeMultipleObjects() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			File speakersFile = getSpeakerFile(SpeakerJsonFlatFileTest.SPEAKERS_JSON_FILE_NAME);
-			/*List<Speaker> speakers = mapper.readValue(speakersFile, 
-					TypeFactory.defaultInstance().constructCollectionType(List.class,  
-							Speaker.class));*/
-			
+			File speakersFile = getSpeakerFile(
+							SpeakerJsonFlatFileTest.SPEAKERS_JSON_FILE_NAME);
 			
 			JsonNode arrNode = mapper.readTree(speakersFile).get("speakers");
 			List<Speaker> speakers = new ArrayList<Speaker>();
@@ -104,7 +103,9 @@ public class SpeakerJsonFlatFileTest {
 			for (Speaker speaker: speakers) {
 				System.out.println(speaker);	
 			}
+			
 			System.out.println("\n");
+			assertTrue(true);
 		} catch (URISyntaxException use) {
 			use.printStackTrace();
 			fail(use.getMessage());
@@ -120,3 +121,4 @@ public class SpeakerJsonFlatFileTest {
 		}
 	}
 }
+
