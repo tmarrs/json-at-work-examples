@@ -21,12 +21,13 @@ public class SpeakerJsonFlatFileTest {
 	public void serializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
+			Writer writer = new StringWriter();
 			String[] tags = {"json", "rest", "api", "oauth"};
 			Speaker speaker = new Speaker(1, 39, "Larson Richard", tags, true);
 
 			mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-			mapper.writeValue(System.out, speaker);
-			System.out.println("\n");
+			mapper.writeValueAsString(speaker);
+			System.out.println(writer.toString());
 			assertTrue(true);
 		} catch (JsonGenerationException jge) {
 			jge.printStackTrace();
@@ -59,6 +60,9 @@ public class SpeakerJsonFlatFileTest {
 			Speaker speaker = mapper.readValue(speakerFile, Speaker.class);
 
 			System.out.println("\n" + speaker + "\n");
+			assertEquals("Larson Richard", speaker.getFullName());
+			assertEquals(39, speaker.getAge());		
+			assertTrue(true);
 		} catch (URISyntaxException use) {
 			use.printStackTrace();
 			fail(use.getMessage());
@@ -97,6 +101,9 @@ public class SpeakerJsonFlatFileTest {
 			}
 
 			System.out.println("\n");
+			Speaker speaker3 = speakers.get(2);
+			assertEquals("Christensen Fisher", speaker3.getFullName());
+			assertEquals(45, speaker3.getAge());	
 			assertTrue(true);
 		} catch (URISyntaxException use) {
 			use.printStackTrace();
