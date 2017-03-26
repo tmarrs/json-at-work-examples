@@ -60,7 +60,10 @@ public class BasicJsonTypesTest {
 			Map<String, Integer> ageMap = mapper.readValue(ageJson,
 					                        new TypeReference<HashMap<String,Integer>>() {});
 
-			System.out.println("age = " + ageMap.get("age") + "\n\n\n");
+			Integer age = ageMap.get("age");
+			 
+			System.out.println("age = " + age + "\n\n\n");
+			assertEquals(39, age.intValue());
       assertTrue(true);
 		} catch (JsonMappingException jme) {
 			jme.printStackTrace();
