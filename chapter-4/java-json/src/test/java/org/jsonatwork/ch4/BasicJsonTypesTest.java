@@ -25,7 +25,6 @@ import com.fasterxml.jackson.databind.SerializationFeature;
  */
 public class BasicJsonTypesTest {
 
-	
 	@Test
 	public void serializeBasicTypes() {
 		try {
@@ -35,6 +34,7 @@ public class BasicJsonTypesTest {
 			String fullName = new String("Larson Richard");
 			List<String> tags = new ArrayList<String>(
 					              Arrays.asList("json", "rest", "api", "oauth"));
+			
 			boolean registered = true;
 
 			writer.write("age = ");
@@ -59,17 +59,14 @@ public class BasicJsonTypesTest {
 			fail(ioe.getMessage());
 		}		
 	}
-	
-	
+
 	@Test
 	public void deSerializeBasicTypes() {	
 		try {
-			
 			String ageJson = "{ \"age\": 39 }";
 			ObjectMapper mapper = new ObjectMapper();
-			
 			Map<String, Integer> ageMap = mapper.readValue(ageJson, 
-					                              new TypeReference<HashMap<String,Integer>>() {});
+					                        new TypeReference<HashMap<String,Integer>>() {});
 			
 			System.out.println("age = " + ageMap.get("age") + "\n\n\n");
       assertTrue(true);

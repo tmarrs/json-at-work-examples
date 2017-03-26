@@ -29,7 +29,6 @@ public class SpeakersApiJsonTest {
 
 	@Test
 	public void testApiAllSpeakersJson() {
-		
 		try {
 			String json = null;
 			HttpResponse <String> resp = Unirest.get(
@@ -55,7 +54,6 @@ public class SpeakersApiJsonTest {
 
 	@Test
 	public void testApiSpeaker3Json() {
-		
 		try {
 			String json = null;
 			HttpResponse <String> resp = Unirest.get(

@@ -99,6 +99,7 @@ public class SpeakerJsonFlatFileTest {
 			    }
 			}
 
+			assertEquals(3, speakers.size());
 			System.out.println("\n\n\nAll Speakers\n");
 			for (Speaker speaker: speakers) {
 				System.out.println(speaker);	
