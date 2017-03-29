@@ -16,6 +16,10 @@ import com.fasterxml.jackson.databind.*;
  *
  */
 public class BasicJsonTypesTest {
+  private static final String TEST_SPEAKER = "age = 39\n" + 
+	   "fullName = \"Larson Richard\"\n" +
+	   "tags = [\"json\",\"rest\",\"api\",\"oauth\"]\n" + 
+		 "registered = true";
 
 	@Test
 	public void serializeBasicTypes() {
@@ -28,6 +32,7 @@ public class BasicJsonTypesTest {
 					              Arrays.asList("json", "rest", "api", "oauth"));
 
 			boolean registered = true;
+			String speaker = null;
 
 			writer.write("age = ");
 			mapper.writeValue(writer, age);
@@ -38,7 +43,9 @@ public class BasicJsonTypesTest {
 			writer.write("\nregistered = ");
 			mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
 			mapper.writeValue(writer, registered);
-			System.out.println(writer.toString());
+			speaker = writer.toString();
+			System.out.println(speaker);
+			assertTrue(TEST_SPEAKER.equals(speaker));
 			assertTrue(true);
 		} catch (JsonGenerationException jge) {
 			jge.printStackTrace();
