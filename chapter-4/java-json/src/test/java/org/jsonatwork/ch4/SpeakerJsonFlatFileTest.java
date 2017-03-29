@@ -16,12 +16,12 @@ public class SpeakerJsonFlatFileTest {
 
 	private static final String SPEAKER_JSON_FILE_NAME = "speaker.json";
 	private static final String SPEAKERS_JSON_FILE_NAME = "speakers.json";
-	private static final String TEST_SPEAKER_JSON = "{" +
-      "\"id\":1," +
-      "\"age\":39," +
-      "\"fullName\":\"Larson Richard\"," +
-      "\"tags\":[\"json\",\"rest\",\"api\",\"oauth\"]," +
-      "\"registered\":true" +
+	private static final String TEST_SPEAKER_JSON = "{\n" + 
+      "  \"id\" : 1,\n" + 
+      "  \"age\" : 39,\n" + 
+      "  \"fullName\" : \"Larson Richard\",\n" + 
+      "  \"tags\" : [ \"json\", \"rest\", \"api\", \"oauth\" ],\n" + 
+      "  \"registered\" : true\n" + 
     "}";
 
 	@Test
@@ -32,7 +32,8 @@ public class SpeakerJsonFlatFileTest {
 			Speaker speaker = new Speaker(1, 39, "Larson Richard", tags, true);
 			String speakerStr = null;
 
-			speakerStr = 			mapper.writeValueAsString(speaker);	
+			mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+			speakerStr = mapper.writeValueAsString(speaker);	
 			System.out.println(speakerStr);
 			assertTrue(TEST_SPEAKER_JSON.equals(speakerStr));
 			assertTrue(true);
