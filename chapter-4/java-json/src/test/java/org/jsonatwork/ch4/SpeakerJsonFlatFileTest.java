@@ -16,18 +16,25 @@ public class SpeakerJsonFlatFileTest {
 
 	private static final String SPEAKER_JSON_FILE_NAME = "speaker.json";
 	private static final String SPEAKERS_JSON_FILE_NAME = "speakers.json";
+	private static final String TEST_SPEAKER_JSON = "{" +
+      "\"id\":1," +
+      "\"age\":39," +
+      "\"fullName\":\"Larson Richard\"," +
+      "\"tags\":[\"json\",\"rest\",\"api\",\"oauth\"]," +
+      "\"registered\":true" +
+    "}";
 
 	@Test
 	public void serializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			Writer writer = new StringWriter();
 			String[] tags = {"json", "rest", "api", "oauth"};
 			Speaker speaker = new Speaker(1, 39, "Larson Richard", tags, true);
+			String speakerStr = null;
 
-			mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-			mapper.writeValueAsString(speaker);
-			System.out.println(writer.toString());
+			speakerStr = 			mapper.writeValueAsString(speaker);	
+			System.out.println(speakerStr);
+			assertTrue(TEST_SPEAKER_JSON.equals(speakerStr));
 			assertTrue(true);
 		} catch (JsonGenerationException jge) {
 			jge.printStackTrace();
