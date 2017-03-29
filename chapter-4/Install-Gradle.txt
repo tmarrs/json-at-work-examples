@@ -1,0 +1,4 @@
+1) Install Gradle: Please see https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-introduction/
+
+Please see: 
+https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-our-first-java-project/
