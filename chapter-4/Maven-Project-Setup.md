@@ -1,6 +1,6 @@
 Test Project Setup with Maven
 =============================
-Here's how to create the `java-json` project with Maven.
+Here's how to create the `speakers-test-mvn` project with Maven.
 
 ## Contents
 - [Testing and Compiling](#testing-and-compiling)
@@ -28,5 +28,5 @@ to delete the `target` directory and start fresh.
 This project was created with the following Maven command:
 
 ```
-mvn archetype:create -DgroupId=org.jsonatwork.ch4 -DartifactId=java-json
+mvn archetype:create -DgroupId=org.jsonatwork.ch4 -DartifactId=speakers-test-mvn
 ```

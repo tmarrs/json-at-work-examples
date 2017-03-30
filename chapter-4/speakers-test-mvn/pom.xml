@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.jsonatwork.ch4</groupId>
-  <artifactId>java-json</artifactId>
+  <artifactId>speakers-test-mvn</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>java-json</name>
+  <name>speakers-test-mvn</name>
   <url>http://maven.apache.org</url>
 
   <properties>
