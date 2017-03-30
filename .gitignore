@@ -2,7 +2,7 @@
 
 **/target
 **/build
-**/.gradle
+**/.gradle/**
 
 .DS_Store
 **/npm-debug.log

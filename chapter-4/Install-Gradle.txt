@@ -1,4 +1,19 @@
-1) Install Gradle: Please see https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-introduction/
+Install Gradle: Please see https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-introduction/
 
 Please see: 
 https://www.petrikainulainen.net/programming/gradle/getting-started-with-gradle-our-first-java-project/
+
+In Project-Setup.md
+To generate a gradle project:
+gradle init --type java-application
+
+Then, remove App.java and AppTest.java
+
+Then, add source and test code.
+Don't forget resources.
+
+Then, use build.gradle
+
+Then, paste in our code.
+
+Then, gradle build
