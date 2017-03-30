@@ -1,4 +1,14 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+    }
+}
+
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
 
 ext {
     jdkVersion = "1.8"
@@ -15,6 +25,11 @@ targetCompatibility = jdkVersion
 
 tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
+}
+
+jar {
+  baseName = 'speakers-api'
+  version =  '0.0.1'
 }
 
 repositories {
@@ -34,13 +49,7 @@ dependencies {
     [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jacksonVersion],
     [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion],
     [group: 'org.apache.commons', name: 'commons-io', version: commonsIoVersion],
-    [group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion],
-    [group: 'org.slf4j', name: 'slf4j-simple', version: slf4jVersion],
-    [group: 'com.mashape.unirest', name: 'unirest-java', version: unirestVersion]
-  )
-  testCompile (
-    [group: 'junit', name: 'junit', version: junitVersion],
-    [group: 'net.javacrumbs.json-unit', name: 'json-unit', version: jsonUnitVersion],
-    [group: 'net.javacrumbs.json-unit', name: 'json-unit-fluent', version: jsonUnitVersion]    
+    [group: 'com.mashape.unirest', name: 'unirest-java', version: unirestVersion],
+    [group: 'org.springframework.boot', name: 'spring-boot-starter-web']
   )
 }
