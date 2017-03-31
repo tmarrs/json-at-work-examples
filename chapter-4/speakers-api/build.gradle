@@ -1,0 +1,44 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+ext {
+  jdkVersion = "1.8"
+}
+
+sourceCompatibility = jdkVersion
+targetCompatibility = jdkVersion
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
+
+jar {
+  baseName = 'speakers-api'
+  version =  '0.0.1'
+}
+
+repositories {
+  mavenCentral()
+}
+
+test {
+  testLogging {
+    showStandardStreams = true // Show standard output & standard error.
+  }
+  ignoreFailures = false
+}
+
+dependencies {
+  compile (
+    [group: 'org.springframework.boot', name: 'spring-boot-starter-web']
+  )
+}
