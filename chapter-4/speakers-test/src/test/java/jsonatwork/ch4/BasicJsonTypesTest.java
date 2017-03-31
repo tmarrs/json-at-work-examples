@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.*;
 public class BasicJsonTypesTest {
   private static final String TEST_SPEAKER = "age = 39\n" + 
 	   "fullName = \"Larson Richard\"\n" +
-	   "tags = [\"json\",\"rest\",\"api\",\"oauth\"]\n" + 
+	   "tags = [\"JavaScript\",\"AngularJS\",\"Yeoman\"]\n" + 
 		 "registered = true";
 
 	@Test
@@ -29,7 +29,7 @@ public class BasicJsonTypesTest {
 			int age = 39;
 			String fullName = new String("Larson Richard");
 			List<String> tags = new ArrayList<String>(
-					              Arrays.asList("json", "rest", "api", "oauth"));
+					Arrays.asList("JavaScript", "AngularJS", "Yeoman"));
 
 			boolean registered = true;
 			String speaker = null;

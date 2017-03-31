@@ -20,7 +20,7 @@ public class SpeakerJsonFlatFileTest {
       "  \"id\" : 1,\n" + 
       "  \"age\" : 39,\n" + 
       "  \"fullName\" : \"Larson Richard\",\n" + 
-      "  \"tags\" : [ \"json\", \"rest\", \"api\", \"oauth\" ],\n" + 
+      "  \"tags\" : [ \"JavaScript\", \"AngularJS\", \"Yeoman\" ],\n" + 
       "  \"registered\" : true\n" + 
     "}";
 
@@ -28,7 +28,7 @@ public class SpeakerJsonFlatFileTest {
 	public void serializeObject() {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			String[] tags = {"json", "rest", "api", "oauth"};
+			String[] tags = {"JavaScript", "AngularJS", "Yeoman"};
 			Speaker speaker = new Speaker(1, 39, "Larson Richard", tags, true);
 			String speakerStr = null;
 
