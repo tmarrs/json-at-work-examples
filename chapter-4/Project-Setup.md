@@ -1,6 +1,6 @@
 Test Project Setup
 ==================
-Here's how to create the `java-json` project with Gradle.
+Here's how to create the `speakers-test` project with Gradle.
 
 ## Contents
 - [Create the Project Directory](#create-the-project-directory)
@@ -23,11 +23,11 @@ If you're curious project directories & tasks, then take a look at the [Gradle B
 First, find a suitable directory for your projects.
 `cd ~/projects`
 
-Next, create the `java-json` directory and navigate there:
+Next, create the `speakers-test` directory and navigate there:
 ```
-mkdir java-json
+mkdir speakers-test
 
-cd java-json
+cd speakers-test
 ```
 
 ## Use the Existing `build.gradle` File
@@ -48,7 +48,7 @@ json-server -p 5000 ./src/test/resources/speakers.json
 ## Run the Tests
 Create another terminal session and run the tests as follows:
 ```
-cd ~/projects/json-at-work-examples/chapter-4/java-json
+cd ~/projects/json-at-work-examples/chapter-4/speakers-test
 
 gradle test
 ```
