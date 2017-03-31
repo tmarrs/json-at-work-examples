@@ -14,13 +14,11 @@ public class SpeakerController {
     };
     
     @RequestMapping(value = "/speakers", method = RequestMethod.GET)
-    @ResponseBody
     public List<Speaker> getAllSpeakers() {
       return Arrays.asList(speakers);
     }
 
     @RequestMapping(value = "/speakers/{id}", method = RequestMethod.GET)
-    @ResponseBody
     public ResponseEntity<?>  getSpeakerById(@PathVariable long id) {
       int tempId = ((new Long(id)).intValue() - 1);
       
