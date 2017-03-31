@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'java-json'
+rootProject.name = 'speakers-test'
