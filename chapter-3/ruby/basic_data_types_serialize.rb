@@ -38,14 +38,7 @@ end
 
 speaker = Speaker.new('Larson', 'Richard', 'larsonrichard@ecratic.com',
             'Incididunt mollit cupidatat magna excepteur do tempor ex non ...',
-            'Ecratic', %w('json', 'rest', 'api', 'oauth'), true)
+            'Ecratic', %w(JavaScript, AngularJS, Yeoman), true)
 
 puts "speaker (using oj gem) = #{MultiJson.dump(speaker)}"
-puts
-
-MultiJson.adapter = :json_gem
-puts "Current JSON Engine = #{MultiJson.current_adapter()}"
-puts
-
-puts "speaker (using JSON gem) = #{MultiJson.dump(speaker)}"
 puts
