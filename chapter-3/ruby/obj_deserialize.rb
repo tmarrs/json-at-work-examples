@@ -1,5 +1,5 @@
 require 'multi_json'
-require 'hashie'
+require 'ostruct'
 require 'awesome_print'
 
 puts "Current JSON Engine = #{MultiJson.current_adapter()}"
@@ -20,16 +20,18 @@ end
 
 speaker = Speaker.new('Larson', 'Richard', 'larsonrichard@ecratic.com',
             'Incididunt mollit cupidatat magna excepteur do tempor ex non ...',
-            'Ecratic', %w('json', 'rest', 'api', 'oauth'), true)
+            'Ecratic', %w(JavaScript, AngularJS, Yeoman), true)
 
-json_spkr2 = MultiJson.dump(speaker, pretty: true)
+json_speaker = MultiJson.dump(speaker, pretty: true)
+puts "speaker (using oj gem) = #{MultiJson.dump(speaker)}"
+puts
 
-hash_spkr2 = Hashie::Mash.new(MultiJson.load(json_spkr2))
+hash_spkr = OpenStruct.new(MultiJson.load(json_speaker))
 
-spkr2 =  Speaker.new(hash_spkr2.first_name, hash_spkr2.last_name, hash_spkr2.email,
-                     hash_spkr2.about, hash_spkr2.company, hash_spkr2.tags,
-                     hash_spkr2.registered)
+speaker2 =  Speaker.new(hash_spkr.first_name, hash_spkr.last_name, hash_spkr.email,
+                     hash_spkr.about, hash_spkr.company, hash_spkr.tags,
+                     hash_spkr.registered)
 
-puts "speaker 2 after load()"
-ap spkr2
+puts "speaker 2 after MultiJson.load()"
+ap speaker2
 puts
