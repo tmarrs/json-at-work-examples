@@ -16,7 +16,7 @@ end
 
 speaker = Speaker.new('Larson', 'Richard', 'larsonrichard@ecratic.com',
             'Incididunt mollit cupidatat magna excepteur do tempor ex non ...',
-            'Ecratic', %w('json', 'rest', 'api', 'oauth'), true)
+            'Ecratic', %w(JavaScript, AngularJS, Yeoman), true)
 
 json = ActiveSupport::JSON.encode(speaker,
                        only: ['first_name', 'last_name'])
