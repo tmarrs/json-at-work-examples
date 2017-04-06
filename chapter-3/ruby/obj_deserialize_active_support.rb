@@ -1,6 +1,7 @@
+require 'multi_json'
 require 'active_support/json'
 require 'active_support/core_ext/string'
-require 'hashie'
+require 'ostruct'
 require 'awesome_print'
 
 class Speaker
@@ -18,16 +19,18 @@ end
 
 speaker = Speaker.new('Larson', 'Richard', 'larsonrichard@ecratic.com',
             'Incididunt mollit cupidatat magna excepteur do tempor ex non ...',
-            'Ecratic', %w('json', 'rest', 'api', 'oauth'), true)
+            'Ecratic', %w(JavaScript, AngularJS, Yeoman), true)
 
-json_spkr2 = ActiveSupport::JSON.encode(speaker)
+json_speaker = ActiveSupport::JSON.encode(speaker)
+puts "speaker (using oj gem) = #{ActiveSupport::JSON.encode(speaker)}"
+puts
 
-hash_spkr2 = Hashie::Mash.new(ActiveSupport::JSON.decode(json_spkr2))
+hash_spkr = OpenStruct.new(ActiveSupport::JSON.decode(json_speaker))
 
-spkr2 =  Speaker.new(hash_spkr2.first_name, hash_spkr2.last_name, hash_spkr2.email,
-                     hash_spkr2.about, hash_spkr2.company, hash_spkr2.tags,
-                     hash_spkr2.registered)
+speaker2 =  Speaker.new(hash_spkr.first_name, hash_spkr.last_name, hash_spkr.email,
+                        hash_spkr.about, hash_spkr.company, hash_spkr.tags,
+                        hash_spkr.registered)
 
-puts "speaker 2 after decode()"
-ap spkr2
+puts "speaker 2 after ActiveSupport::JSON.decode()"
+ap speaker2
 puts
