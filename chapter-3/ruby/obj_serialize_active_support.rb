@@ -25,5 +25,5 @@ puts "Speaker with only first_name and last_name \n#{json}"
 puts
 
 json = ActiveSupport::JSON.encode(speaker).camelize(first_letter = :lower)
-puts "Speaker with camel cased JSON \n#{json}"
+puts "Speaker with camel-cased JSON \n#{json}"
 puts
