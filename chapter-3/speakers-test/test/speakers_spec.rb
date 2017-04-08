@@ -26,17 +26,13 @@ describe 'Speakers API' do
     speakers.length.must_be :==, 3
     ap speakers
     
-    # speaker3 = speakers[2]
     speaker3 = OpenStruct.new(speakers[2])
     speaker3.company.must_be :==, 'Talkola'
     speaker3.firstName.must_be :==, 'Christensen'
     speaker3.lastName.must_be :==, 'Fisher'
     speaker3.tags.must_be :==, ['Java', 'Spring',
       'Maven', 'REST']
-    
-    #speaker3['company'].must_be :==, 'Talkola'
-    #speaker3['firstName'].must_be :==, 'Christensen'
-    #speaker3['lastName'].must_be :==, 'Fisher'
+
     ap speaker3
   end
 end
