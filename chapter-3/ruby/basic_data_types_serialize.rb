@@ -15,7 +15,7 @@ reqistered = true # Boolean
 puts "reqistered = #{MultiJson.dump(reqistered)}"
 puts
 
-tags = %w('json', 'rest', 'api', 'oauth') # Array
+tags = %w(JavaScript, AngularJS, Yeoman) # Array of Strings
 puts "tags = #{MultiJson.dump(tags)}"
 puts
 
