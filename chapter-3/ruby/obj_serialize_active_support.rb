@@ -17,13 +17,15 @@ end
 speaker = Speaker.new('Larson', 'Richard', 'larsonrichard@ecratic.com',
             'Incididunt mollit cupidatat magna excepteur do tempor ex non ...',
             'Ecratic', %w(JavaScript, AngularJS, Yeoman), true)
+            
+json = ActiveSupport::JSON.encode(speaker).camelize(first_letter = :lower)
+puts "Speaker as camel-cased JSON \n#{json}"
+puts
 
 json = ActiveSupport::JSON.encode(speaker,
                        only: ['first_name', 'last_name'])
+                       .camelize(first_letter = :lower)
 
-puts "Speaker with only first_name and last_name \n#{json}"
+puts "Speaker as camel-cased JSON with only firstName and lastName \n#{json}"
 puts
 
-json = ActiveSupport::JSON.encode(speaker).camelize(first_letter = :lower)
-puts "Speaker with camel-cased JSON \n#{json}"
-puts
