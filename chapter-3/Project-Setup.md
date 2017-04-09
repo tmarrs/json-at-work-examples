@@ -13,10 +13,12 @@ gem 'awesome_print'
 
 `bundle install --path vendor/bundle`
 
-Rakefile looks like this:
+This creates ``.bundle/config`
+
+Develop a `Rakefile` that looks like this:
 
 ```
-require "rake/testtask"
+require 'rake/testtask'
 
 Rake::TestTask.new(:test) do |t|
   t.libs = %w(lib test)
