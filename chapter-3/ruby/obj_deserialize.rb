@@ -26,11 +26,11 @@ json_speaker = MultiJson.dump(speaker, pretty: true)
 puts "speaker (using oj gem) = #{MultiJson.dump(speaker)}"
 puts
 
-hash_spkr = OpenStruct.new(MultiJson.load(json_speaker))
+ostruct_spkr = OpenStruct.new(MultiJson.load(json_speaker))
 
-speaker2 =  Speaker.new(hash_spkr.first_name, hash_spkr.last_name, hash_spkr.email,
-                     hash_spkr.about, hash_spkr.company, hash_spkr.tags,
-                     hash_spkr.registered)
+speaker2 =  Speaker.new(ostruct_spkr.first_name, ostruct_spkr.last_name, 
+                     ostruct_spkr.email, ostruct_spkr.about, ostruct_spkr.company,
+                     ostruct_spkr.tags, ostruct_spkr.registered)
 
 puts "speaker 2 after MultiJson.load()"
 ap speaker2
