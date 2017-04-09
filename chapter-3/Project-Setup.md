@@ -73,7 +73,7 @@ The above command creates the following files:
 You should see the following in your terminal session:
 
 ```
-bundle install --path vendor/bundle
+json-at-work => bundle install --path vendor/bundle
 Fetching gem metadata from https://rubygems.org/........
 Fetching version metadata from https://rubygems.org/.
 Resolving dependencies...
@@ -94,7 +94,7 @@ Please see the [Bundler documentation](http://bundler.io) for further details.
 
 
 ## Use the Existing `Rakefile`
-We use the well-known [`rake`](https://ruby.github.io/rake) utility to build
+We use the well-known [`rake`](http://rake.rubyforge.org) utility to build
 and test the code. The `Rakefile` defines the build tasks, and looks like this:
 
 ```
@@ -111,7 +111,7 @@ task :default => :test
 
 In the above `Rakefile`, `test` is the default task.
 
-Please see the [`rake` documentation](https://ruby.github.io/rake) for further details.
+Please see the [`rake` documentation](http://rake.rubyforge.org) for further details.
 
 
 ## Write the Tests
@@ -130,8 +130,11 @@ Create another terminal session and run the tests as follows:
 ```
 cd chapter-3/speakers-test
 
-rake
+bundle exec rake
 ```
+
+Please note that `bundle exec rake` runs `rake` within the context of the 
+gems installed by Bundler for this project.
 
 
 ## References
