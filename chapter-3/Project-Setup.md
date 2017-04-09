@@ -1,4 +1,4 @@
-`bundle install` # creates Gemfile
+`bundle install` # creates Gemfile and Gemfile.lock.
 
 Add our gems for testing, and Gemfile looks like:
 
@@ -13,7 +13,7 @@ gem 'awesome_print'
 
 `bundle install --path vendor/bundle`
 
-This creates ``.bundle/config`
+This creates `.bundle/config`
 
 Develop a `Rakefile` that looks like this:
 
