@@ -48,7 +48,7 @@ json-server -p 5000 ./src/test/resources/speakers.json
 ## Run the Tests
 Create another terminal session and run the tests as follows:
 ```
-cd ~/projects/json-at-work-examples/chapter-4/speakers-test
+cd chapter-4/speakers-test
 
 gradle test
 ```
