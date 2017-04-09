@@ -27,15 +27,16 @@ describe 'Speakers API' do
     ap speakers
     puts
     
-    hash_spkr3 = OpenStruct.new(speakers[2])
-    expect(hash_spkr3.company).must_equal 'Talkola'
-    expect(hash_spkr3.firstName).must_equal 'Christensen'
-    expect(hash_spkr3.lastName).must_equal 'Fisher'
-    expect(hash_spkr3.tags).must_equal ['Java', 'Spring', 'Maven', 'REST']
+    ostruct_spkr3 = OpenStruct.new(speakers[2])
     
-    speaker3 =  Speaker.new(hash_spkr3.firstName, hash_spkr3.lastName,
-                         hash_spkr3.email, hash_spkr3.about, hash_spkr3.company, 
-                         hash_spkr3.tags, hash_spkr3.registered)
+    expect(ostruct_spkr3.company).must_equal 'Talkola'
+    expect(ostruct_spkr3.firstName).must_equal 'Christensen'
+    expect(ostruct_spkr3.lastName).must_equal 'Fisher'
+    expect(ostruct_spkr3.tags).must_equal ['Java', 'Spring', 'Maven', 'REST']
+    
+    speaker3 =  Speaker.new(ostruct_spkr3.firstName, ostruct_spkr3.lastName,
+                            ostruct_spkr3.email, ostruct_spkr3.about, ostruct_spkr3.company, 
+                            ostruct_spkr3.tags, ostruct_spkr3.registered)
 
     expect(speaker3.company).must_equal 'Talkola'
     expect(speaker3.first_name).must_equal 'Christensen'

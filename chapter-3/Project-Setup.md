@@ -73,7 +73,7 @@ The above command creates the following files:
 You should see the following in your terminal session:
 
 ```
-json-at-work => bundle install --path vendor/bundle
+bundle install --path vendor/bundle
 Fetching gem metadata from https://rubygems.org/........
 Fetching version metadata from https://rubygems.org/.
 Resolving dependencies...
