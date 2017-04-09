@@ -3,6 +3,7 @@ require 'minitest/autorun'
 require 'unirest'
 require 'awesome_print'
 require 'ostruct'
+require 'plissken'
 require_relative '../speaker'
 
 describe 'Speakers API' do
@@ -27,14 +28,14 @@ describe 'Speakers API' do
     ap speakers
     puts
     
-    ostruct_spkr3 = OpenStruct.new(speakers[2])
+    ostruct_spkr3 = OpenStruct.new(speakers[2].to_snake_keys())
     
     expect(ostruct_spkr3.company).must_equal 'Talkola'
-    expect(ostruct_spkr3.firstName).must_equal 'Christensen'
-    expect(ostruct_spkr3.lastName).must_equal 'Fisher'
+    expect(ostruct_spkr3.first_name).must_equal 'Christensen'
+    expect(ostruct_spkr3.last_name).must_equal 'Fisher'
     expect(ostruct_spkr3.tags).must_equal ['Java', 'Spring', 'Maven', 'REST']
     
-    speaker3 =  Speaker.new(ostruct_spkr3.firstName, ostruct_spkr3.lastName,
+    speaker3 =  Speaker.new(ostruct_spkr3.first_name, ostruct_spkr3.last_name,
                             ostruct_spkr3.email, ostruct_spkr3.about, ostruct_spkr3.company, 
                             ostruct_spkr3.tags, ostruct_spkr3.registered)
 

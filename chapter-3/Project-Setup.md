@@ -78,15 +78,23 @@ Fetching gem metadata from https://rubygems.org/........
 Fetching version metadata from https://rubygems.org/.
 Resolving dependencies...
 Installing rake 12.0.0
+Installing i18n 0.8.1
+Installing minitest 5.10.1
+Installing thread_safe 0.3.6
+Installing builder 3.2.3
 Installing addressable 2.3.8
 Installing awesome_print 1.7.0
 Installing json 1.8.6 with native extensions
 Installing mime-types 1.25.1
-Installing minitest 5.10.1
 Using bundler 1.14.6
+Installing tzinfo 1.2.3
 Installing rest-client 1.6.9
+Installing activesupport 4.2.8
 Installing unirest 1.1.2
-Bundle complete! 4 Gemfile dependencies, 9 gems now installed.
+Installing activemodel 4.2.8
+Installing symbolize 4.5.2
+Installing plissken 0.3.0
+Bundle complete! 5 Gemfile dependencies, 17 gems now installed.
 Bundled gems are installed into ./vendor/bundle.
 ```
 
