@@ -1,10 +1,13 @@
-require 'minitest/spec'
-require 'minitest/autorun'
+require 'minitest_helper'
+
 require 'unirest'
 require 'awesome_print'
 require 'ostruct'
 require 'plissken'
+require 'jq/extend'
+
 require_relative '../speaker'
+
 
 describe 'Speakers API' do
   SPEAKERS_ALL_URI = 'http://localhost:5000/speakers'
@@ -25,9 +28,11 @@ describe 'Speakers API' do
     expect(speakers).wont_be_nil
     expect(speakers).wont_be_empty    
     expect(speakers.length).must_equal 3
-    ap speakers
-    puts
-    
+    # ap speakers
+  end
+
+  it 'should validate the 3rd speaker as an Object' do
+    speakers = @res.body    
     ostruct_spkr3 = OpenStruct.new(speakers[2].to_snake_keys())
     
     expect(ostruct_spkr3.company).must_equal 'Talkola'
@@ -44,7 +49,23 @@ describe 'Speakers API' do
     expect(speaker3.last_name).must_equal 'Fisher'
     expect(speaker3.tags).must_equal ['Java', 'Spring', 'Maven', 'REST']
 
-    puts "Speaker3"
-    ap speaker3
+    # puts 'Speaker3 as Object'
+    # ap speaker3
   end
+  
+  it 'should validate the 3rd speaker as JSON' do
+    speakers = @res.body 
+    speaker3 = speakers[2]
+    
+    speaker3.jq('.company') {|value| expect(value).must_equal 'Talkola'}
+    speaker3.jq('.tags') {|value|
+       expect(value).must_equal ['Java', 'Spring', 'Maven', 'REST']}  
+    speaker3.jq('.email') {|value| 
+       expect(value).must_equal 'christensenfisher@talkola.com'}
+    speaker3.jq('. | "\(.firstName) \(.lastName)"') {|value|
+       expect(value).must_equal 'Christensen Fisher'}
+        
+    # ap speaker3
+  end
+  
 end

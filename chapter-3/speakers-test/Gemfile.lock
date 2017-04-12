@@ -10,17 +10,27 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
+    ansi (1.5.0)
     awesome_print (1.7.0)
     builder (3.2.3)
     i18n (0.8.1)
     json (1.8.6)
     mime-types (1.25.1)
     minitest (5.10.1)
+    minitest-reporters (1.1.14)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
+    multi_json (1.12.1)
     plissken (0.3.0)
       symbolize (~> 4.2)
     rake (12.0.0)
     rest-client (1.6.9)
       mime-types (~> 1.16)
+    ruby-jq (0.1.6)
+      multi_json
+    ruby-progressbar (1.8.1)
     symbolize (4.5.2)
       activemodel (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -39,8 +49,10 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   minitest
+  minitest-reporters
   plissken
   rake
+  ruby-jq
   unirest
 
 BUNDLED WITH
