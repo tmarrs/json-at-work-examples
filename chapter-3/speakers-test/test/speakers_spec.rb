@@ -6,7 +6,7 @@ require 'ostruct'
 require 'plissken'
 require 'jq/extend'
 
-require_relative '../speaker'
+require_relative '../models/speaker'
 
 
 describe 'Speakers API' do
@@ -53,17 +53,17 @@ describe 'Speakers API' do
     # ap speaker3
   end
   
-  it 'should validate the 3rd speaker as JSON' do
+  it 'should validate the 3rd speaker with jq' do
     speakers = @res.body 
     speaker3 = speakers[2]
     
     speaker3.jq('.company') {|value| expect(value).must_equal 'Talkola'}
     speaker3.jq('.tags') {|value|
-       expect(value).must_equal ['Java', 'Spring', 'Maven', 'REST']}  
+        expect(value).must_equal ['Java', 'Spring', 'Maven', 'REST']}  
     speaker3.jq('.email') {|value| 
-       expect(value).must_equal 'christensenfisher@talkola.com'}
+        expect(value).must_equal 'christensenfisher@talkola.com'}
     speaker3.jq('. | "\(.firstName) \(.lastName)"') {|value|
-       expect(value).must_equal 'Christensen Fisher'}
+        expect(value).must_equal 'Christensen Fisher'}
         
     # ap speaker3
   end
