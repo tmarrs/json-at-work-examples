@@ -5,19 +5,21 @@ class SpeakersController < ApplicationController
   
   # GET	/speakers 
   def index
-    puts 'In #index'
     render json: @speakers
   end
 
   # GET	/speakers/:id 
   def show
-    puts 'In #show'
-    id = params[:id].to_i
-    puts id
-    render json: @speakers[id]
+    id = params[:id].to_i - 1
+
+    if id >= 0 && id < @speakers.length
+      render json: @speakers[id]
+    else 
+      render plain: '404 Not found', status: 404
+    end
   end
   
-  private 
+  private
   
   def set_speakers
     @speakers = []
