@@ -3,18 +3,18 @@ require 'speaker'
 class SpeakersController < ApplicationController
   before_action :set_speakers, only: [:index, :show]
   
-  # GET	/speakers/:id  
+  # GET	/speakers 
   def index
     puts 'In #index'
-    id = params[:id]
-    puts id
-    render json: @speakers[id]
+    render json: @speakers
   end
 
-  # GET	/speakers
+  # GET	/speakers/:id 
   def show
     puts 'In #show'
-    render json: @speakers
+    id = params[:id].to_i
+    puts id
+    render json: @speakers[id]
   end
   
   private 
