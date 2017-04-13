@@ -1,4 +1,4 @@
-class Speaker
+class Speaker < ActiveModelSerializers::Model
   attr_accessor :first_name, :last_name, :email,
                 :about, :company, :tags, :registered
   
