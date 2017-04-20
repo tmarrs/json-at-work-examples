@@ -28,7 +28,6 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
         - [Install `jsonlint`](#install-jsonlint)
         - [Install `json`](#install-json)
         - [Install `ujs-jsonvalidate`](#install-ujs-jsonvalidate)
-        - [Install `tinyserver`](#install-tinyserver)
         - [Install `http-server`](#install-http-server)
         - [Install `json-server`](#install-json-server)
         - [Install `crest`](#install-crest)
@@ -260,7 +259,6 @@ We use the following npm modules at the command line, so we install them globall
 * [`jsonlint`](#install-jsonlint)
 * [`json`](#install-json)
 * [`ujs-jsonvalidate`](#install-ujs-jsonvalidate)
-* [`tinyserver`](#install-tinyserver)
 * [`http-server`](#install-http-server)
 * [`json-server`](#install-json-server)
 
@@ -301,26 +299,8 @@ To validate a JSON document:
 validate basic.json basic-schema.json
 ```
 
-#### Install `tinyserver`
-`tinyserver` is a simple Web Server that serves up files in the current directory structure on the local host system as static content.
-
-To install:
-```
-npm install -g tinyserver
-```
-
-To run:
-```
-tinyserver 8081
-```
-
-To access:
-```
-http://localhost:8081
-```
-
 #### Install `http-server`
-`http-server` is another simple Web Server that serves up files in the current directory structure on the local host system as static content. I prefer `http-server` over `tinyserver` because it has better documentation, and the command line options and shutdown are more intuitive. Here's the [`http-server` GitHub Repository](https://github.com/indexzero/http-server).
+`http-server` is a simple Web Server that serves up files in the current directory structure on the local host system as static content. I like `http-server` because it has solid documentation, and the command line options and shutdown are intuitive. Here's the [`http-server` GitHub Repository](https://github.com/indexzero/http-server) and [`http-server` npm Repository](https://www.npmjs.com/package/http-server).
 
 To install:
 ```
