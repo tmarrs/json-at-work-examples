@@ -42,13 +42,8 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
         - [Java Setup on Linux](#java-setup-on-linux)
         - [Java Setup on Windows](#java-setup-on-windows)
     - [Install Maven](#install-maven)
-        - [Install Spring - Add to the POM](#install-spring---add-to-the-pom)
         - [Install JUnit - Add to the POM](#install-junit---add-to-the-pom)
     - [Using Eclipse with Maven](#using-eclipse-with-maven)
-    - [Install Apache Tomcat](#install-apache-tomcat)
-        - [Install Apache Tomcat on Mac OS X](#install-apache-tomcat-on-mac-os-x)
-        - [Install Apache Tomcat on Linux](#install-apache-tomcat-on-linux)
-        - [Install Apache Tomcat on Windows](#install-apache-tomcat-on-windows)
 - [Install `jq`](#install-jq)
 - [Install `cURL`](#install-curl)
     - [Install `cURL` on Mac OS X](#install-curl-on-mac-os-x)
@@ -455,7 +450,6 @@ Please see the [MongoDB installation documentation](https://docs.mongodb.com/man
 Our Java environment depends on:
 * [Java SE](#install-java-se)
 * [Maven](#install-maven)
-  * [Spring](#install-spring---add-to-the-pom)
   * [JUnit](#install-junit---add-to-the-pom)
   * [Eclipse](#using-eclipse-with-maven)
 * [Apache Tomcat](#install-apache-tomcat)
@@ -532,39 +526,6 @@ OS name: "mac os x", version: "10.11.2", arch: "x86_64", family: "mac"
 
 For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
-#### Install Spring - Add to the POM
-[Spring](https://spring.io/) isn't a separate install - just add it to the [Maven POM (Project Object Model)](https://maven.apache.org/pom.html):
-
-```
-<dependency>
-  <groupId>org.springframework</groupId>
-  <artifactId>spring-context</artifactId>
-  <version>4.1.6.RELEASE</version>
-  <scope>runtime</scope>
-  <exclusions>
-    <exclusion>
-      <groupId>commons-logging</groupId>
-      <artifactId>commons-logging</artifactId>
-    </exclusion>
-  </exclusions>
-</dependency>
-```
-
-We've turned off Apache Commons Logging so we can add SLF4J and LogBack to the POM.
-
-```
-<dependency>
-  <groupId>org.slf4j</groupId>
-  <artifactId>jcl-over-slf4j</artifactId>
-  <version>1.6.3</version>
-</dependency>
-<dependency>
-  <groupId>org.slf4j</groupId>
-  <artifactId>slf4j-api</artifactId>
-  <version>1.6.3</version>
-</dependency>
-```
-
 #### Install JUnit - Add to the POM
 [JUnit](http://junit.org/) isn't a separate install - just add it to the [Maven POM (Project Object Model)](https://maven.apache.org/pom.html):
 
@@ -578,53 +539,6 @@ We've turned off Apache Commons Logging so we can add SLF4J and LogBack to the P
 
 ### Using Eclipse with Maven
 Use the following Maven command to integrate with Eclipse: `mvn ecplise:eclipse`
-
-### Install Apache Tomcat
-We use [Apache Tomcat 8](https://tomcat.apache.org/tomcat-8.0-doc/introduction.html) to run our Spring-based Java application. Be sure to install [Java SE](#install-java-se) before Install Tomcat.
-
-#### Install Apache Tomcat on Mac OS X
-[Homebrew](http://brew.sh/) is the simplest way to install Tomcat on Mac OS X. Just do `brew install tomcat` from the command line. This gives you the latest version by default.
-
-Start Tomcat by typing `catalina start`, and then visit `http://localhost:8080` in your browser. You should see the Tomcat startup page. Type `catalina stop` to shut down Tomcat.
-
-The Mac Homebrew install instructions were inspired by the [`{{discovery_collection}} blog`](http://blog.bolshchikov.net/post/50277857673/install-tomcat-on-macos-with-homebrew). You can follow the additional steps listed there to further configure your application directory structure.
-
-For further reference, please see:
-* http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html
-* http://wolfpaulus.com/jounal/mac/tomcat8/
-
-#### Install Apache Tomcat on Linux
-* Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a tar file.
-* Untar the tar file.
-* Add `CATALINA_HOME` to `.bashrc`:
-```
-export CATALINA_HOME=/usr/local/tomcat/apache-tomcat-8.0.{xx}/bin
-
-export PATH=...:${CATALINA_HOME}/bin:... # Add CATALINA_HOME to your PATH
-```
-* `source ~/.bashrc`
-
-Start Tomcat as follows:
-* `cd $CATALINA_HOME\bin`
-* Type `startup.sh` to start Tomcat.
-* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page.
-* Type `shutdown.sh` to shut down Tomcat.
-
-Credit for the Tomcat/Linux install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
-
-#### Install Apache Tomcat on Windows
-* Visit the [Tomcat Download page](https://tomcat.apache.org/download-80.cgi) and download a zip file.
-* Unzip the file.
-* Add `CATALINA_HOME` as a System Variable (see the [Java Setup on Windows](#java-setup-on-windows) for an example for an example of how to set a Windows System Variable).
-
-Start Tomcat as follows:
-* `cd %CATALINA_HOME%\bin`
-* Type `startup.bat` to start Tomcat.
-* Visit `http://localhost:8080` in your browser. You should see the Tomcat startup page.
-* Type `shutdown.bat` to shut down Tomcat.
-
-Credit for the Tomcat/Windows install instructions goes to [Nenyang Technical University](http://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html).
-
 
 ## Install `jq`
 [`jq`](http://stedolan.github.io/jq/) provides JSON-based command-line processing.
