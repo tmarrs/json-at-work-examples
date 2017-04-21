@@ -4,7 +4,6 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
 
 
 ## Contents
-- [Contents](#contents)
 - [Install JSON Tools in the Browser](#install-json-tools-in-the-browser)
     - [Install JSONView in Chrome and Firefox](#install-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
@@ -32,8 +31,14 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
         - [Install `json-server`](#install-json-server)
         - [Install `crest`](#install-crest)
 - [Install Ruby on Rails (RoR)](#install-ruby-on-rails-ror)
-    - [Install with RVM + the `rails` Gem](#install-with-rvm--the-rails-gem)
-    - [Rails on Windows](#rails-on-windows)
+    - [Install Rails on Mac OS X and Linux](#install-rails-on-mac-os-x-and-linux)
+    - [Install Rails on Windows](#install-rails-on-windows)
+    - [Install Ruby Gems](#install-ruby-gems)
+        - [Install `multi_json`](#install-multijson)
+        - [Install `oj`](#install-oj)
+        - [Install `awesome_print`](#install-awesomeprint)
+        - [Install `activesupport`](#install-activesupport)
+        - [Install `mailcatcher`](#install-mailcatcher)
 - [Install MongoDB](#install-mongodb)
 - [Install The Java Environment](#install-the-java-environment)
     - [Install Java SE](#install-java-se)
@@ -377,7 +382,7 @@ There are several ways to install Ruby on Rails:
 * [RVM (Ruby Version Manager)](https://rvm.io/) + the `rails` gem
 * [+rbenv+](https://github.com/sstephenson/rbenv) + the `rails` gem
 
-### Install with RVM + the `rails` Gem
+### Install Rails on Mac OS X and Linux
 I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux.
 
 Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
@@ -387,14 +392,14 @@ Use RVM to install Ruby as follows:
 ```
 rvm list known
 ```
-* Install Ruby `v2.2.0` as follows:
+* Install Ruby `v2.4.0` as follows:
 ```
-rvm install 2.2.0
+rvm install 2.4.0
 ```
 * Check the Ruby version, and you should see something like this.
 ```
 ruby -v
-ruby 2.2.0
+ruby 2.4.0
 ```
 
 After installing Ruby, you can install Rails as follows:
@@ -404,23 +409,72 @@ gem install rails
 
 Check Rails version, and it should look like:
 ```
-json-at-work => rails -v
-Rails 4.2.1
+rails -v
+Rails Rails 5.0.2
 ```
 
 And you're done.
 
 You can easily upgrade to new versions of Ruby and Rails by:
-* Installing a new version of Ruby (2.3 for example): `rvm install 2.3`
-* Using the new version: `rvm use 2.3`
-* Then install the `rails` as shown above.
+* Installing a new version of Ruby (2.x for example): `rvm install 2.x`
+* Using the new version: `rvm use 2.x`
+* Then install the `rails` gem as shown above.
 
-### Rails on Windows
-Use [Rails Installer](http://railsinstaller.org) for a Windows environment. 
+### Install Rails on Windows
+Use [Rails Installer](http://railsinstaller.org) for a Windows environment, and do the following:
+* Download the installer for Windows.
+* Run the intaller and follow the defaults.
 
-FIXME - Add more installation instructions.
+I've used this on Windows 7, and it worked properly.
 
-If this doesn't work, you may want to avoid this headache and use [CodingGround](https://www.tutorialspoint.com/codingground.htm) to run your Ruby on Rails environment in the Cloud rather than on Windows.
+The [Rails Installer](http://railsinstaller.org) page has excellent information on RoR tutorials and
+how to get help with installation issues. 
+
+### Install Ruby Gems
+We use the following Ruby Gems outside of Rails, so we install them globally:
+* [`multijson`](#install-multi_json)
+* [`oj`](#install-oj)
+* [`awesome_print`](#install-awesome_print)
+* [`activesupport`](#install-activesupport)
+* [`minitest`](#install-minitest)
+* [`mailcatcher`](#install-mailcatcher)
+
+#### Install `multi_json`
+[`multi_json`](https://github.com/intridea/multi_json) provides a wrapper that invokes the most common JSON gems on behalf of the caller by choosing the fastest JSON gem that has been loaded in an application's environment. Install it as follows:
+
+```
+gem install multi_json
+```
+
+#### Install `oj`
+[`oj`](https://github.com/ohler55/oj), (Optimized JSON), is considered by many to be the fastest Ruby-based
+JSON processor available. Install it as follows:
+
+```
+gem install oj
+```
+
+#### Install `awesome_print`
+[awesome_print](https://github.com/awesome-print/awesome_print) pretty-prints a Ruby object and is used for
+debugging purposes. Install it as follows:
+
+```
+gem install awesome_print
+```
+
+#### Install `activesupport`
+[`activesupport`](https://github.com/rails/rails/tree/master/activesupport) provides functionality that has been extracted from Rails. ActiveSupport's JSON module provides the ability to convert keys between camel case and snake case. Install it as follows:
+
+```
+gem install activesupport
+```
+
+#### Install `mailcatcher`
+[`mailcatcher`](https://mailcatcher.me) is a very simple mail (i.e., SMTP) server. It's a great tool for testing emails without forcing you to send a real email. Install it as follows:
+
+```
+gem install mailcatcher
+```
 
 
 ## Install MongoDB
@@ -430,9 +484,6 @@ Please see the [MongoDB installation documentation](https://docs.mongodb.com/man
 Our Java environment depends on:
 * [Java SE](#install-java-se)
 * [Maven](#install-maven)
-  * [JUnit](#install-junit---add-to-the-pom)
-  * [Eclipse](#using-eclipse-with-maven)
-* [Apache Tomcat](#install-apache-tomcat)
 
 ### Install Java SE
 We're using Java SE (Standard Edition) 8 for this book, so please visit the [Oracle Java SE 8 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
