@@ -129,19 +129,19 @@ npm update -g npm
 
 Then, do the following health checks:
 
-  * `nvm ls`. You should see:
+* `nvm ls`. You should see:
 ```
           ->  v4.2.2
                system
           default -> v4.2.2
 ```
 
-  * `node -v`, which yields:
+* `node -v`, which yields:
 ```
           v4.2.2
 ```
 
-  * `npm -v`, and it looks like:
+* `npm -v`, and it looks like:
 ```
           3.3.10
 ```
