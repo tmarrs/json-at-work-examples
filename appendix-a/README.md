@@ -583,7 +583,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.72-b15, mixed mode)
 ```
 
 #### Java Setup on Mac OS X
-In `.bashrc`, do the following:
+In `.bashrc`, do the following to setup `JAVA_HOME` and add it to your `PATH`:
 ```
 ...
 
@@ -591,11 +591,11 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.x.y.jdk/Contents/Home # 
 
 ...
 
-export PATH=...:${JAVA_HOME}/bin:... # JAVA_HOME to your PATH
+export PATH=...:${JAVA_HOME}/bin:...
 ```
 
 #### Java Setup on Linux
-In `.bashrc`, do the following:
+In `.bashrc`, do the following to setup `JAVA_HOME` and add it to your `PATH`:
 ```
 ...
 
@@ -603,7 +603,7 @@ export JAVA_HOME=/usr/java/jdk1.x.y/bin/java # x and y are the minor and patch v
 
 ...
 
-export PATH=...:${JAVA_HOME}/bin:... # Add JAVA_HOME to your PATH
+export PATH=...:${JAVA_HOME}/bin:...
 ```
 
 Then, refresh your environment: `source ~/.bashrc`
