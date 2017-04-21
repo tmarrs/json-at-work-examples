@@ -383,9 +383,7 @@ There are several ways to install Ruby on Rails:
 * [+rbenv+](https://github.com/sstephenson/rbenv) + the `rails` gem
 
 ### Install Rails on Mac OS X and Linux
-I prefer RVM because it's easy to upgrade to switch between Ruby versions. These instructions work for Mac OS X and Linux.
-
-Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
+I prefer RVM because for Mac OS X and Linux because it's easy to upgrade to switch between Ruby versions. Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
 
 Use RVM to install Ruby as follows:
 * See the available versions of Ruby
@@ -423,10 +421,9 @@ You can easily upgrade to new versions of Ruby and Rails by:
 ### Install Rails on Windows
 Use [Rails Installer](http://railsinstaller.org) for a Windows environment, and do the following:
 * Download the installer for Windows.
-* Run the intaller and follow the defaults.
+* Run the installer and follow the defaults.
 
-I've used this on Windows 7, and it worked properly.
-
+I've used Rails Installer](http://railsinstaller.org) on Windows 7, and it worked properly.
 The [Rails Installer](http://railsinstaller.org) page has excellent information on RoR tutorials and
 how to get help with installation issues. 
 
