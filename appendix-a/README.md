@@ -4,7 +4,6 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
 
 
 ## Contents
-- [Contents](#contents)
 - [Install JSON Tools in the Browser](#install-json-tools-in-the-browser)
     - [Install JSONView in Chrome and Firefox](#install-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
