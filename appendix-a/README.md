@@ -89,6 +89,7 @@ Although you could use the installation package from the [Node.js site](https://
 
 #### Install and Configure NVM
 First, install NVM by using one of the following methods:
+
 * [Install Script](https://github.com/creationix/nvm#install-script)
 * [Manual Install](https://github.com/creationix/nvm#manual-install)
 
@@ -96,11 +97,13 @@ Next, let's make sure that NVM runs properly. Source it from a shell as follows:
 Now NVM will work properly for the remainder of the installation process.
 
 If you're running bash, then do the following file to so that NVM is automatically sourced (i.e., configured) upon login. If you're running bash, then do the following:
+
 * In ```$HOME/.bashrc```, add these lines:
 ```
 source ~/.nvm/nvm.sh
 export NVM_HOME=~/.nvm/v4.2.2
 ```
+
 * In ```$HOME/.bashrc_profile```, add this line:
 ```
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
@@ -110,6 +113,7 @@ Please note that similar steps apply to Bourne Shell or Korn Shell.
 
 #### Install Node with NVM
 Now that NVM is installed, use it to install Node:
+
 * Type `nvm ls-remote` to see what remote (i.e., not on your local machine) versions of Node are available to install.
 * Install version `v4.2.2` with the following command: `nvm install v4.2.2`
   * All Node versions are installed in `$HOME/.nvm`
@@ -124,16 +128,19 @@ npm update -g npm
 ```
 
 Then, do the following health checks:
+
   * `nvm ls`. You should see:
 ```
           ->  v4.2.2
                system
           default -> v4.2.2
 ```
+
   * `node -v`, which yields:
 ```
           v4.2.2
 ```
+
   * `npm -v`, and it looks like:
 ```
           3.3.10
@@ -207,6 +214,7 @@ NVM also works well on on Windows due to Corey Butler's [`nvm-windows`](https://
 
 #### Install Node.js on Windows with `nvm-windows`
 Here are the steps:
+
 * Visit the [`nvm-windows` Downloads Page](https://github.com/coreybutler/nvm-windows/releases)
 * Download the latest `nvm-setup.zip` to your `Downloads` folder.
 * Unzip `nvm-setup.zip` with your favorite Zip tool.
@@ -234,6 +242,7 @@ If you have a previous installation of Node.js that isn't quite working properly
 Uninstalls can be complicated, and credit for the Mac uninstall instructions goes to [Clay at Hungred Dot Com](http://hungred.com/how-to/completely-removing-nodejs-npm/). If `homebrew` was used to install Node.js, then simply type `brew uninstall node` at the prompt.
 
 If you didn't use `homebrew`, do the following:
+
 * cd to `/usr/local/lib` and delete any `node` executable and `node_modules`
 * cd to `/usr/local/include` and delete any node and node_modules directory
 * cd to `/usr/local/bin` and delete any `node` executable
@@ -249,9 +258,11 @@ rm -rf $USER/.npm
 #### Uninstall Node.js on Linux
 Credit for the Linux uninstall instructions goes to [Stack Overflow](http://stackoverflow.com/questions/5650169/uninstall-node-js-using-linux-command-line) and [GitHub](https://github.com/joyent/node/issues/4058).
 Do the following:
+
 * Find the node installation by typing `which node`. Let's assume it's at `/usr/local/bin/node`
 * cd to `/usr/local`
 * Execute the following:
+
 ```
 sudo rm -rf bin/node
 sudo rm -rf bin/npm
@@ -262,6 +273,7 @@ sudo rm -rf share/man/*/node.*
 
 #### Uninstall Node.js on Windows
 Credit for the Windows uninstall instructions goes to [Team Treehouse](http://blog.teamtreehouse.com/install-node-js-npm-windows). Here are the steps:
+
 * Open the Windows Control Panel.
 * Choose “Programs and Features”.
 * Click “Uninstall a program”.
@@ -270,6 +282,7 @@ Credit for the Windows uninstall instructions goes to [Team Treehouse](http://bl
 
 ### Install Yeoman
 [Yeoman](http://yeoman.io) consists of:
+
 * `yo` (for Scaffolding).
 * Either [`npm`](https://www.npmjs.com) or [`bower`](https://bower.io) (for Package Management).
 * Either [`gulp`](http://gulpjs.com) or [`grunt`](https://gruntjs.com) (for the Build System).
@@ -280,6 +293,7 @@ For the code examples in this book, you'll need both [`gulp`](http://gulpjs.com)
 I chose [`bower`](https://bower.io) for Package Management.
 
 Here are the installation steps:
+
 * Install `yo`: 
   * `npm install -g yo`
   * Test the `yo` installation: `yo --version`
@@ -305,6 +319,7 @@ npm install -g generator-webapp
 
 ### Install npm Modules
 We use the following npm modules at the command line, so we install them globally:
+
 * [`jsonlint`](#install-jsonlint)
 * [`json`](#install-json)
 * [`ujs-jsonvalidate`](#install-ujs-jsonvalidate)
@@ -392,6 +407,7 @@ http://localhost:5000/speakers
 Crest is a small REST server that provides a RESTful wrapper for MongoDB. Please visit the 
 [Crest Github Repository](https://github.com/cordazar/crest). The Global +npm+ install
 would be the simplest way to install +crest+, but this is broken. Instead, do a +git clone+ as follows:
+
 * `cd` to the directory where your other development projects reside. We'll call this directory `projects`: `cd projects`
 * Clone the repository: `git clone git://github.com/Cordazar/crest.git`
 * Navigate to the `crest` directory: `cd crest`
@@ -411,8 +427,10 @@ but you can re-add these fields and set them to proper values later - just make 
   "debug": true
 }
 ```
+
 * Be sure to [install and start MongoDB](#install-mongodb) first.
 * In a separate tab or command shell, start `crest`:
+
 ```
 node server
 
@@ -434,6 +452,7 @@ Then run it from the command line: `jq-tutorial`
 
 ## Install Ruby on Rails (RoR)
 There are several ways to install Ruby on Rails:
+
 * [Rails Installer](http://railsinstaller.org)
 * [ruby-install](https://github.com/postmodern/ruby-install)
 * [RVM (Ruby Version Manager)](https://rvm.io/) + the `rails` gem
@@ -443,26 +462,34 @@ There are several ways to install Ruby on Rails:
 I prefer RVM because for Mac OS X and Linux because it's easy to upgrade to switch between Ruby versions. Install RVM by visiting the [RVM site](https://rvm.io/) and following the [installation instructions](https://rvm.io/rvm/install).
 
 Use RVM to install Ruby as follows:
-* See the available versions of Ruby
+
+* See the available versions of Ruby:
+
 ```
 rvm list known
 ```
+
 * Install Ruby `v2.4.0` as follows:
+
 ```
 rvm install 2.4.0
 ```
+
 * Check the Ruby version, and you should see something like this.
+
 ```
 ruby -v
 ruby 2.4.0
 ```
 
-After installing Ruby, you can install Rails as follows:
+* After installing Ruby, you can install Rails as follows:
+
 ```
 gem install rails
 ```
 
-Check Rails version, and it should look like:
+* Check the Rails version, and it should look like:
+
 ```
 rails -v
 Rails Rails 5.0.2
@@ -471,12 +498,14 @@ Rails Rails 5.0.2
 And you're done.
 
 You can easily upgrade to new versions of Ruby and Rails by:
+
 * Installing a new version of Ruby (2.x for example): `rvm install 2.x`
 * Using the new version: `rvm use 2.x`
 * Then install the `rails` gem as shown above.
 
 ### Install Rails on Windows
 Use [Rails Installer](http://railsinstaller.org) for a Windows environment, and do the following:
+
 * Download the installer for Windows.
 * Run the installer and follow the defaults.
 
@@ -486,6 +515,7 @@ how to get help with installation issues.
 
 ### Install Ruby Gems
 We use the following Ruby Gems outside of Rails, so we install them globally:
+
 * [`multijson`](#install-multi_json)
 * [`oj`](#install-oj)
 * [`awesome_print`](#install-awesome_print)
@@ -536,6 +566,7 @@ Please see the [MongoDB installation documentation](https://docs.mongodb.com/man
 
 ## Install The Java Environment
 Our Java environment depends on:
+
 * [Java SE](#install-java-se)
 * [Gradle](#install-gradle)
 
@@ -584,6 +615,7 @@ The Java Windows Installer usually puts the JDK in one of the following director
 `C:\Program Files\Java` or `C:\Program Files (x86)\Java`.
 
 Then, do the following:
+
 * Right-click the `My Computer` icon on your desktop and select `Properties`.
 * Click the `Advanced` tab.
 * Click the `Environment Variables` button.
@@ -651,6 +683,7 @@ This should work on Ubuntu or Debian.
 
 ### Install `cURL` on Windows
 To install `cURL` on Windows, do the following:
+
 * Visit the [`cURL` Download Wizard](http://curl.haxx.se/dlwiz/)
 * Select the type of package: __curl executable__
 * Select the Operating System: either Windows / Win32 or Win64
@@ -675,20 +708,22 @@ This installs both Kafka and Zookeeper. You're done.
 
 ### Install Kafka on UNIX
 Install Zookeeper as follows:
+
 * Download Zookeeper from the [Zookeeper Releases page](http://zookeeper.apache.org/releases.html#download).
 * Extract the TAR file from the GZipped file you downloaded: `tar -zxf zookeeper-3.4.9.tar.gz` (Current/latest Zookeeper download)
-* Add System Environment Variables:
-  * In `~/.bashrc`: 
+* Add System Environment Variables in `~/.bashrc`: 
+
 ```
 export ZOOKEEPER_HOME = <Zookeeper-Install-Path>/zookeeper-3.4.9
 export PATH=$PATH:$ZOOKEEPER_HOME/bin
 ```
 
 Install Kafka as follows:
+
 * Download Kafka from the [Kafka Downloads page](http://kafka.apache.org/downloads.html).
 * Extract the TAR file from the GZipped file you downloaded: `tar -zxf  kafka_2.11-0.10.1.1.tgz` (Current/latest Kafka download)
-* * Add System Environment Variables:
-  * In `~/.bashrc`: 
+* Add System Environment Variables in `~/.bashrc`: 
+
 ```
 export KAFKA_HOME = <Kafka-Install-Path>/zookeeper-3.4.9
 export PATH=$PATH:$KAFKA_HOME/bin
@@ -699,16 +734,19 @@ Credit for the Apache Kafka installation on Windows instructions goes to [Tutori
 
 ### Install Kafka on Windows
 Install Zookeeper as follows:
+
 * Download Zookeeper from the [Zookeeper Downloads page](http://zookeeper.apache.org/releases.html#download).
 * Use your favorite Zip tool to unzip the Zookeeper file to the `C:` drive.
 * Add System Variables as follows:
   * In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
   * Create the following new System Variable: `ZOOKEEPER_HOME = C:\zookeeper-3.4.9` (Current/latest Zookeeper download)
   * Add Zookeeper to your `PATH` by editing that variable and adding `;%ZOOKEEPER_HOME%\bin;` at the end.
+
 Install Kafka as follows:
+
 * Download Kafka from the [Kafka Downloads page](http://kafka.apache.org/downloads.html).
 * Use your favorite Zip tool to unzip the Kafka file to the `C:` drive.
-* * Add System Variables as follows:
+* Add System Variables as follows:
   * In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
   * Create the following new System Variable: `KAFKA_HOME = C:\kafka_2.11-0.10.1.1` (Current/latest Kafka download)
   * Add Kafka to your `PATH` by editing that variable and adding `;%KAFKA_HOME%\bin;` at the end.
