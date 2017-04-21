@@ -268,7 +268,29 @@ Credit for the Windows uninstall instructions goes to [Team Treehouse](http://bl
 
 
 ### Install Yeoman
-Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html).
+[Yeoman](http://yeoman.io) consists of:
+* `yo` (for Scaffolding).
+* Either [`npm`](https://www.npmjs.com) or [`bower`](https://bower.io) (for Package Management).
+* Either [`gulp`](http://gulpjs.com) or [`grunt`](https://gruntjs.com) (for the Build System).
+
+For the code exmaples in this book, you'll need both [`gulp`](http://gulpjs.com/) and [`grunt-cli`](https://github.com/gruntjs/grunt-cli) for the Build System. I chose [`bower`](https://bower.io) (for Package Management).
+
+Here are the installation steps:
+* Install `yo`: 
+  * `npm install -g yo`
+  * Test the `yo` installation: `yo --version`
+* Install [`bower`](https://bower.io):
+  * `npm install -g bower`
+  * Test the `bower` installation: `bower --version`
+* Install [`gulp`](http://gulpjs.com/):
+  * `npm install -g gulp-cli`
+  * `npm install -g gulp` 
+  * Test the `gulp` installation: `gulp --version`
+* Install [`grunt-cli`](https://github.com/gruntjs/grunt-cli):
+  * `npm install -g grunt-cli`
+  * Test the `grunt-cli` installation: `grunt --version`
+  
+Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html) for more information.
 
 #### Install the `webapp` Yeoman Generator
 Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp). Please follow the default installation so that the test environment includes both [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
