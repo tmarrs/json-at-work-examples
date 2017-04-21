@@ -423,7 +423,7 @@ Use [Rails Installer](http://railsinstaller.org) for a Windows environment, and 
 * Download the installer for Windows.
 * Run the installer and follow the defaults.
 
-I've used Rails Installer](http://railsinstaller.org) on Windows 7, and it worked properly.
+I've used [Rails Installer](http://railsinstaller.org) on Windows 7, and it worked properly.
 The [Rails Installer](http://railsinstaller.org) page has excellent information on RoR tutorials and
 how to get help with installation issues. 
 
