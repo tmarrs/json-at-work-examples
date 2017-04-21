@@ -9,14 +9,15 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
     - [JSONLint](#jsonlint)
     - [Install Postman](#install-postman)
 - [Install JSONPad](#install-jsonpad)
-- [Install Node.js](#install-nodejs)
+- [Install Node](#install-node)
     - [Install Node.js on Mac OS X and Linux with NVM](#install-nodejs-on-mac-os-x-and-linux-with-nvm)
         - [Install and Configure NVM](#install-and-configure-nvm)
-        - [Install Node](#install-node)
+        - [Install Node with NVM](#install-node-with-nvm)
         - [Avoiding `sudo` with npm](#avoiding-sudo-with-npm)
         - [Avoiding `sudo` with npm - Option 2](#avoiding-sudo-with-npm---option-2)
-        - [Taming the REPL](#taming-the-repl)
+        - [Taming the REPL - `mynode`](#taming-the-repl---mynode)
     - [Install Node.js on Windows](#install-nodejs-on-windows)
+        - [Install Node.js on Windows with `nvm-windows`](#install-nodejs-on-windows-with-nvm-windows)
     - [Uninstall Node.js](#uninstall-nodejs)
         - [Uninstall Node.js on Mac OS X](#uninstall-nodejs-on-mac-os-x)
         - [Uninstall Node.js on Linux](#uninstall-nodejs-on-linux)
@@ -30,6 +31,7 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
         - [Install `http-server`](#install-http-server)
         - [Install `json-server`](#install-json-server)
         - [Install `crest`](#install-crest)
+        - [Install `jq-tutorial`](#install-jq-tutorial)
 - [Install Ruby on Rails (RoR)](#install-ruby-on-rails-ror)
     - [Install Rails on Mac OS X and Linux](#install-rails-on-mac-os-x-and-linux)
     - [Install Rails on Windows](#install-rails-on-windows)
@@ -78,26 +80,11 @@ JSONPad in its current form runs on Adobe AIR, which requires a separate install
 Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to [my own `json-pad` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool from Adobe AIR to [NW.js (formerly known as Node Webkit)](http://nwjs.io) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
 
 
-## Install Node.js
-This book uses Node.js version `v4.2.2`.
-
-If Node.js is working properly on your machine, then you should see the following from the command line when you check the version number:
-
-```
-json-at-work => node -v
-v4.2.2
-```
-
-When you check out the Node.js [REPL (Request-Eval-Print-Loop)](https://nodejs.org/api/repl.html), you should see this:
-
-```
-json-at-work => node
-> .exit
-json-at-work =>
-```
+## Install Node
+This book uses Node.js version `v4.2.2`. The current latest stable version is [`v6.10.2`](https://nodejs.org/en/download), and this installation will be updated shortly.
 
 ### Install Node.js on Mac OS X and Linux with NVM
-Now that Node.js is completely uninstalled, let's do a fresh instllation. Although you could use the installation package from the [Node.js site](https://nodejs.org/), it's difficult to change versions. Instead, let's use [NVM (Node Version Manager)](https://github.com/creationix/nvm). NVM makes it easy to install/uninstall Node.js, and upgrade to newer versions.
+Although you could use the installation package from the [Node.js site](https://nodejs.org), it's difficult to change versions. Instead, let's use [NVM (Node Version Manager)](https://github.com/creationix/nvm). NVM makes it easy to install/uninstall Node.js, and upgrade to newer versions.
 
 #### Install and Configure NVM
 First, install NVM by using one of the following methods:
@@ -120,7 +107,7 @@ export NVM_HOME=~/.nvm/v4.2.2
 
 Please note that similar steps apply to Bourne Shell or Korn Shell.
 
-#### Install Node
+#### Install Node with NVM
 Now that NVM is installed, use it to install Node:
 * Type `nvm ls-remote` to see what remote (i.e., not on your local machine) versions of Node are available to install.
 * Install version `v4.2.2` with the following command: `nvm install v4.2.2`
@@ -153,6 +140,20 @@ Then, do the following health checks:
 
 To see a full list of NVM's capabilities, type: `nvm --help`.
 
+If Node.js is working properly on your machine, then you should see the following from the command line when you check the version number:
+
+```
+json-at-work => node -v
+v4.2.2
+```
+
+When you check out the Node.js [REPL (Request-Eval-Print-Loop)](https://nodejs.org/api/repl.html), you should see this:
+
+```
+json-at-work => node
+-> .exit
+```
+
 #### Avoiding `sudo` with npm
 npm may require you to run as `sudo`, and this can get cumbersome and annoying. This also can be a security risk because packages can contain scripts, and npm is running with root privilege. To avoid this do the following:
 
@@ -166,17 +167,17 @@ This tip was inspired by Isaac Z. Schlueter from [How to Node](http://howtonode.
 #### Avoiding `sudo` with npm - Option 2
 Here's another way to avoid `sudo` - please see the [NPM Global without Sudo Guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) provided by [Sindre Sorhus](https://github.com/sindresorhus).
 
-#### Taming the REPL
+#### Taming the REPL - `mynode`
 Out of the box, the default behavior of the REPL leaves a bit to be desired because you 'undefined' after most lines of JavaScript, hitting the Enter key, breathing, etc. This is due to the fact that JavaScript functions always return something. If nothing is returned, then 'undefined' is returned by default. This behavior can be very annoying and unproductive. Here's a sample session:
 
 ```
 json-at-work => node
-> # Hit Enter
-undefined
->
-> var y = 5
-undefined
-> .exit
+-> Hit Enter
+-> undefined
+
+-> var y = 5
+-> undefined
+-> .exit
 ```
 
 To turn off 'undefined' in the REPL, add the following to `.bashrc` (or your setup for Bourne or Korn Shell):
@@ -194,20 +195,35 @@ Meanwhile, `mynode` serves as your new REPL command.
 
 ```
 json-at-work => mynode
->
-> var x = 5
-> .exit
+-> var x = 5
+-> .exit
 ```
 
 You now have a Node REPL that does what you want - no more annoying 'undefined'. You're welcome. :smile:
 
-
 ### Install Node.js on Windows
-NVM also works well on on Windows. You can try the following options on Windows, Use [nvm-windows](https://github.com/coreybutler/nvm-windows)
+NVM also works well on on Windows due to Corey Butler's [`nvm-windows`](https://github.com/coreybutler/nvm-windows) application. This is a port of `nvm` to a Windows environment. I successfully used [`nvm-windows`](https://github.com/coreybutler/nvm-windows) on Windows 7.
 
-FIXME - Fill in this section.
-
-If this doesn't work, you may want to avoid this headache and use [CodingGround](https://www.tutorialspoint.com/codingground.htm) to run your Node.js environment in the Cloud rather than on Windows.
+#### Install Node.js on Windows with `nvm-windows`
+Here are the steps:
+* Visit the [`nvm-windows` Downloads Page](https://github.com/coreybutler/nvm-windows/releases)
+* Download the latest `nvm-setup.zip` to your `Downloads` folder.
+* Unzip `nvm-setup.zip` with your favorite Zip tool.
+* Run `nvm-setup.exe`, which is a Wizard. Accept all defaults and the MIT License agreement:
+  * Download to `C:\Users\{username}\AppData\Roaming\nvm`
+  * Click Finish when the install completes.
+  * This sets up the necessary environment variables to run Node on your Windows machine.
+* Ensure that NVM is on your `PATH`:
+  * Navigate to `Control Panel ⇒ System ⇒ Advanced System Settings`
+  * Click “Environment Variables” on the Advanced System Settings popup.
+  * `NVM_HOME` should have been added to Env Vars during install – `C:\Users\{username}\AppData\Roaming\nvm`
+  * `NVM_SYMLINK` should point to `C:\Program Files\nodejs`
+  * Both `NVM_HOME` and `NVM_SYMLINK` should be on the `PATH`.
+* Install Node with [`nvm-windows`](https://github.com/coreybutler/nvm-windows):
+  * Type `nvm list available` to get a list of available versions.
+  * Type `nvm install v4.2.2`
+  * Set the version of Node: `nvm use v4.2.2`
+  * Test the install: `node -v`
 
 
 ### Uninstall Node.js
@@ -264,6 +280,7 @@ We use the following npm modules at the command line, so we install them globall
 * [`ujs-jsonvalidate`](#install-ujs-jsonvalidate)
 * [`http-server`](#install-http-server)
 * [`json-server`](#install-json-server)
+* [`jq-tutorial`](#install-jq-tutorial) 
 
 #### Install `jsonlint`
 This is the npm equivalent of the [JSONLint site](http://ww.jsonlint.com) used to validate a JSON document. Here's the [`jsonlint` GitHub Repository](https://github.com/zaach/jsonlint).
@@ -293,6 +310,7 @@ Please visit the [`json` GitHub repository](https://github.com/trentm/json) for 
 This is the npm equivalent of the [JSON Validate site](http://jsonvalidate.com/) used to valid a JSON document against a JSON Schema. Here's the [`ujs-jsonvalidate` GitHub Repository](https://github.com/usingjsonschema/ujs-jsonvalidate-nodejs).
 
 To install:
+
 ```
 npm install -g ujs-jsonvalidate
 ```
@@ -372,6 +390,17 @@ DEBUG: util.js is loaded
 DEBUG: rest.js is loaded
 crest listening at http://:::3500
 ```
+
+#### Install `jq-tutorial`
+[`jq-tutorial`](https://www.npmjs.com/package/jq-tutorial) is an npm module that provides a
+nice `jq` tutorial from the command line. Install it as follows:
+
+```
+npm install -g jq-tutorial
+```
+
+Then run it from the command line: `jq-tutorial`
+
 
 ## Install Ruby on Rails (RoR)
 There are several ways to install Ruby on Rails:
