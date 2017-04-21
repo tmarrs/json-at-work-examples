@@ -24,7 +24,7 @@ npm install -g bower
 
 
 ## Install the `generator-webapp` Yeoman Generator
-Install the `generator-webapp` Yeoman Generator as follows:
+Install the [`generator-webapp` Yeoman Generator](https://github.com/yeoman/generator-webapp) as follows:
 ```
 npm install -g generator-webapp
 ```
@@ -36,7 +36,7 @@ npm install -g grunt-cli
 
 
 ## Generate The Web Application
-We'll use the `generator-webapp` Yeoman Generator to create a simple web app.
+We'll use the [`generator-webapp` Yeoman Generator](https://github.com/yeoman/generator-webapp) to create a simple web app.
 
 ### Create the Project Directory
 First, find a suitable directory for your projects.

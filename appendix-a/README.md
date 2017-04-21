@@ -4,6 +4,7 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
 
 
 ## Contents
+- [Contents](#contents)
 - [Install JSON Tools in the Browser](#install-json-tools-in-the-browser)
     - [Install JSONView in Chrome and Firefox](#install-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
@@ -23,7 +24,7 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
         - [Uninstall Node.js on Linux](#uninstall-nodejs-on-linux)
         - [Uninstall Node.js on Windows](#uninstall-nodejs-on-windows)
     - [Install Yeoman](#install-yeoman)
-        - [Install the `webapp` Yeoman Generator](#install-the-webapp-yeoman-generator)
+        - [Install the `generator-webapp` Yeoman Generator](#install-the-generator-webapp-yeoman-generator)
     - [Install npm Modules](#install-npm-modules)
         - [Install `jsonlint`](#install-jsonlint)
         - [Install `json`](#install-json)
@@ -273,7 +274,10 @@ Credit for the Windows uninstall instructions goes to [Team Treehouse](http://bl
 * Either [`npm`](https://www.npmjs.com) or [`bower`](https://bower.io) (for Package Management).
 * Either [`gulp`](http://gulpjs.com) or [`grunt`](https://gruntjs.com) (for the Build System).
 
-For the code exmaples in this book, you'll need both [`gulp`](http://gulpjs.com/) and [`grunt-cli`](https://github.com/gruntjs/grunt-cli) for the Build System. I chose [`bower`](https://bower.io) (for Package Management).
+For the code examples in this book, you'll need both [`gulp`](http://gulpjs.com) and [`grunt-cli`](https://github.com/gruntjs/grunt-cli) for the Build System. Although
+[`gulp`](http://gulpjs.com) is used as the primary build tool, you still need [`grunt-cli`](https://github.com/gruntjs/grunt-cli) to run some of the gulp tasks.
+
+I chose [`bower`](https://bower.io) for Package Management.
 
 Here are the installation steps:
 * Install `yo`: 
@@ -282,7 +286,7 @@ Here are the installation steps:
 * Install [`bower`](https://bower.io):
   * `npm install -g bower`
   * Test the `bower` installation: `bower --version`
-* Install [`gulp`](http://gulpjs.com/):
+* Install [`gulp`](http://gulpjs.com):
   * `npm install -g gulp-cli`
   * `npm install -g gulp` 
   * Test the `gulp` installation: `gulp --version`
@@ -292,8 +296,12 @@ Here are the installation steps:
   
 Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html) for more information.
 
-#### Install the `webapp` Yeoman Generator
-Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp). Please follow the default installation so that the test environment includes both [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/).
+#### Install the `generator-webapp` Yeoman Generator
+Please see the [`generator-webapp` GitHub page](https://github.com/yeoman/generator-webapp).
+Install the generator as follows:
+```
+npm install -g generator-webapp
+```
 
 ### Install npm Modules
 We use the following npm modules at the command line, so we install them globally:
