@@ -129,7 +129,7 @@ npm update -g npm
 
 Then, do the following health checks:
 
-* `nvm ls`. You should see:
+* `nvm ls` - You should see:
 ```
           ->  v4.2.2
                system
