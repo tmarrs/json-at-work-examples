@@ -45,9 +45,7 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
         - [Java Setup on Mac OS X](#java-setup-on-mac-os-x)
         - [Java Setup on Linux](#java-setup-on-linux)
         - [Java Setup on Windows](#java-setup-on-windows)
-    - [Install Maven](#install-maven)
-        - [Install JUnit - Add to the POM](#install-junit---add-to-the-pom)
-    - [Using Eclipse with Maven](#using-eclipse-with-maven)
+    - [Install Gradle](#install-gradle)
 - [Install `jq`](#install-jq)
 - [Install `cURL`](#install-curl)
     - [Install `cURL` on Mac OS X](#install-curl-on-mac-os-x)
@@ -75,9 +73,9 @@ or as a standalone GUI application on Mac OS X, Linux, or Windows. Please visit 
 
 ## Install JSONPad
 You can download JSONPad from the [JSONPad Downloads page](https://code.google.com/p/json-pad/downloads/list).
-JSONPad in its current form runs on Adobe AIR, which requires a separate install. You can download Adobe AIR at: [https://get.adobe.com/air/](https://get.adobe.com/air/).
+JSONPad in its current form runs on Adobe AIR, which requires a separate install. You can download Adobe AIR at: [https://get.adobe.com/air](https://get.adobe.com/air).
 
-Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to [my own `json-pad` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool from Adobe AIR to [NW.js (formerly known as Node Webkit)](http://nwjs.io/) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
+Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to [my own `json-pad` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool from Adobe AIR to [NW.js (formerly known as Node Webkit)](http://nwjs.io) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
 
 
 ## Install Node.js
@@ -480,7 +478,7 @@ Please see the [MongoDB installation documentation](https://docs.mongodb.com/man
 ## Install The Java Environment
 Our Java environment depends on:
 * [Java SE](#install-java-se)
-* [Maven](#install-maven)
+* [Gradle](#install-gradle)
 
 ### Install Java SE
 We're using Java SE (Standard Edition) 8 for this book, so please visit the [Oracle Java SE 8 download site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -538,35 +536,22 @@ Then, do the following:
 
 Credit for the Java setup on Windows goes to [Robert Sindall](http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/).
 
-### Install Maven
-* Be sure to install [Java SE](#install-java-se) first.
-* Visit the [Maven Download page](http://maven.apache.org/download.cgi) to download a Maven zip or tar file.
-* Follow the [Maven Installation Instructions](http://maven.apache.org/download.cgi#Installation) for your system.
-* Run `mvn --version`, and you should see something like this:
-```
-Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T09:41:47-07:00)
-Maven home: /Users/tmarrs/apache-maven-3.3.9
-Java version: 1.8.0_72, vendor: Oracle Corporation
-Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home/jre
-Default locale: en_US, platform encoding: UTF-8
-OS name: "mac os x", version: "10.11.2", arch: "x86_64", family: "mac"
-```
-
-For further reference, please see [Maven in 5 Minutes](http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
-
-#### Install JUnit - Add to the POM
-[JUnit](http://junit.org/) isn't a separate install - just add it to the [Maven POM (Project Object Model)](https://maven.apache.org/pom.html):
+### Install Gradle
+[Gradle](http://www.gradle.org) is used for building source and test code. Please visit
+the [Gradle Installation Guide](https://gradle.org/install) and follow the instructions 
+for your operating system.  After you've completed the installation, run `gradle -v` from 
+the command line and you should see something like this:
 
 ```
-<dependency>
-	<groupId>junit</groupId>
-	<artifactId>junit</artifactId>
-	<version>4.12</version>
-</dependency>
+gradle -v
+
+------------------------------------------------------------
+Gradle 3.4.1
+------------------------------------------------------------
 ```
 
-### Using Eclipse with Maven
-Use the following Maven command to integrate with Eclipse: `mvn ecplise:eclipse`
+On Mac OS X, I succesfully used [Homebrew to install Gradle](https://gradle.org/install#with-homebrew).
+
 
 ## Install `jq`
 [`jq`](http://stedolan.github.io/jq/) provides JSON-based command-line processing.
