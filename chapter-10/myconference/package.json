@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/tmarrs/json-at-work-examples#readme",
   "dependencies": {
-    "ajv": "^4.10.4",
+    "ajv": "^5.0.0",
     "handlebars": "^4.0.6",
     "kafka-node": "^1.1.0",
-    "nodemailer": "^2.7.0"
+    "nodemailer": "^4.0.1"
   }
 }
