@@ -83,9 +83,8 @@ describe('cities-json-patch', function() {
           console.log(JSON.stringify(output, null, 2));
           done();
         } catch (transformError) {
-          expect(transformError).to.be.an.instanceof(Object);
-          expect(transformError.name).to.eql('PatchConflictError');
-          done();
+          console.error(transformError);
+          done(transformError);
         }
       } else {
         console.error(fileReadError);
