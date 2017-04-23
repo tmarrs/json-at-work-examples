@@ -721,7 +721,7 @@ export KAFKA_HOME = <Kafka-Install-Path>/zookeeper-3.4.9
 export PATH=$PATH:$KAFKA_HOME/bin
 ```
 
-Credit for the Apache Kafka installation on Windows instructions goes to [TutorialsPoint](https://www.tutorialspoint.com/apache_kafka/apache_kafka_installation_steps.htm).
+Credit for the Apache Kafka installation on UNIX instructions goes to [TutorialsPoint](https://www.tutorialspoint.com/apache_kafka/apache_kafka_installation_steps.htm).
 
 
 ### Install Kafka on Windows
