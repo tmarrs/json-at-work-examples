@@ -115,10 +115,10 @@ Now that NVM is installed, use it to install Node:
 
 - Type `nvm ls-remote` to see what remote (i.e., not on your local machine) versions of Node are available to install.
 - Install version `v6.10.2` with the following command: `nvm install v6.10.2`
-  - All Node versions are installed in `$HOME/.nvm`
+    - All Node versions are installed in `$HOME/.nvm`
 - Set the default Node version to be used in any new shell: `nvm alias default v6.10.2`
-  - Without this, neither the `node` or `npm` commands will work properly when you exit the current shell.
-  - Now, exit your current shell.
+    - Without this, neither the `node` or `npm` commands will work properly when you exit the current shell.
+    - Now, exit your current shell.
 
 From a new shell, upgrade to the latest version of npm:
 
@@ -211,20 +211,20 @@ Here are the steps:
 - Download the latest `nvm-setup.zip` to your `Downloads` folder.
 - Unzip `nvm-setup.zip` with your favorite Zip tool.
 - Run `nvm-setup.exe`, which is a Wizard. Accept all defaults and the MIT License agreement:
-  - Download to `C:\Users\{username}\AppData\Roaming\nvm`
-  - Click Finish when the install completes.
-  - This sets up the necessary environment variables to run Node on your Windows machine.
+    - Download to `C:\Users\{username}\AppData\Roaming\nvm`
+    - Click Finish when the install completes.
+    - This sets up the necessary environment variables to run Node on your Windows machine.
 - Ensure that NVM is on your `PATH`:
-  - Navigate to `Control Panel ⇒ System ⇒ Advanced System Settings`
-  - Click “Environment Variables” on the Advanced System Settings popup.
-  - `NVM_HOME` should have been added to Env Vars during install – `C:\Users\{username}\AppData\Roaming\nvm`
-  - `NVM_SYMLINK` should point to `C:\Program Files\nodejs`
-  - Both `NVM_HOME` and `NVM_SYMLINK` should be on the `PATH`.
+    - Navigate to `Control Panel ⇒ System ⇒ Advanced System Settings`
+    - Click “Environment Variables” on the Advanced System Settings popup.
+    - `NVM_HOME` should have been added to Env Vars during install – `C:\Users\{username}\AppData\Roaming\nvm`
+    - `NVM_SYMLINK` should point to `C:\Program Files\nodejs`
+    - Both `NVM_HOME` and `NVM_SYMLINK` should be on the `PATH`.
 - Install Node with [`nvm-windows`](https://github.com/coreybutler/nvm-windows):
-  - Type `nvm list available` to get a list of available versions.
-  - Type `nvm install v6.10.2`
-  - Set the version of Node: `nvm use v6.10.2`
-  - Test the install: `node -v`
+    - Type `nvm list available` to get a list of available versions.
+    - Type `nvm install v6.10.2`
+    - Set the version of Node: `nvm use v6.10.2`
+    - Test the install: `node -v`
 
 
 ### Uninstall Node.js
@@ -287,17 +287,17 @@ I chose [`bower`](https://bower.io) for Package Management.
 Here are the installation steps:
 
 - Install `yo`: 
-  - `npm install -g yo`
-  - Test the `yo` installation: `yo --version`
+    - `npm install -g yo`
+    - Test the `yo` installation: `yo --version`
 - Install [`bower`](https://bower.io):
-  - `npm install -g bower`
-  - Test the `bower` installation: `bower --version`
+    - `npm install -g bower`
+    - Test the `bower` installation: `bower --version`
 - Install [`gulp`](http://gulpjs.com):
-  - `npm install -g gulp-cli`
-  - Test the `gulp` installation: `gulp --version`
+    - `npm install -g gulp-cli`
+    - Test the `gulp` installation: `gulp --version`
 - Install [`grunt-cli`](https://github.com/gruntjs/grunt-cli):
-  - `npm install -g grunt-cli`
-  - Test the `grunt-cli` installation: `grunt --version`
+    - `npm install -g grunt-cli`
+    - Test the `grunt-cli` installation: `grunt --version`
   
 Please refer to the [Yeoman Setup page](http://yeoman.io/codelab/setup.html) for more information.
 
@@ -730,18 +730,18 @@ Install Zookeeper as follows:
 - Download Zookeeper from the [Zookeeper Downloads page](http://zookeeper.apache.org/releases.html#download).
 - Use your favorite Zip tool to unzip the Zookeeper file to the `C:` drive.
 - Add System Variables as follows:
-  - In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
-  - Create the following new System Variable: `ZOOKEEPER_HOME = C:\zookeeper-3.4.9` (Current/latest Zookeeper download)
-  - Add Zookeeper to your `PATH` by editing that variable and adding `;%ZOOKEEPER_HOME%\bin;` at the end.
+    - In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
+    - Create the following new System Variable: `ZOOKEEPER_HOME = C:\zookeeper-3.4.9` (Current/latest Zookeeper download)
+    - Add Zookeeper to your `PATH` by editing that variable and adding `;%ZOOKEEPER_HOME%\bin;` at the end.
 
 Install Kafka as follows:
 
 - Download Kafka from the [Kafka Downloads page](http://kafka.apache.org/downloads.html).
 - Use your favorite Zip tool to unzip the Kafka file to the `C:` drive.
 - Add System Variables as follows:
-  - In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
-  - Create the following new System Variable: `KAFKA_HOME = C:\kafka_2.11-0.10.1.1` (Current/latest Kafka download)
-  - Add Kafka to your `PATH` by editing that variable and adding `;%KAFKA_HOME%\bin;` at the end.
+    - In Windows, navigate to: `Control Panel ==> System ==> Advanced System Settings ==> Environment Variables`
+    - Create the following new System Variable: `KAFKA_HOME = C:\kafka_2.11-0.10.1.1` (Current/latest Kafka download)
+    - Add Kafka to your `PATH` by editing that variable and adding `;%KAFKA_HOME%\bin;` at the end.
 
 Credit for the Apache Kafka installation on Windows instructions goes to [Gopal Tiwari's article on DZone](https://dzone.com/articles/running-apache-kafka-on-windows-os).
 
