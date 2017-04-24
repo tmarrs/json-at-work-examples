@@ -7,8 +7,8 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
 - [Install JSON Tools in the Browser](#install-json-tools-in-the-browser)
     - [Install JSONView in Chrome and Firefox](#install-jsonview-in-chrome-and-firefox)
     - [JSONLint](#jsonlint)
+    - [JSON Editor Online](#json-editor-online)
     - [Install Postman](#install-postman)
-- [Install JSONPad](#install-jsonpad)
 - [Install Node](#install-node)
     - [Install Node.js on Mac OS X and Linux with NVM](#install-nodejs-on-mac-os-x-and-linux-with-nvm)
         - [Install and Configure NVM](#install-and-configure-nvm)
@@ -65,19 +65,16 @@ Installation Guides for [__JSON at Work__](https://github.com/tmarrs/json-at-wor
 JSONView pretty-prints JSON in Chrome or Firefox. Please follow the installation instructions on the [JSONView site](http://jsonview.com/) for your browser.
 
 ### JSONLint
-Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online.
+Use [JSONLint](http://www.jsonlint.com) to validate JSON documents online. JSONLint doesn't require an install.
+
+### JSON Editor Online
+Use [JSON Editor Online](http://www.jsoneditoronline.org) to model JSON documents. Since this is a
+web app, there's nohing to install.
 
 ### Install Postman
 Postman provides the ability to fully test a RESTful API. It can send HTTP `GET`,
 `POST`, `PUT`, and `DELETE` requests and set HTTP Headers. You can install Postman as a Chrome extension
 or as a standalone GUI application on Mac OS X, Linux, or Windows. Please visit the [Postman site](https://www.getpostman.com/) for installation instructions.
-
-
-## Install JSONPad
-You can download JSONPad from the [JSONPad Downloads page](https://code.google.com/p/json-pad/downloads/list).
-JSONPad in its current form runs on Adobe AIR, which requires a separate install. You can download Adobe AIR at: [https://get.adobe.com/air](https://get.adobe.com/air).
-
-Unfortunately, Google Code is shutting down due to the popularity of GitHub, so I recently exported this project to [my own `json-pad` GitHub Repository](https://github.com/tmarrs/json-pad) to preserve the codebase. My hope is to eventually re-platform this excellent tool from Adobe AIR to [NW.js (formerly known as Node Webkit)](http://nwjs.io) so that it will run as a cross-platform compatible GUI. But this effort will have to wait until the book is published.
 
 
 ## Install Node
